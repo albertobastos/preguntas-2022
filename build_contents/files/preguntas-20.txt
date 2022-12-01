@@ -1,0 +1,450 @@
+﻿1. La Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, té per objecte adaptar l’ordenament jurídic espanyol al:
+a) Reglament (UE) 2016/679 del Parlament Europeu i el Consell, de 27 d’abril de 2016, relatiu a la protecció de les persones físiques i jurídiques pel que fa al tractament de les dades personals i a la lliure circulació d’aquestes dades.
+b) Reglament (UE) 2016/679 del Parlament Europeu i el Consell, de 27 d’abril de 2016, relatiu a la protecció de les persones físiques pel que fa al tractament de les dades personals i a la lliure circulació d’aquestes dades.
+c) Reglament (UE) 2016/679 del Parlament Europeu i el Consell, de 27 d’abril de 2016, relatiu a la protecció de les persones físiques pel que fa al tractament de les seves dades personals i a la lliure circulació d’aquestes dades, i completar-ne les disposicions.
+d) Reglament (UE) 2016/679 del Parlament Europeu i el Consell, de 27 d’abril de 2016, relatiu a la protecció de les persones físiques i jurídiques pel que fa al tractament de les dades personals i a la lliure circulació d’aquestes dades, i completar-ne les disposicions.
+
+2. Quin dels tractaments de dades següents no és aplicable directament el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), perquè afecta activitats no compreses en l’àmbit d’aplicació del dret de la Unió Europea?
+a) Tractament de dades d’alumnes d’un centre educatiu.
+b) Tractaments fets en l’àmbit d’institucions penitenciàries.
+c) Tractament de dades per a fins comercials.
+d) Tractament de dades fet per empreses de telecomunicacions.
+
+3. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, en relació amb els drets i llibertats consagrats a la Constitució i als tractats i convenis internacionals en què Espanya sigui part, qui ha de contribuir a garantir-ne l’aplicació?
+a) Els prestadors de serveis de la societat de la informació i els proveïdors de serveis d’Internet.
+b) Les persones que autoritzin el tractament de les seves dades personals.
+c) Exclusivament els proveïdors de serveis d’Internet.
+d) Exclusivament els prestadors de serveis de la societat.
+
+4. Indicau quin dels següents no és un dret digital reconegut a la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals:
+a) Dret a la intimitat davant l’ús de dispositius de videovigilància i enregistrament de sons a la llar.
+b) Dret a la intimitat davant la utilització de sistemes de geolocalització en l’àmbit laboral.
+c) Drets digitals en la negociació col·lectiva.
+d) Dret a l’oblit en cerques d’Internet.
+
+5. El que disposen els títols de l’I al IX i els articles del 89 al 94 de la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, s’aplica a:
+a) Qualsevol tractament totalment automatitzat de dades personals, així com al tractament automatitzat de dades personals contingudes o destinades a ser incloses en un fitxer.
+b) Qualsevol tractament totalment o parcialment automatitzat de dades personals, així com al tractament no automatitzat de dades personals contingudes o destinades a ser incloses en un fitxer.
+c) Qualsevol tractament totalment automatitzat de dades personals, així com al tractament no automatitzat de dades personals contingudes o destinades a ser incloses en un fitxer.
+d) Qualsevol tractament totalment o parcialment automatitzat de dades personals, així com al tractament automatitzat de dades personals contingudes o destinades a ser incloses en un fitxer.
+
+6. Indicau quina de les respostes següents no és un principi de la protecció de dades d’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals:
+a) Exactitud de les dades i, si és necessari, actualitzades.
+b) Deure de confidencialitat dels responsables i encarregats del tractament de dades, així com totes les persones que intervinguin en qualsevol fase.
+c) Tractament basat en el consentiment de l’afectat, i s’accepta que no hi hagi una declaració negativa.
+d) Consentiment dels menors d’edat, quan aquests siguin més grans de catorze anys.
+
+7. Indicau quina de les respostes següents no és un principi de la protecció de dades d’acord amb el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades):
+a) Minimització de dades.
+b) Limitació de la finalitat.
+c) Licitud, lleialtat i opacitat.
+d) Exactitud.
+
+8. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, quan la supressió derivi de l’exercici del dret d’oposició d’acord amb l’article 21.2 del Reglament (UE) 2016/ 679, el responsable:
+a) Pot conservar les dades identificatives de l’afectat necessàries per tal d’impedir tractaments futurs per a fins de màrqueting indirecte.
+b) No pot conservar les dades identificatives de l’afectat necessàries per tal d’impedir tractaments futurs per a fins de màrqueting indirecte.
+c) Pot conservar les dades identificatives de l’afectat necessàries per tal d’impedir tractaments futurs per a fins de màrqueting directe.
+d) No pot conservar les dades identificatives de l’afectat necessàries per tal d’impedir tractaments futurs per a fins de màrqueting directe.
+
+9. D’acord amb el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), quan no s’hi ha d’aplicar el dret de supressió?
+a) Quan el tractament de dades personals afecti menors.
+b) Quan el tractament sigui necessari per exercir el dret a la llibertat d’expressió i d’informació.
+c) Quan les dades personals hagin estat tractades il·lícitament.
+d) Quan les dades personals ja no siguin necessàries en relació amb les finalitats per a les quals van ser recollides o tractades d’una altra manera.
+
+10. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, entre altres exigències, què implica el dret d’accés universal a Internet?
+a) Tothom té dret a accedir a Internet independentment de la seva condició personal, social, econòmica o geogràfica.
+b) Els proveïdors de serveis d’Internet han de proporcionar una oferta transparent de serveis sense discriminació per motius tècnics o econòmics.
+c) Es garanteix un accés universal, gratuït i no discriminatori per a tota la població.
+d) Tothom té dret a la llibertat d’expressió a Internet.
+
+11. D’acord amb el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), l’encarregat del tractament pot recórrer a un altre encarregat:
+a) En cap cas.
+b) Sempre que ho comuniqui dins el següent mes al responsable, el qual té l’oportunitat d’autoritzar-lo o oposar-s’hi.
+c) Només si té l’autorització prèvia per escrit del responsable, i sempre que l’informi de qualsevol canvi previst en la incorporació o la substitució d’altres encarregats, de manera que doni al responsable l’oportunitat d’oposar-s’hi.
+d) Sempre que ho consideri oportú, atès que aquest reglament autoritza l’encarregat a disposar dels recursos que consideri millors per complir la seva funció d’acord amb la normativa.
+
+12. D’acord amb el títol V de la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, els responsables i encarregats del tractament han de designar un delegat de protecció de dades (senyalau la resposta incorrecta):
+a) Quan es tracti de distribuïdors i comercialitzadors d’energia elèctrica i els distribuïdors i comercialitzadors de gas natural.
+b) Quan es tracti d’empreses de serveis d’inversió, regulades per la legislació del mercat de valors.
+c) Quan es tracti de tribunals que actuïn en exercici de la seva funció judicial.
+d) Quan es tracti d’entitats asseguradores i reasseguradores.
+
+13. D’acord amb el títol V de la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, els responsables i encarregats del tractament han de comunicar a l’Agència Espanyola de Protecció de Dades o, en el seu cas, a les autoritats autonòmiques de protecció de dades, les designacions, els nomenaments i els cessaments dels delegats de protecció de dades:
+a) En el termini de deu dies, tant en els supòsits en què estiguin obligades a designar-los com en el cas que sigui voluntària.
+b) En el termini de deu dies en els supòsits en què estiguin obligades a designar-los però no en el cas que sigui voluntària.
+c) En el termini de quinze dies, tant en els supòsits en què estiguin obligades a designar-los com en el cas que sigui voluntària.
+d) En el termini de quinze dies en els supòsits en què estiguin obligades a designar-los però no en el cas que sigui voluntària.
+
+14. D’acord amb el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), el principi de minimització de dades en el tractament de dades suposa que les dades personals han de ser:
+a) Adequades, pertinents i limitades al que és necessari en relació amb els fins per als quals són tractades.
+b) Exactes i, si cal, actualitzades.
+c) Recollides amb fins determinats, explícits i legítims, i no seran tractades ulteriorment de manera incompatible amb aquests fins.
+d) Tractades de manera lícita, lleial i transparent en relació amb l’interessat.
+
+15. Indicau quina de les respostes següents no està inclosa entre les exigències que estableix la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, per garantir el dret d’accés universal a Internet:
+a) Tothom té dret a accedir a Internet independentment de la condició personal, social, econòmica o geogràfica.
+b) L’accés a Internet d’homes i dones ha de procurar la superació de la bretxa de gènere tant en l’àmbit personal com laboral.
+c) La garantia efectiva del dret d’accés a Internet ha d’atendre la realitat específica dels entorns rurals.
+d) Tothom té dret a la llibertat d’expressió a Internet.
+
+16. D’acord amb el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), el dret a la portabilitat de les dades suposa que l’interessat té dret a rebre les dades personals que el concerneixin i que hagi facilitat a un responsable del tractament en un format estructurat, d’ús comú i lectura mecànica:
+a) Per suprimir-les o modificar-les sense que ho impedeixi el responsable a qui les hagi facilitades.
+b) I a transmetre-les a un altre responsable del tractament, la qual cosa pot impedir el responsable a qui les hagi facilitades.
+c) Per suprimir-les o modificar-les, la qual cosa pot impedir el responsable al qual les hagi facilitades.
+d) I a transmetre-les a un altre responsable del tractament sense que ho impedeixi el responsable al qual les hagi facilitades.
+
+17. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, l’Agència Espanyola de Protecció de Dades té la condició de representant comú de les autoritats de protecció de dades del Regne de Espanya:
+a) Al Parlament Europeu.
+b) A la Comissió Europea.
+c) Al Comitè Europeu de Protecció de Dades.
+d) Al Consell Europeu.
+
+18. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, què implica el dret a l’educació digital?
+a) Que l’accés a Internet ha de garantir condicions d’igualtat per a les persones que tenguin necessitats especials.
+b) Que es garanteix un accés universal, assequible, de qualitat i no discriminatori per a tota la població.
+c) Que el sistema educatiu ha de garantir la plena inserció de l’alumnat en la societat digital i l’aprenentatge d’un consum responsable i un ús crític i segur dels mitjans digitals.
+d) Que els usuaris tenen dret a la seguretat de les comunicacions que transmetin i rebin mitjançant Internet.
+
+19. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, el tractament de les dades dels menors de catorze anys, fonamentat en el consentiment:
+a) No és lícit en cap cas i té especial protecció.
+b) Només és lícit si consta el del titular de la pàtria potestat o tutela.
+c) És lícit en qualsevol cas.
+d) Només és lícit si consta el del titular de la pàtria potestat o tutela i el del responsable del tractament.
+
+20. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, l’Agència Espanyola de Protecció de Dades ha de destinar el resultat positiu dels seus ingressos a:
+a) La caixa única de l’Administració de l’Estat.
+b) La dotació de les seves reserves per tal de garantir-ne la plena independència.
+c) La dotació de reserves per finançar les autoritats de control autonòmiques.
+d) El manteniment dels registres d’activitats de tractament.
+
+21. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, els actes i les disposicions que dicti la presidència de l’Agència Espanyola de Protecció de Dades:
+a) No posen fi a la via administrativa, i són recurribles mitjançant un recurs d’alçada davant el Ministeri de Justícia.
+b) No posen fi a la via administrativa, i són recurribles mitjançant un recurs d’alçada davant el Ministeri d’Afers Econòmics i Transformació Digital.
+c) Posen fi a la via administrativa, i són recurribles, directament, davant la Sala Contenciosa Administrativa de l’Audiència Nacional.
+d) Posen fi a la via administrativa, i són recurribles, directament, davant la Sala Social de l’Audiència Nacional.
+
+22. D’acord amb el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), quan el tractament de dades personals té per objecte el màrqueting directe:
+a) L’interessat té dret a oposar-se en tot moment al tractament de les dades personals que el concerneixin, inclosa l’elaboració de perfils.
+b) L’interessat té dret a oposar-se en tot moment al tractament de les dades personals que el concerneixin, excepte l’elaboració de perfils.
+c) L’autoritat de control té dret a oposar-se en tot moment al tractament de les dades personals que el concerneixin, inclosa l’elaboració de perfils.
+d) L’autoritat de control té dret a oposar-se en tot moment al tractament de les dades personals que el concerneixin, excepte l’elaboració de perfils.
+
+23. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, què implica el dret a la protecció dels menors a Internet?
+a) La utilització o difusió d’imatges o informació personal de menors a les xarxes socials i serveis de la societat de la informació equivalents que puguin implicar una intromissió il·legítima en els seus drets fonamentals determina la intervenció del Ministeri Fiscal.
+b) El sistema educatiu ha de garantir la plena inserció de l’alumnat en la societat digital i l’aprenentatge d’un consum responsable i un ús crític i segur dels mitjans digitals.
+c) S’ha de garantir un accés universal, assequible, de qualitat i no discriminatori per a tota la població, inclosos els menors.
+d) Els usuaris menors tenen dret a la seguretat de les comunicacions que transmetin i rebin a través d’Internet.
+
+24. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, l’Agència Espanyola de Protecció Dades ha d’elaborar i aprovar la relació de llocs de treball:
+a) En el marc dels criteris establerts pel Ministeri d’Hisenda.
+b) En el marc dels criteris establerts pel Ministeri de Presidència.
+c) En el marc dels criteris establerts pel Ministeri de Justícia.
+d) En el marc dels criteris establerts pel Govern.
+
+25. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, les autoritats autonòmiques de protecció de dades personals poden exercir les funcions i potestats que estableixen els articles 57 i 58 del Reglament (UE) 2016/679, d’acord amb la normativa autonòmica, quan es refereixin a (senyalau la resposta incorrecta):
+a) Tractaments dels quals siguin responsables les entitats integrants del sector públic de la comunitat autònoma corresponent o de les entitats locals incloses en el seu àmbit territorial.
+b) Tractaments duits a terme per persones físiques o jurídiques per a l’exercici de les funcions públiques en matèries que siguin competència de l’Administració autonòmica o local corresponent.
+c) Tractaments duits a terme per persones físiques o jurídiques per a fins de màrqueting directe.
+d) Tractaments que estiguin expressament prevists, si s’escau, als estatuts d’autonomia respectius.
+
+26. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, el tractament de dades personals només es pot considerar fonamentat en el compliment d’una missió duita a terme en interès públic o en l’exercici de poders públics conferits al responsable, en els termes prevists a l’article 6.1.e) del Reglament (UE) 2016/679:
+a) Quan derivi d’una competència atribuïda per una norma de dret de la Unió Europea o una norma amb rang de llei.
+b) Quan derivi d’una competència atribuïda per una norma reglamentària de desplegament d’aquesta llei.
+c) Quan derivi d’una competència atribuïda per una norma de dret de la Unió Europea.
+d) Quan derivi d’una competència atribuïda per una norma amb rang de llei.
+
+27. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, què implica el dret a l’actualització d’informacions en mitjans de comunicació digitals?
+a) Els responsables de xarxes socials i serveis equivalents han d’adoptar protocols adequats per possibilitar l’exercici del dret de rectificació davant dels usuaris que difonguin continguts que atemptin contra el dret a l’honor, la intimitat personal i familiar a Internet i el dret a comunicar o rebre lliurement informació veraç.
+b) Qualsevol persona té dret al fet que els motors de cerca a Internet eliminin de les llistes de resultats que s’obtenguin després d’una cerca efectuada a partir del seu nom els enllaços publicats que contenguin informació relativa a aquesta persona quan siguin inadequats, inexactes, no pertinents, no actualitzats o excessius.
+c) Qualsevol persona té dret a sol·licitar motivadament dels mitjans de comunicació digitals la inclusió d’un avís d’actualització prou visible al costa de les notícies que la concerneixin quan la informació continguda en la notícia original no reflecteixi la seva situació actual com a conseqüència de circumstàncies que s’hagin produït després de la publicació, i li causi un perjudici.
+d) Els usuaris tenen dret a la seguretat de les comunicacions que transmetin i rebin mitjançant Internet. Els proveïdors de serveis d’Internet han d’informar els usuaris dels seus drets.
+
+28. D’acord amb el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), quina de les condicions següents no suposa la licitud del tractament de dades personals?
+a) Que el tractament sigui necessari per a l’execució d’un contracte en què l’interessat és part o per a l’aplicació a petició d’aquest de mesures precontractuals.
+b) Que el tractament sigui necessari per complir una obligació legal aplicable al particular.
+c) Que el tractament sigui necessari per protegir interessos vitals de l’interessat o d’una altra persona física.
+d) Que l’interessat hagi donat el consentiment per al tractament de les seves dades personals per a un o diversos fins específics.
+
+29. D’acord amb el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), quan l’interessat és objecte d’una decisió basada únicament en el tractament automatitzat i la decisió es basa en el consentiment explícit de l’interessat, aquest té com a mínim el dret a:
+a) Obtenir intervenció humana per part del responsable, a expressar el seu punt de vista i a impugnar la decisió.
+b) Sense obtenir intervenció humana per part del responsable, expressar el seu punt de vista i impugnar la decisió.
+c) Obtenir intervenció humana per part del responsable, expressar el seu punt de vista però no impugnar la decisió.
+d) Sense obtenir intervenció humana per part del responsable, expressar el seu punt de vista però no impugnar la decisió.
+
+30. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, indicau quina de les respostes següents és una infracció molt greu:
+a) La resistència o l’obstrucció de l’exercici de la funció inspectora per l’autoritat de protecció de dades competent.
+b) El tractament de dades personals d’un menor d’edat sense obtenir-ne el consentiment, quan tengui capacitat per a això, o el del titular de la seva pàtria potestat o tutela, de conformitat amb l’article 8 del Reglament (UE) 2016/679.
+c) El trencament, com a conseqüència de la manca de la diligència deguda, de les mesures tècniques i organitzatives que s’hagin implantat d’acord amb el que exigeix l’article 32.1 del Reglament (UE) 2016/679.
+d) No cooperar amb les autoritats de control en l’exercici de les seves funcions en els supòsits no prevists en l’article 72 d’aquesta llei orgànica.
+
+31. D’acord amb el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), quan el tractament es basa en el consentiment de l’interessat:
+a) L’interessat té dret a retirar-ne el consentiment a partir d’un any des de la concessió.
+b) L’interessat té dret a retirar-ne el consentiment a partir dels dos anys des de la concessió.
+c) L’interessat té dret a retirar-ne el consentiment a partir dels sis mesos des de la concessió.
+d) L’interessat té dret a retirar el consentiment en qualsevol moment.
+
+32. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, què implica el dret a la intimitat i l’ús de dispositius digitals en l’àmbit laboral?
+a) En cap cas s’admet la instal·lació de sistemes d’enregistrament de sons ni de videovigilància en llocs destinats al descans o l’esbargiment dels treballadors o dels empleats públics, com ara vestuaris, lavabos, menjadors i anàlegs.
+b) Els ocupadors poden tractar les dades obtingudes a través de sistemes de geolocalització per a l’exercici de les funcions de control dels treballadors o dels empleats públics previstes, respectivament, en l’article 20.3 de l’Estatut dels treballadors i en la legislació de funció pública, sempre que aquestes funcions s’exerceixin dins el seu marc legal i amb els límits inherents a aquest.
+c) L’ocupador pot accedir als continguts derivats de l’ús de mitjans digitals facilitats als treballadors als únics efectes de controlar el compliment de les obligacions laborals o estatutàries i de garantir la integritat dels dispositius esmentats.
+d) Els treballadors i els empleats públics tenen dret a la desconnexió digital a fi de garantir, fora del temps de treball legalment o convencionalment establert, el respecte del seu temps de descans, permisos i vacances, així com de la seva intimitat personal i familiar.
+
+33. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, indicau quina de les següents és una infracció greu:
+a) La reversió deliberada d’un procediment d’anonimització per tal de permetre la reidentificació dels afectats.
+b) L’incompliment del deure de l’encarregat del tractament de notificar al responsable del tractament les violacions de seguretat de què tengui coneixement.
+c) L’impediment o l’obstaculització o la no atenció reiterada de l’exercici dels drets que estableixen els articles 15 a 22 del Reglament (UE) 2016/679.
+d) L’incompliment de l’obligació de bloqueig de les dades que estableix l’article 32 d’aquesta llei orgànica quan sigui exigible.
+
+34. D’acord amb l’article 7 del Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), en avaluar si el consentiment s’ha donat lliurement, s’ha de tenir en compte tant com sigui possible si:
+a) L’execució d’un contracte se supedita al consentiment al tractament de dades personals que no són necessàries per a l’execució del contracte esmentat.
+b) El particular interessat és més gran de 65 anys.
+c) L’execució d’un contracte es fa fora de la Unió Europea.
+d) El particular interessat és menor de 18 anys.
+
+35. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, què implica el dret a la intimitat davant l’ús de dispositius de videovigilància i d’enregistrament de sons al lloc de feina?
+a) Que els ocupadors poden tractar les imatges obtingudes a través de sistemes de càmeres o càmeres de vídeo per a l’exercici de les funcions de control dels treballadors o els empleats públics previstes, respectivament, en l’article 20.3 de l’Estatut dels Treballadors i en la legislació de funció pública, sempre que aquestes funcions s’exerceixin dins el seu marc legal i amb els límits inherents a aquest.
+b) Que es permet la instal·lació de sistemes de gravació de sons i de videovigilància en llocs destinats al descans o l’esbargiment dels treballadors o els empleats públics, com ara vestuaris, lavabos, menjadors i anàlegs.
+c) Que els ocupadors no estan obligats a informar els treballadors o els empleats públics i, si escau, els seus representants, sobre la mesura de tractar les imatges obtingudes a través de sistemes de càmeres o càmeres de vídeo per a l’exercici de les funcions de control dels treballadors o els empleats públics.
+d) Que s’ha de preservar el dret a la desconnexió digital en els supòsits de realització total o parcial del treball a distància així com al domicili de l’empleat vinculat a l’ús amb finalitats laborals d’eines tecnològiques.
+
+36. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, els responsables i encarregats, tenint en compte els elements enumerats en els articles 24 i 25 del Reglament (UE) 2016 /679, han de determinar les mesures tècniques i organitzatives apropiades que han d’aplicar per tal de garantir i acreditar que el tractament és conforme, entre d’altres:
+a) A aquesta llei orgànica i les seves normes de desenvolupament.
+b) A l’estat de la tècnica.
+c) Al contracte que reguli les obligacions de tots dos.
+d) A la legislació local.
+
+37. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, indicau quina de les següents és una infracció lleu:
+a) El tractament de dades personals sense dur a terme una valoració prèvia dels elements esmentats en l’article 28 d’aquesta llei orgànica.
+b) No disposar del registre d’activitats de tractament que estableix l’article 30 del Reglament (UE) 2016/679.
+c) La manca d’atenció per part del representant a la Unió del responsable o de l’encarregat del tractament de les sol·licituds que efectuïn l’autoritat de protecció de dades o els afectats.
+d) L’incompliment de l’obligació de notificació relativa a la rectificació o la supressió de dades personals o la limitació del tractament exigida per l’article 19 del Reglament (UE) 2016/679.
+
+38. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, què implica el dret a la intimitat davant l’ús de dispositius de videovigilància i d’enregistrament de sons al lloc de feina?
+a) Que els treballadors i els empleats públics tenen dret a la protecció de la seva intimitat en l’ús dels dispositius digitals posats a la seva disposició pel seu ocupador.
+b) Que es permet la instal·lació de sistemes d’enregistrament de sons i de videovigilància en llocs destinats al descans o l’esbargiment dels treballadors o els empleats públics, com ara vestuaris, lavabos, menjadors i anàlegs.
+c) Que els ocupadors poden tractar les dades obtingudes a través de sistemes de geolocalització per a l’exercici de les funcions de control dels treballadors o dels empleats públics.
+d) Que els ocupadors poden tractar les imatges obtingudes a través de sistemes de càmeres o càmeres de vídeo per a l’exercici de les funcions de control dels treballadors o els empleats públics previstes, respectivament, en l’article 20.3 de l’Estatut dels treballadors i en la legislació de funció pública, sempre que aquestes funcions s’exerceixin dins el seu marc legal i amb els límits inherents a aquest.
+
+39. D’acord amb el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), el tractament de les dades personals d’un menor de 16 anys només es considera lícit:
+a) Si el consent el menor major de 14 anys.
+b) Si el consentiment el dona o l’autoritza el titular de la pàtria potestat o tutela del menor.
+c) Si el consent el menor major de 12 anys.
+d) No es pot fer tractament de dades personals de menors de 16 anys.
+
+40. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, interromp la prescripció de la infracció:
+a) La iniciació, fins i tot sense el coneixement de l’interessat, del procediment sancionador.
+b) La iniciació, amb coneixement de l’interessat, del procediment sancionador.
+c) La iniciació, amb coneixement de l’interessat, del procediment de cobrament executiu de la sanció.
+d) La iniciació, fins i tot sense el coneixement de l’interessat, del procediment de cobrament executiu de la sanció.
+
+41. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, una vegada interrompuda la prescripció de la infracció per la iniciació, amb coneixement de l’interessat, del procediment sancionador, s’ha de reiniciar el termini de prescripció:
+a) Si l’expedient sancionador està paralitzat durant més de nou mesos per causes no imputables al presumpte infractor.
+b) Si l’expedient sancionador està paralitzat durant més de tres mesos per causes no imputables al presumpte infractor.
+c) Si l’expedient sancionador està paralitzat durant més de sis mesos per causes no imputables al presumpte infractor.
+d) Si l’expedient sancionador està paralitzat durant més de nou mesos, sempre que ho sol·liciti l’interessat.
+
+42. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, indicau la resposta incorrecta en relació amb el dret digital de protecció de dades dels menors a Internet:
+a) Els centres educatius han de garantir la protecció de l’interès superior del menor i els drets fonamentals.
+b) La publicació o difusió de dades personals del menor a través de serveis de la societat de la informació ha de comptar amb el consentiment del Ministeri Fiscal.
+c) Qualssevol persones físiques o jurídiques que desenvolupin activitats en què participin menors d’edat han de garantir la protecció de l’interès superior del menor i els drets fonamentals.
+d) Qualssevol persones físiques o jurídiques que desenvolupin activitats en què participin menors d’edat han de garantir especialment el dret a la protecció de dades personals en la publicació o difusió de les dades personals a través de serveis de la societat de la informació.
+
+43. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, per a l’adopció de les mesures tècniques i organitzatives apropiades que han d’aplicar els responsables i encarregats del tractament s’han de tenir en compte, en particular, els riscs superiors que es poden produir (senyalau la resposta incorrecta):
+a) Quan el tractament impliqui una avaluació d’aspectes personals dels afectats per tal de crear o utilitzar perfils personals d’aquests.
+b) Quan es produeixi un tractament massiu que impliqui un gran nombre d’afectats.
+c) Quan les dades personals hagin estat objecte de transferència, amb caràcter habitual, als estats de la Unió respecte dels quals no s’hagi declarat un nivell adequat de protecció.
+d) Quan el tractament pugui generar situacions de discriminació.
+
+44. Quan les dades personals siguin obtingudes de l’afectat, el responsable del tractament pot donar compliment al deure d’informació que estableix l’article 13 del Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades):
+a) Facilitant a l’afectat la informació bàsica del tractament d’aquestes dades.
+b) Indicant a l’afectat una adreça electrònica o un altre mitjà que permeti accedir de manera senzilla i immediata a la informació bàsica.
+c) Indicant a l’afectat un correu postal que permeti accedir de manera immediata a la informació bàsica.
+d) Facilitant a l’afectat una adreça electrònica que permeti accedir en el futur a la informació bàsica.
+
+45. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, indicau quina de les següents és una infracció lleu:
+a) No cooperar amb les autoritats de control en l’exercici de les seves funcions en els supòsits no prevists en l’article 72 d’aquesta llei orgànica.
+b) No disposar del registre d’activitats de tractament que estableix l’article 30 del Reglament (UE) 2016/679.
+c) No possibilitar la participació efectiva del delegat de protecció de dades en totes les qüestions relatives a la protecció de dades personals, no donar-li suport o interferir en l’exercici de les seves funcions.
+d) Incomplir l’obligació de suprimir les dades referides a una persona morta quan això sigui exigible d’acord amb l’article 3 d’aquesta llei orgànica.
+
+46. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, quan les dades personals s’obtenguin de l’afectat, el responsable del tractament ha de facilitar a l’afectat la informació bàsica del tractament de aquestes dades, que ha de contenir:
+a) La identitat del responsable del tractament i del seu representant, si escau.
+b) La possibilitat d’exercir els principis de protecció de dades que estableixen els articles del 15 al 22 del Reglament (UE) 2016/679.
+c) Els resultats del tractament.
+d) Els mitjans de consentiment del tractament.
+
+47. Indicau quina de les respostes següents no està inclosa entre les exigències que estableix la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, per garantir el dret a l’oblit en cerques d’Internet:
+a) L’exercici del dret a l’oblit en cerques d’Internet impedeix l’accés a la informació publicada al lloc web mitjançant la utilització d’altres criteris de cerca diferents del nom de qui exerceixi el dret.
+b) El dret a l’oblit en cerques d’Internet substitueix encara que sigui lícita la conservació de la informació publicada al lloc web al qual es dirigeixi l’enllaç i aquest no procedeixi a esborrar-lo prèviament o simultàniament.
+c) Qualsevol persona té dret que els motors de cerca a Internet eliminin de les llistes de resultats que s’obtenguin després d’una cerca efectuada a partir del seu nom quan les circumstàncies personals que invoqui l’afectat evidenciïn la prevalença dels seus drets sobre el manteniment dels enllaços pel servei de cerca a Internet.
+d) Qualsevol persona té dret que els motors de cerca a Internet eliminin de les llistes de resultats que s’obtenguin després d’una cerca efectuada a partir del seu nom els enllaços publicats que contenguin informació relativa a aquesta persona quan siguin no pertinents, entre altres motius.
+
+48. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, el registre d’activitats ha d’especificar, segons les seves finalitats:
+a) Els perfils duits a terme i les altres circumstàncies que estableix el Reglament esmentat.
+b) Les dades personals tractades i les altres circumstàncies que estableix el Reglament esmentat.
+c) Les persones les dades personals de les quals han estat tractades i les altres circumstàncies que estableix el Reglament esmentat.
+d) Les activitats de tractament duites a terme i les altres circumstàncies que estableix el Reglament esmentat.
+
+49. D’acord amb el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), cada autoritat de control ha de garantir que la imposició de les multes administratives d’acord amb aquest Reglament siguin en cada cas individual:
+a) Eficients, justes i dissuasives.
+b) Justes, dissuasives i correctives.
+c) Efectives, proporcionades i dissuasives.
+d) Eficients, proporcionades i correctives.
+
+50. Quan el responsable o l’encarregat d’un tractament sigui l’administració d’una comunitat autònoma i cometi alguna de les infraccions a què fa referència la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, i la infracció sigui imputable a autoritats o directius i s’acrediti l’existència d’informes tècnics o recomanacions per al tractament que no s’hagin atès degudament:
+a) En la resolució en què s’imposi la sanció s’ha d’incloure una amonestació amb la denominació del càrrec responsable i se n’ha d’ordenar la publicació en el butlletí oficial autonòmic que correspongui.
+b) En la resolució en què s’imposi la sanció s’ha d’incloure la disposició del cessament del càrrec responsable i se n’ha d’ordenar la publicació en el butlletí oficial autonòmic que correspongui.
+c) En la resolució s’ha d’imposar la sanció directament al càrrec responsable i se n’ha d’ordenar la publicació en el butlletí oficial autonòmic que correspongui.
+d) En la resolució en què s’imposi la sanció s’ha d’incloure la disposició del cessament del càrrec responsable, però no s’ha de publicar per no vulnerar la mateixa llei orgànica de protecció de dades personals.
+
+51. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, indicau la resposta incorrecta en relació amb les disposicions generals sobre l’exercici dels drets de les persones pel que fa al tractament de dades personals.
+a) Els mitjans han de ser fàcilment accessibles per a l’afectat.
+b) L’encarregat del tractament ha de facilitar un correu electrònic de contacte.
+c) El responsable del tractament està obligat a informar l’afectat sobre els mitjans a la seva disposició per exercir els drets que li corresponen.
+d) L’exercici del dret no pot ser denegat pel sol motiu d’optar l’afectat per un altre mitjà.
+
+52. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, indicau la resposta correcta en relació amb la prescripció de les sancions imposades en aplicació del Reglament (UE) 2016/679 i d’aquesta llei orgànica:
+a) Les sancions per un import comprès entre 40.001 i 300.000 euros prescriuen al cap de tres anys.
+b) Les sancions imposades per infraccions greus prescriuen en el termini de 2 anys.
+c) Les sancions per un import comprès entre 40.001 i 300.000 euros prescriuen a cap de dos anys.
+d) Les sancions imposades per infraccions greus prescriuen en el termini de tres anys.
+
+53. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, els responsables i encarregats del tractament de dades així com totes les persones que intervenguin en qualsevol fase d’aquest tractament estan subjectes:
+a) Al deure de custòdia.
+b) Al deure de confiança.
+c) Al deure de confidencialitat.
+d) Al deure de sigil.
+
+54. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, el responsable del tractament està obligat a bloquejar les dades:
+a) Quan dugui a terme actuacions de manteniment.
+b) Quan contracti un altre encarregat.
+c) Quan contracti un altre delegat de protecció de dades.
+d) Quan en dugui a terme la rectificació o la supressió.
+
+55. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, el tractament de dades personals relatives a condemnes i infraccions penals només es pot dur a terme quan es trobi emparat:
+a) En una norma de dret de la Unió o en aquesta llei orgànica.
+b) En aquesta llei orgànica o en altres normes de rang legal.
+c) En aquesta llei orgànica.
+d) En una norma de dret de la Unió, en aquesta llei orgànica o en altres normes de rang legal.
+
+56. El dret a la transparència de la informació regulat en el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), estableix les formes en què pot ser facilitada la informació (indicau la incorrecta):
+a) Per escrit.
+b) Per mitjans electrònics.
+c) Verbalment, si l’interessat ho ha sol·licitat i s’identifica per un altre mitjà.
+d) Verbalment, si és el mitjà elegit per l’encarregat del tractament.
+
+57. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, en relació amb el dret al testament digital (indicau la resposta correcta).
+a) Les persones legitimades a l’accés a continguts gestionats per prestadors de serveis de la societat de la informació sobre persones difuntes poden decidir en qualsevol cas sobre el manteniment o l’eliminació dels perfils personals d'aquestes persones difuntes en xarxes socials o serveis equivalents.
+b) La persona morta no pot prohibir l’accés, per part de persones vinculades al mort o hereus, a continguts gestionats per prestadors de serveis de la societat de la informació.
+c) En cas de persones mortes menors d’edat, les facultats d’accés a continguts gestionats per prestadors de serveis de la societat de la informació també les pot exercir el Ministeri Fiscal, que sempre ha d’actuar d’ofici.
+d) Les persones legitimades a l’accés a continguts gestionats per prestadors de serveis de la societat de la informació sobre persones mortes poden decidir sobre el manteniment o l’eliminació dels perfils personals de persones difuntes en xarxes socials o serveis equivalents, tret que el difunt hagi decidit sobre aquesta circumstància, cas en què cal atenir-se a les seves instruccions.
+
+58. D’acord amb el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), el tractament de les dades personals d’un menor:
+a) Es considera lícit quan tengui com a mínim 14 anys. Els estats membres poden establir per llei una edat inferior a aquests fins, sempre que aquesta no sigui inferior a 12 anys.
+b) Es considera lícit quan tengui com a mínim 16 anys. Els estats membres poden establir per llei una edat inferior a aquests fins, sempre que aquesta no sigui inferior a 12 anys.
+c) Es considera lícit quan tengui com a mínim 14 anys. Els estats membres poden establir per llei una edat inferior a aquests fins, sempre que aquesta no sigui inferior a 13 anys.
+d) Es considera lícit quan tengui com a mínim 16 anys. Els estats membres poden establir per llei una edat inferior a aquests fins, sempre que aquesta no sigui inferior a 13 anys.
+
+59. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, en decidir la imposició d’una multa administrativa i la quantia s’ha de tenir en compte (indicau la resposta incorrecta):
+a) L’existència d’un procés de fusió per absorció posterior a la comissió de la infracció, que no es pot imputar a l’entitat absorbent.
+b) L’afectació als drets de les persones vulnerables i d’edat avançada.
+c) La disposició, quan no sigui obligatori, d’un delegat de protecció de dades.
+d) La possibilitat que la conducta de l’afectat hagi pogut induir la comissió de la infracció.
+
+60. D’acord amb el dret a la transparència de la informació regulat en el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), si el responsable del tractament no tramita la sol·licitud de l’interessat:
+a) L’ha d’informar sense dilació, i com a molt transcorreguts 15 dies de la recepció de la sol·licitud, de les raons per les quals no ha actuat i de la possibilitat de presentar una altra sol·licitud.
+b) L’ha d’informar sense dilació, i com a molt transcorreguts 15 dies de la recepció de la sol·licitud, de les raons per les quals no ha actuat i de la possibilitat de presentar una reclamació davant una autoritat de control i d’exercir accions judicials.
+c) L’ha d’informar sense dilació, i com a molt transcorregut un mes de la recepció de la sol·licitud, de les raons per les quals no ha actuat i de la possibilitat de presentar una altra sol·licitud.
+d) L’ha d’informar sense dilació, i com a molt transcorregut un mes de la recepció de la sol·licitud, de les raons per les quals no ha actuat i de la possibilitat de presentar una reclamació davant una autoritat de control i d’exercir accions judicials.
+
+61. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, la presidència i l’adjunt de l’Agència Espanyola de Protecció de Dades han de ser nomenats pel Consell de Ministres mitjançant:
+a) Un reial decret.
+b) Una llei ordinària
+c) Una ordre ministerial.
+d) Un acord.
+
+62. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, l’accés per part d’un encarregat de tractament a les dades personals que siguin necessàries per a la prestació d’un servei al responsable:
+a) No es considera una comunicació de dades en cap cas.
+b) No es considera una comunicació de dades sempre que es compleixi el que estableix el Reglament (UE) 2016/679, aquesta llei orgànica i les seves normes de desplegament.
+c) Es considera una comunicació de dades en qualsevol cas.
+d) Es considera una comunicació de dades sempre que es compleixi el que estableix el Reglament (UE) 2016/679, aquesta llei orgànica i les seves normes de desplegament.
+
+63. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, la presidència de l’Agència Espanyola de Protecció de Dades ha d’estar assessorada per un Consell Consultiu compost pels membres següents (senyalau la resposta incorrecta):
+a) Un expert proposat per la Federació Espanyola de Municipis i Províncies.
+b) Dos experts proposats per les organitzacions empresarials.
+c) Dos experts proposats pel Consell de Consumidors i Usuaris.
+d) Un diputat, proposat pel Congrés dels Diputats
+
+64. D’acord amb el dret a la transparència de la informació regulat en el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), quan el responsable del tractament tengui dubtes raonables sobre la identitat de la persona física que presenta la sol·licitud d’accés a les dades personals:
+a) Pot cobrar per facilitar aquesta informació.
+b) Pot respondre aquesta sol·licitud en un termini més ampli.
+c) S’ha de comunicar amb l’afectat perquè hi consenti.
+d) Pot sol·licitar que es faciliti la informació addicional necessària per confirmar la identitat de l’interessat.
+
+65. D’acord amb el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), si un responsable o un encarregat del tractament incompleix de forma intencionada o negligent, per a les mateixes operacions de tractament o operacions vinculades, diverses disposicions d’aquest Reglament, la quantia total de la multa administrativa:
+a) No ha de ser superior a la quantia prevista per a les infraccions més greus.
+b) No ha de ser superior al doble de la quantia prevista per a totes les infraccions.
+c) Ha de ser la suma de les quanties previstes per a totes les infraccions.
+d) No ha de ser superior al triple de la quantia prevista per a totes les infraccions.
+
+66. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, el dret d’accés s’entén atorgat si el responsable del tractament facilita a l’afectat un sistema d’accés remot, directe i segur a les dades personals:
+a) Que garanteixi, temporalment per un mínim de 6 mesos, l’accés a la seva totalitat.
+b) Que garanteixi, de manera permanent, l’accés a la seva totalitat.
+c) Que garanteixi, de manera temporal pel termini sol·licitat amb un mínim de 6 mesos, l’accés a la seva totalitat.
+d) Que garanteixi, de manera temporal, l’accés parcial a la informació.
+
+67. D’acord amb el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), en decidir la imposició d’una multa administrativa i la quantia en cada cas individual s’ha de tenir degudament en compte (indicau la resposta incorrecta):
+a) Qualsevol mesura presa pel responsable o l’encarregat del tractament per pal·liar els danys i els perjudicis patits pels interessats.
+b) La intencionalitat o negligència en la infracció.
+c) Qualsevol infracció anterior comesa pel responsable o l’encarregat del tractament.
+d) El grau de responsabilitat del delegat de protecció de dades del tractament.
+
+68. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, el responsable del tractament ha de determinar si, quan finalitzi la prestació dels serveis de l’encarregat, les dades personals han de ser (indicau la resposta incorrecta):
+a) Destruïdes.
+b) Tornades al responsable.
+c) Lliurades a un nou encarregat.
+d) Tornades als interessats.
+
+69. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, als efectes que estableix l’article 12.5 del Reglament (UE) 2016/679 es pot considerar repetitiu l’exercici del dret d’accés:
+a) Quan el dret d’accés sigui exercit més d’una vegada durant el termini de tres mesos, tret que hi hagi una causa legítima.
+b) Quan el dret d’accés sigui exercit més d’una vegada durant el termini de quatre mesos, tret que hi hagi una causa legítima.
+c) Quan el dret d’accés sigui exercit més d’una vegada durant el termini de sis mesos, tret que hi hagi causa legítima.
+d) Quan el dret d’accés sigui exercit més d’una vegada durant el termini d’un any, tret que hi hagi una causa legítima.
+
+70. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, en relació amb les polítiques d’impuls dels drets digitals:
+a) El Govern, mitjançant un decret del Consell de Govern, ha d’elaborar un pla d’accés a Internet.
+b) El Govern, en col·laboració amb les comunitats autònomes, ha d’elaborar un pla d’accés a Internet.
+c) El Consell Consultiu de l’Agència Espanyola de Protecció de Dades ha d’elaborar un pla d’accés a Internet.
+d) L’Agència Espanyola de Protecció de Dades, en col·laboració amb les autoritats autonòmiques de protecció de dades, ha d’elaborar un pla d’accés a Internet.
+
+71. D’acord amb el Reglament (UE) 2016/679 del Parlament Europeu i del Consell, de 27 de abril de 2016 (Reglament general de protecció de dades), en decidir la imposició d’una multa administrativa i la quantia en cada cas individual s’ha de tenir degudament en compte (indicau la resposta incorrecta):
+a) La intencionalitat o la negligència en la infracció.
+b) Qualsevol mesura presa pel responsable o encarregat del tractament per pal·liar els danys i perjudicis patits pels interessats.
+c) Qualsevol mesura presa pel delegat de protecció de dades per pal·liar els danys i perjudicis patits pels interessats.
+d) L’adhesió a codis de conducta en virtut de l’article 40 o a mecanismes de certificació aprovats d’acord amb l’article 42.
+
+72. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, quan finalitzi la prestació dels serveis de l’encarregat, no escau la destrucció de les dades:
+a) Quan hi hagi una previsió legal que obligui a conservar-les.
+b) Quan la situació de la tecnologia no ho permeti.
+c) Quan hi ha una previsió que l’encarregat reutilitzi aquestes dades.
+d) Quan hi ha una previsió que el responsable de la protecció de les dades les reutilitzi.
+
+73. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, l’activitat d’investigació de l’Agència Espanyola de Protecció de Dades l’han de dur a terme:
+a) Els funcionaris de l’Agència Espanyola de Protecció de Dades o funcionaris aliens a aquesta habilitats expressament per la presidència.
+b) Exclusivament els funcionaris de l’Agència Espanyola de Protecció de Dades.
+c) Els funcionaris de l’Agència Espanyola de Protecció de Dades o funcionaris aliens a aquesta habilitats expressament pel Ministeri de Justícia.
+d) Exclusivament els funcionaris aliens habilitats expressament per la presidència.
+
+74. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, estan obligats a proporcionar a l’Agència Espanyola de Protecció de Dades les dades, els informes, els antecedents i els justificants necessaris per dur a terme la seva activitat d‘investigació:
+a) Les administracions públiques, excloses les tributàries i de la Seguretat Social, i els particulars.
+b) Les administracions públiques, incloses les tributàries i de la Seguretat Social, i els particulars.
+c) Només els particulars.
+d) Només les administracions públiques, incloses les tributàries i de la Seguretat Social.
+
+75. D’acord amb la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, quan l’afectat triï un mitjà diferent del que se li ofereix que suposi un cost desproporcionat per exercir el dret d’accés:
+a) La sol·licitud s’ha de considerar considerada excessiva, per la qual cosa aquest afectat ha d’assumir l’excés de costos que la seva tria comporti.
+b) La sol·licitud ha de ser considerada excessiva, per la qual cosa aquest afectat ha d’assumir el 50 % de l’excés de costos que la seva tria comporti.
+c) La sol·licitud ha de ser considerada excessiva, per la qual cosa el responsable del tractament ha d’informar-lo dels mitjans disponibles per exercir el seu dret.
+d) La sol·licitud ha de ser considerada excessiva, per la qual cosa el responsable del tractament està facultat a no respondre-la.
+
