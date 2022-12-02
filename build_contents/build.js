@@ -83,14 +83,14 @@ async function fillQuestions(chapter) {
 
 async function fillAnswers(chapter) {
   const file_in = path.join(BASE, `respuestas-${chapter.num}.txt`);
-  const regex = /^([0-9]+)=([a-z]+)$/;
+  const regex = /^([0-9]+)-([A-Za-z\?]+)$/;
   const map = new Map();
   if (fs.existsSync(file_in)) {
     const rl = readline.createInterface({input: fs.createReadStream(file_in)});
     rl.on('line', line => {
       const m = line.match(regex);
       if (!m) throw new Error(`Unexpected answer line: [${line}]`);
-      map.set(Number(m[1]), m[2]);
+      map.set(Number(m[1]), m[2].toLowerCase());
     });
     await events.once(rl, 'close');  
   }
