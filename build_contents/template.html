@@ -31,43 +31,46 @@
       margin-top: 1em;
       padding: .5em 1em .5em 1em;
     }
-    #exam_right {
+    section.exam_stats span {
       font-weight: bold;
+      margin-right: 1em;
+    }
+    section.exam_stats span#exam_score {
+      margin-right: 0;
+    }
+    #exam_right {
       color: green;
     }
     #exam_wrong {
-      font-weight: bold;
       color: red;
     }
-    #exam_skip {
-      font-weight: bold;
+    #exam_pending {
       color: darkorange;
     }
-    .exam_count {
-      color: #666;
-      font-style: italic;
-      font-size: 0.8em;
-    }
-    #exam_question {
+    #exam_questions {
       font-size: 1.2em;
-      margin-left: 2em;
     }
-    #exam_options {
-      margin-left: 2em;
+    #exam_questions li {
       margin-bottom: 1em;
     }
-    #exam_options button {
+    #exam_questions button {
       width: 100%;
-      margin: 0 0 .5em 0;
+      margin: .5em 0 0 0;
       border: 1px solid #000;
       padding: .5em;
       text-align: left;
       font-size: 1em;
       background-color: #F9F9F9;
     }
-    #exam_options button:hover {
+    #exam_questions button:hover {
       background-color: #F0F0F0;
       cursor: pointer;
+    }
+    #exam_questions button.right {
+      background-color: lightgreen;
+    }
+    #exam_questions  button.wrong {
+      background-color: lightpink;
     }
   </style>
 </html>
@@ -82,30 +85,37 @@
     <p>Elige qué temas incluir:</p>
     <ul id="config_chapters">
         <!-- to fill -->
+        <li class="chapter"><input type="checkbox" name="config_chapter" value="1" checked="checked" /><strong>Tema 1.</strong> Título del capítulo. <i>(N preguntas)</i>.</li>
     </ul>
     <button onclick="startExam();">Empezar</button>
   </section>
   
   <section class="page exam">
-    <button onclick="gotoPage('config');">Volver</button>
+    <button onclick="gotoPage('config');">Nuevo examen</button>
     <section class="exam_stats">
       <p>
         Aciertos: <span id="exam_right">-</span>
         Fallos: <span id="exam_wrong">-</span>
-        No contestadas: <span id="exam_skip">-</span>
+        No contestadas: <span id="exam_pending">-</span>
+        Resultado: <span id="exam_score">-</span><span>/60</span>
       </p>
     </section>
-    <p class="exam_count">Pregunta <span id="exam_current">-</span> de <span id="exam_count">-</span></p>
-    <p id="exam_question"></p>
-    <section id="exam_options">
-      <!-- to fill -->
+    <section>
+      <ol id="exam_questions">
+        <!-- to fill -->
+        <li title="Tema y numero de pregunta">Enunciado de la pregunta
+          <button id="q-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>
+          <button id="q-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>
+          <button id="q-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>
+          <button id="q-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>    
+        </li>  
+      </ol>
     </section>
-    <button onclick="gotoPage('config');">Volver</button>
+    <button onclick="gotoPage('config');">Nuevo examen</button>
   </section>
 
   <section class="page results">
     <button onclick="startExam();">Nuevo examen</button>
-    <button onclick="gotoPage('config');">Cambiar configuración</button>
   </section>
 </div>
 
@@ -114,11 +124,15 @@ const DATA = ##DATA##;
 
 let exam_state = {
   questions: null,
-  current: -1,
   right: 0,
   wrong: 0,
-  skip: 0
+  pending: 0,
+  score: 0
 };
+
+DATA.forEach(chapter => {
+  chapter.questions.forEach(question => question.c = chapter.num);
+});
 
 renderConfig();
 
@@ -144,42 +158,67 @@ function startExam() {
     return;
   }
   resetExam(shuffleArray(questions).slice(0, howMany));
-  updateExamPage();
+  renderExamPage();
 
   gotoPage("exam");
 }
 
 function resetExam(questions) {
   exam_state.questions = questions;
+  exam_state.answers = new Array(questions.length).fill(null);
   exam_state.current = 0;
-  exam_state.right = exam_state.wrong = exam_state.skip = 0;
+  exam_state.right = exam_state.wrong = exam_state.score = 0;
+  exam_state.pending = exam_state.questions.length;
 }
 
-const exam_current = document.getElementById("exam_current");
-const exam_count = document.getElementById("exam_count");
 const exam_right = document.getElementById("exam_right");
 const exam_wrong = document.getElementById("exam_wrong");
-const exam_skip  = document.getElementById("exam_skip");
+const exam_pending  = document.getElementById("exam_pending");
 const exam_question  = document.getElementById("exam_question");
-const exam_options = document.getElementById("exam_options");
-function updateExamPage() {
-  exam_current.innerHTML = exam_state.current+1;
-  exam_count.innerHTML = exam_state.questions.length;
-  exam_right.innerHTML = exam_state.right;
-  exam_wrong.innerHTML = exam_state.wrong;
-  exam_skip.innerHTML = exam_state.skip;
+const exam_score  = document.getElementById("exam_score");
+const exam_questions  = document.getElementById("exam_questions");
+function renderExamPage() {
+  updateExamStats();
 
-  const curr = exam_state.questions[exam_state.current]; 
-  exam_question.innerHTML = curr.q;
-  let opts = "";
-  for (const opt of Object.keys(curr.o)) {
-    opts += `<button onclick="answerQuestion('${opt}');">${opt}) ${curr.o[opt]}</button>`;
-  }
-  exam_options.innerHTML = opts;
+  let s = "";
+  exam_state.questions.forEach((q,i) => {
+    s += `<li title="Tema ${q.c} Pregunta ${q.n}">${q.q}`;
+    Object.keys(q.o).forEach(a => {
+      s += `<button id="answer-${i}-${a}" onclick="answerQuestion(${i}, '${a}');">${a}) ${q.o[a]}</button>`;
+    });
+    s += `</li>`;
+  });
+  exam_questions.innerHTML = s;
 }
 
-function answerQuestion(answer) {
-  alert(answer);
+function updateExamStats() {
+  exam_right.innerHTML = exam_state.right;
+  exam_wrong.innerHTML = exam_state.wrong;
+  exam_pending.innerHTML = exam_state.pending;
+  exam_score.innerHTML = exam_state.score;
+}
+
+function answerQuestion(question, answer) {
+  if (exam_state.answers[question] != null) return; // already answered
+  exam_state.answers[question] = answer;
+  const q = exam_state.questions[question];
+  if (q.a === answer) {
+    // right!
+    exam_state.right++;
+    document.getElementById(`answer-${question}-${answer}`).className = "right";
+  } else {
+    // wrong!
+    exam_state.wrong++;
+    document.getElementById(`answer-${question}-${answer}`).className = "wrong";
+    document.getElementById(`answer-${question}-${q.a}`).className = "right";
+  }
+  exam_state.pending--;
+  updateScore();
+  updateExamStats();
+}
+
+function updateScore() {
+  exam_state.score = Math.floor((exam_state.right/exam_state.questions.length) *6000) / 100;
 }
 
 const pages = document.querySelectorAll('section.page');
