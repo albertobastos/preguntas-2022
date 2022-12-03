@@ -35,9 +35,6 @@
       font-weight: bold;
       margin-right: 1em;
     }
-    section.exam_stats span#exam_score {
-      margin-right: 0;
-    }
     #exam_right {
       color: green;
     }
@@ -97,7 +94,7 @@
         Aciertos: <span id="exam_right">-</span>
         Fallos: <span id="exam_wrong">-</span>
         No contestadas: <span id="exam_pending">-</span>
-        Resultado: <span id="exam_score">-</span><span>/60</span>
+        Resultado: <span id="exam_score">-</span>
       </p>
     </section>
     <section>
@@ -195,7 +192,7 @@ function updateExamStats() {
   exam_right.innerHTML = exam_state.right;
   exam_wrong.innerHTML = exam_state.wrong;
   exam_pending.innerHTML = exam_state.pending;
-  exam_score.innerHTML = exam_state.score;
+  exam_score.innerHTML = formatScore(exam_state.score);
 }
 
 function answerQuestion(question, answer) {
@@ -219,6 +216,11 @@ function answerQuestion(question, answer) {
 
 function updateScore() {
   exam_state.score = Math.floor((exam_state.right/exam_state.questions.length) *6000) / 100;
+}
+
+function formatScore(score) {
+  const score10 = Math.floor(((score * 10) / 60) * 100) / 100;
+  return `${score}/60 - ${score10}/10`;
 }
 
 const pages = document.querySelectorAll('section.page');
