@@ -29,19 +29,20 @@
     section.exam_stats {
       background-color: #eee;
       margin-top: 1em;
+      margin-bottom: .5em;
       padding: .5em 1em .5em 1em;
     }
     section.exam_stats span {
       font-weight: bold;
       margin-right: 1em;
     }
-    #exam_right {
+    .exam_right {
       color: green;
     }
-    #exam_wrong {
+    .exam_wrong {
       color: red;
     }
-    #exam_pending {
+    .exam_pending {
       color: darkorange;
     }
     #exam_questions {
@@ -90,11 +91,12 @@
   <section class="page exam">
     <button onclick="gotoPage('config');">Nuevo examen</button>
     <section class="exam_stats">
+      <!-- to fill -->
       <p>
-        Aciertos: <span id="exam_right">-</span>
-        Fallos: <span id="exam_wrong">-</span>
-        No contestadas: <span id="exam_pending">-</span>
-        Resultado: <span id="exam_score">-</span>
+        Aciertos: <span class="exam_right">-</span>
+        Fallos: <span class="exam_wrong">-</span>
+        No contestadas: <span class="exam_pending">-</span>
+        Resultado: <span class="exam_score">-</span>
       </p>
     </section>
     <section>
@@ -107,6 +109,8 @@
           <button id="q-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>    
         </li>  
       </ol>
+    </section>
+    <section class="exam_stats">
     </section>
     <button onclick="gotoPage('config');">Nuevo examen</button>
   </section>
@@ -168,11 +172,7 @@ function resetExam(questions) {
   exam_state.pending = exam_state.questions.length;
 }
 
-const exam_right = document.getElementById("exam_right");
-const exam_wrong = document.getElementById("exam_wrong");
-const exam_pending  = document.getElementById("exam_pending");
-const exam_question  = document.getElementById("exam_question");
-const exam_score  = document.getElementById("exam_score");
+const exam_stats = document.querySelectorAll(".exam_stats");
 const exam_questions  = document.getElementById("exam_questions");
 function renderExamPage() {
   updateExamStats();
@@ -189,10 +189,16 @@ function renderExamPage() {
 }
 
 function updateExamStats() {
-  exam_right.innerHTML = exam_state.right;
-  exam_wrong.innerHTML = exam_state.wrong;
-  exam_pending.innerHTML = exam_state.pending;
-  exam_score.innerHTML = formatScore(exam_state.score);
+  let s = `
+<p>
+  Aciertos: <span class="exam_right">${exam_state.right}</span>
+  Fallos: <span class="exam_wrong">${exam_state.wrong}</span>
+  No contestadas: <span class="exam_pending">${exam_state.pending}</span>
+  Resultado: <span class="exam_score">${formatScore(exam_state.score)}</span>
+</p>
+`;
+  for (const section of exam_stats)
+    section.innerHTML = s;
 }
 
 function answerQuestion(question, answer) {
@@ -236,4 +242,6 @@ function shuffleArray(array) {
   }
   return array;
 }
+
+startExam();
 </script>
