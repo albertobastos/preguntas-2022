@@ -8,6 +8,10 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       margin: 1em;
+      font-size: 1.2em;
+    }
+    li.chapter {
+      list-style-type: none;
     }
     div.outer {
       margin-left: auto;
@@ -22,6 +26,12 @@
     }
     li.chapter {
       margin-bottom: .5em;
+      text-align: justify;
+    }
+    li.chapter input {
+      margin-right: 2em;
+      width: 1.2em;
+      height: 1.2em;
     }
     li.chapter i {
       color: #666;
@@ -53,9 +63,6 @@
     }
     .exam_pending {
       color: darkorange;
-    }
-    #exam_questions {
-      font-size: 1.2em;
     }
     #exam_questions li {
       margin-bottom: 1em;
@@ -100,6 +107,7 @@
 
   <section class="page config">
     <button onclick="startExam();">Empezar</button>
+    <button onclick="allChapters();">Seleccionar todos</button>
     <p>¿Cuántas preguntas quieres?</p>
     <input id="config_questions" value="100" />
     <p>Elige qué temas incluir:</p>
@@ -108,6 +116,7 @@
         <li class="chapter"><input type="checkbox" name="config_chapter" value="1" checked="checked" /><strong>Tema 1.</strong> Título del capítulo. <i>(N preguntas)</i>.</li>
     </ul>
     <button onclick="startExam();">Empezar</button>
+    <button onclick="allChapters();">Seleccionar todos</button>
   </section>
   
   <section class="page exam">
@@ -175,6 +184,11 @@ function onlyChapter(num) {
 
   const ch = DATA.find(c => c.num === num);
   config_questions.value = ch.questions.length;
+}
+
+function allChapters() {
+  document.getElementsByName("config_chapter").forEach(c => c.checked = true);
+  config_questions.value = 100;
 }
 
 function startExam() {
