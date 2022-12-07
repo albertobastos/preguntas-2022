@@ -70,6 +70,19 @@
     #exam_questions  button.wrong {
       background-color: lightpink;
     }
+    #exam_questions li.fail {
+      color: red;
+    }
+    #exam_questions.onlyFail li {
+      visibility: hidden;
+      height: 0;
+      margin-bottom: 0;
+    }
+    #exam_questions.onlyFail li.fail {
+      visibility: visible;
+      height: auto;
+      margin-bottom: inherit;
+    }
   </style>
 </html>
 
@@ -90,6 +103,7 @@
   
   <section class="page exam">
     <button onclick="gotoPage('config');">Nuevo examen</button>
+    <button class="switch_questions" onclick="switchQuestions();">Ver solo fallos</button>
     <section class="exam_stats">
       <!-- to fill -->
       <p>
@@ -100,9 +114,9 @@
       </p>
     </section>
     <section>
-      <ol id="exam_questions">
+      <ol id="exam_questions" className="onlyFail">
         <!-- to fill -->
-        <li title="Tema y numero de pregunta">Enunciado de la pregunta
+        <li title="Tema y numero de pregunta" class="fail">Enunciado de la pregunta
           <button id="q-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>
           <button id="q-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>
           <button id="q-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>
@@ -113,10 +127,7 @@
     <section class="exam_stats">
     </section>
     <button onclick="gotoPage('config');">Nuevo examen</button>
-  </section>
-
-  <section class="page results">
-    <button onclick="startExam();">Nuevo examen</button>
+    <button class="switch_questions" onclick="switchQuestions();">Ver solo fallos</button>
   </section>
 </div>
 
@@ -160,6 +171,7 @@ function startExam() {
   }
   resetExam(shuffleArray(questions).slice(0, howMany));
   renderExamPage();
+  switchQuestions(false);
 
   gotoPage("exam");
 }
@@ -203,17 +215,19 @@ function updateExamStats() {
 
 function answerQuestion(question, answer) {
   if (exam_state.answers[question] != null) return; // already answered
+  const button = document.getElementById(`answer-${question}-${answer}`);
   exam_state.answers[question] = answer;
   const q = exam_state.questions[question];
   if (q.a === answer) {
     // right!
     exam_state.right++;
-    document.getElementById(`answer-${question}-${answer}`).className = "right";
+    button.className = "right";
   } else {
     // wrong!
     exam_state.wrong++;
-    document.getElementById(`answer-${question}-${answer}`).className = "wrong";
+    button.className = "wrong";
     document.getElementById(`answer-${question}-${q.a}`).className = "right";
+    button.parentNode.className = "fail";
   }
   exam_state.pending--;
   updateScore();
@@ -241,6 +255,20 @@ function shuffleArray(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
   return array;
+}
+
+let onlyFail = false;
+const switchButtons = document.querySelectorAll('.switch_questions');
+function switchQuestions(force) {
+  if (force !== undefined) onlyFail = force;
+  else onlyFail = !onlyFail;
+
+  exam_questions.className = onlyFail ? "onlyFail" : "";
+
+  for (const button of switchButtons) {
+    button.innerHTML = onlyFail ? "Ver todas" : "Ver solo fallos";
+    button.style.color = onlyFail ? "red" : "";
+  }
 }
 
 //startExam();
