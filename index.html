@@ -26,6 +26,15 @@
     li.chapter i {
       color: #666;
     }
+    li.chapter a, li.chapter a:visited {
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+    }
+    li.chapter a:hover {
+      text-decoration: underline;
+      color: #666;
+    }
     section.exam_stats {
       background-color: #eee;
       margin-top: 1em;
@@ -151,9 +160,21 @@ renderConfig();
 function renderConfig() {
   let s ="";
   DATA.forEach(chapter => {
-    s += `<li class="chapter"><input type="checkbox" name="config_chapter" value="${chapter.num}" checked="checked" /><strong>Tema ${chapter.num}.</strong> ${chapter.title}. <i>(${chapter.questions.length} preguntas)</i>.</li>`;
+    s += `<li class="chapter"><input type="checkbox" name="config_chapter" value="${chapter.num}" checked="checked" /><strong><a href="javascript:onlyChapter(${chapter.num});">Tema ${chapter.num}.</a></strong> ${chapter.title}. <i>(${chapter.questions.length} preguntas)</i>.</li>`;
   });
   document.getElementById("config_chapters").innerHTML = s;
+}
+
+const config_questions = document.getElementById("config_questions");
+function onlyChapter(num) {
+  const numstr = ""+num;
+  const checks = document.getElementsByName("config_chapter");
+
+  for (const check of checks)
+    check.checked = check.value === numstr;
+
+  const ch = DATA.find(c => c.num === num);
+  config_questions.value = ch.questions.length;
 }
 
 function startExam() {
@@ -164,7 +185,7 @@ function startExam() {
       acc.push(...chapter.questions);
       return acc;
     }, []);
-  const howMany = Number(document.getElementById("config_questions").value);
+  const howMany = Number(config_questions.value);
   if (howMany > questions.length) {
     alert("Seleccione más temas para alcanzar " + howMany + " preguntas (" + questions.length + ")");
     return;
