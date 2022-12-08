@@ -107,7 +107,8 @@
 
   <section class="page config">
     <button onclick="startExam();">Empezar</button>
-    <button onclick="allChapters();">Seleccionar todos</button>
+    <button onclick="allChapters(true);">Todos</button>
+    <button onclick="allChapters(false);">Ninguno</button>
     <p>¿Cuántas preguntas quieres?</p>
     <input id="config_questions" value="100" />
     <p>Elige qué temas incluir:</p>
@@ -116,7 +117,8 @@
         <li class="chapter"><input type="checkbox" name="config_chapter" value="1" checked="checked" /><strong>Tema 1.</strong> Título del capítulo. <i>(N preguntas)</i>.</li>
     </ul>
     <button onclick="startExam();">Empezar</button>
-    <button onclick="allChapters();">Seleccionar todos</button>
+    <button onclick="allChapters(true);">Todos</button>
+    <button onclick="allChapters(false);">Ninguno</button>
   </section>
   
   <section class="page exam">
@@ -186,9 +188,9 @@ function onlyChapter(num) {
   config_questions.value = ch.questions.length;
 }
 
-function allChapters() {
-  document.getElementsByName("config_chapter").forEach(c => c.checked = true);
-  config_questions.value = 100;
+function allChapters(checked) {
+  document.getElementsByName("config_chapter").forEach(c => c.checked = checked);
+  if (checked) config_questions.value = 100;
 }
 
 function startExam() {
@@ -209,6 +211,7 @@ function startExam() {
   switchQuestions(false);
 
   gotoPage("exam");
+  window.scrollTo(0, 0);
 }
 
 function resetExam(questions) {
@@ -304,6 +307,8 @@ function switchQuestions(force) {
     button.innerHTML = onlyFail ? "Ver todas" : "Ver solo fallos";
     button.style.color = onlyFail ? "red" : "";
   }
+
+  window.scrollTo(0, 0);
 }
 
 //startExam();
