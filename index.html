@@ -67,6 +67,10 @@
     #exam_questions li {
       margin-bottom: 1em;
     }
+    #exam_questions li input {
+      width: 1.2em;
+      height: 1.2em;
+    }
     #exam_questions button {
       width: 100%;
       margin: .5em 0 0 0;
@@ -124,6 +128,8 @@
   <section class="page exam">
     <button onclick="gotoPage('config');">Nuevo examen</button>
     <button class="switch_questions" onclick="switchQuestions();">Ver solo fallos</button>
+    <button onclick="exportQuestions()">Exportar seleccionadas</button>
+    <button onclick="mailQuestions()">Enviar seleccionadas</button>
     <section class="exam_stats">
       <!-- to fill -->
       <p>
@@ -136,7 +142,9 @@
     <section>
       <ol id="exam_questions" className="onlyFail">
         <!-- to fill -->
-        <li title="Tema y numero de pregunta" class="fail">Enunciado de la pregunta
+        <li title="Tema y numero de pregunta" class="fail">
+          <input type="checkbox" name="check_question" id="check-question-1" value="1" />
+          <span onclick="clickQuestion(1);">Enunciado de la pregunta</span>
           <button id="q-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>
           <button id="q-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>
           <button id="q-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>
@@ -148,6 +156,8 @@
     </section>
     <button onclick="gotoPage('config');">Nuevo examen</button>
     <button class="switch_questions" onclick="switchQuestions();">Ver solo fallos</button>
+    <button onclick="exportQuestions()">Exportar seleccionadas</button>
+    <button onclick="mailQuestions()">Enviar seleccionadas</button>
   </section>
 </div>
 
@@ -229,7 +239,10 @@ function renderExamPage() {
 
   let s = "";
   exam_state.questions.forEach((q,i) => {
-    s += `<li title="Tema ${q.c} Pregunta ${q.n}">${q.q}`;
+    s += `
+<li title="Tema ${q.c} Pregunta ${q.n}">
+<input type="checkbox" name="check_question" id="check-question-${i}" value="${i}" />
+<span onclick="clickQuestion(${i});">${q.q}</span>`;
     Object.keys(q.o).forEach(a => {
       s += `<button id="answer-${i}-${a}" onclick="answerQuestion(${i}, '${a}');">${a}) ${q.o[a]}</button>`;
     });
@@ -265,11 +278,18 @@ function answerQuestion(question, answer) {
     exam_state.wrong++;
     button.className = "wrong";
     document.getElementById(`answer-${question}-${q.a}`).className = "right";
+    document.getElementById(`check-question-${question}`).checked = true;
     button.parentNode.className = "fail";
+
   }
   exam_state.pending--;
   updateScore();
   updateExamStats();
+}
+
+function clickQuestion(question) {
+  const chk = document.getElementById(`check-question-${question}`);
+  chk.checked = !chk.checked;
 }
 
 function updateScore() {
@@ -311,5 +331,40 @@ function switchQuestions(force) {
   window.scrollTo(0, 0);
 }
 
-//startExam();
+function exportQuestions() {
+  const body = generateExportedQuestions('\n');
+  if (body == null) return;
+  navigator.clipboard.writeText(body).then(
+    () => alert('Preguntas copiadas al portapapeles'),
+    () => alert('Error copiando al portapapeles')
+  );
+}
+
+function mailQuestions() {
+  alert('Todavía no...');
+  return;
+  const body = generateExportedQuestions('%0D%0A');
+  if (body == null) return;
+  const a = document.createElement('a');
+  a.href = `mailto:your@email.com?subject=Preguntas Examinador&body=${body}`;
+  a.click();
+}
+
+function generateExportedQuestions(lb) {
+  const qnums = [...document.getElementsByName("check_question")].filter(c => c.checked).map(c => Number(c.value));
+  if (qnums.length < 1) return null;
+
+  let str = "";
+  for (const n of qnums) {
+    const q = exam_state.questions[n];
+    str += `Tema ${q.c} Pregunta ${q.n}${lb}`;
+    str += q.q + lb;
+    for (const o of Object.keys(q.o)) {
+      str += `${o}) ${q.o[o]}${lb}`;
+    }
+    str += lb;
+  }
+
+  return str;
+}
 </script>
