@@ -129,7 +129,6 @@
     <button onclick="gotoPage('config');">Nuevo examen</button>
     <button class="switch_questions" onclick="switchQuestions();">Ver solo fallos</button>
     <button onclick="exportQuestions()">Exportar seleccionadas</button>
-    <button onclick="mailQuestions()">Enviar seleccionadas</button>
     <section class="exam_stats">
       <!-- to fill -->
       <p>
@@ -157,7 +156,6 @@
     <button onclick="gotoPage('config');">Nuevo examen</button>
     <button class="switch_questions" onclick="switchQuestions();">Ver solo fallos</button>
     <button onclick="exportQuestions()">Exportar seleccionadas</button>
-    <button onclick="mailQuestions()">Enviar seleccionadas</button>
   </section>
 </div>
 
@@ -338,16 +336,6 @@ function exportQuestions() {
     () => alert('Preguntas copiadas al portapapeles'),
     () => alert('Error copiando al portapapeles')
   );
-}
-
-function mailQuestions() {
-  alert('Todavía no...');
-  return;
-  const body = generateExportedQuestions('%0D%0A');
-  if (body == null) return;
-  const a = document.createElement('a');
-  a.href = `mailto:your@email.com?subject=Preguntas Examinador&body=${body}`;
-  a.click();
 }
 
 function generateExportedQuestions(lb) {
