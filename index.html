@@ -144,10 +144,7 @@
         <li title="Tema y numero de pregunta" class="fail">
           <input type="checkbox" name="check_question" id="check-question-1" value="1" />
           <span onclick="clickQuestion(1);">Enunciado de la pregunta</span>
-          <button id="q-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>
-          <button id="q-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>
-          <button id="q-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>
-          <button id="q-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>    
+          <button name="answer-0" id="answer-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>
         </li>  
       </ol>
     </section>
@@ -242,7 +239,7 @@ function renderExamPage() {
 <input type="checkbox" name="check_question" id="check-question-${i}" value="${i}" />
 <span onclick="clickQuestion(${i});">${q.q}</span>`;
     Object.keys(q.o).forEach(a => {
-      s += `<button id="answer-${i}-${a}" onclick="answerQuestion(${i}, '${a}');">${a}) ${q.o[a]}</button>`;
+      s += `<button name="answer-${i}" id="answer-${i}-${a}" onclick="answerQuestion(${i}, '${a}');">${a}) ${q.o[a]}</button>`;
     });
     s += `</li>`;
   });
@@ -276,7 +273,7 @@ function answerQuestion(question, answer) {
     exam_state.wrong++;
     button.className = "wrong";
     document.getElementById(`answer-${question}-${q.a}`).className = "right";
-    document.getElementById(`check-question-${question}`).checked = true;
+    //document.getElementById(`check-question-${question}`).checked = true;
     button.parentNode.className = "fail";
 
   }
@@ -348,6 +345,9 @@ function generateExportedQuestions(lb) {
     str += `Tema ${q.c} Pregunta ${q.n}${lb}`;
     str += q.q + lb;
     for (const o of Object.keys(q.o)) {
+      if (document.getElementById(`answer-${n}-${o}`).className === 'wrong') str += 'X ';
+      else if (o === q.a) str += '+ '; 
+      else str += '  ';
       str += `${o}) ${q.o[o]}${lb}`;
     }
     str += lb;
