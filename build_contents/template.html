@@ -338,7 +338,8 @@ function exportQuestions(type) {
       () => alert('Error copiando al portapapeles')
     );
   } else if (type === 'html') {
-    alert('Todavía no...');
+    const w = window.open("", "examinador_export");
+    w.document.body.innerHTML = body;
   }
 }
 
@@ -360,23 +361,19 @@ function generateExportedQuestions(type) {
       }
       str += '\n';
     } else if (type == 'html') {
-      str += `<p><i>[Tema ${q.c} Pregunta ${q.n}]</i><br />`;
-      str += `<strong>q.q</strong></p>`;
-      str += '<p>';
+      str += `<p style="margin-bottom:0;">[Tema ${q.c} Pregunta ${q.n}]</p><p style="margin-top:0;">${q.q}</p>`;
       for (const o of Object.keys(q.o)) {
         let color = null;
-        if (document.getElementById(`answer-${n}-${o}`).className === 'wrong') color = '#660000 ';
-        else if (o === q.a) color = '#006600';
-        else color = '#000000';
-        str += `<span style="color: ${color}">${o}) ${q.o[o]}</span><br />`;
+        if (document.getElementById(`answer-${n}-${o}`).className === 'wrong') color = 'red ';
+        else if (o === q.a) color = 'green';
+        else color = 'black';
+        str += `<p style="color: ${color}; margin: 0;">${o}) ${q.o[o]}</p>`;
       }
-      str += '</p>';
     }
   }
 
   return str;
 }
-
 /*
 config_questions.value = 3;
 startExam();
