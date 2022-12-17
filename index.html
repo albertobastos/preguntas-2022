@@ -128,7 +128,8 @@
   <section class="page exam">
     <button onclick="gotoPage('config');">Nuevo examen</button>
     <button class="switch_questions" onclick="switchQuestions();">Ver solo fallos</button>
-    <button onclick="exportQuestions()">Exportar seleccionadas</button>
+    <button onclick="exportQuestions('text')">Exportar seleccionadas (texto)</button>
+    <button onclick="exportQuestions('html')">Exportar seleccionadas (HTML)</button>
     <section class="exam_stats">
       <!-- to fill -->
       <p>
@@ -152,7 +153,8 @@
     </section>
     <button onclick="gotoPage('config');">Nuevo examen</button>
     <button class="switch_questions" onclick="switchQuestions();">Ver solo fallos</button>
-    <button onclick="exportQuestions()">Exportar seleccionadas</button>
+    <button onclick="exportQuestions('text')">Exportar seleccionadas (texto)</button>
+    <button onclick="exportQuestions('html')">Exportar seleccionadas (HTML)</button>
   </section>
 </div>
 
@@ -326,33 +328,59 @@ function switchQuestions(force) {
   window.scrollTo(0, 0);
 }
 
-function exportQuestions() {
-  const body = generateExportedQuestions('\n');
+function exportQuestions(type) {
+  const body = generateExportedQuestions(type);
   if (body == null) return;
-  navigator.clipboard.writeText(body).then(
-    () => alert('Preguntas copiadas al portapapeles'),
-    () => alert('Error copiando al portapapeles')
-  );
+
+  if (type === 'text') {
+    navigator.clipboard.writeText(body).then(
+      () => alert('Preguntas copiadas al portapapeles'),
+      () => alert('Error copiando al portapapeles')
+    );
+  } else if (type === 'html') {
+    alert('Todavía no...');
+  }
 }
 
-function generateExportedQuestions(lb) {
+function generateExportedQuestions(type) {
   const qnums = [...document.getElementsByName("check_question")].filter(c => c.checked).map(c => Number(c.value));
   if (qnums.length < 1) return null;
 
   let str = "";
   for (const n of qnums) {
     const q = exam_state.questions[n];
-    str += `Tema ${q.c} Pregunta ${q.n}${lb}`;
-    str += q.q + lb;
-    for (const o of Object.keys(q.o)) {
-      if (document.getElementById(`answer-${n}-${o}`).className === 'wrong') str += 'X ';
-      else if (o === q.a) str += '+ '; 
-      else str += '  ';
-      str += `${o}) ${q.o[o]}${lb}`;
+    if (type === 'text') {
+      str += `[Tema ${q.c} Pregunta ${q.n}]\n`;
+      str += q.q + '\n';
+      for (const o of Object.keys(q.o)) {
+        if (document.getElementById(`answer-${n}-${o}`).className === 'wrong') str += 'X ';
+        else if (o === q.a) str += '+ '; 
+        else str += '  ';
+        str += `${o}) ${q.o[o]}\n`;
+      }
+      str += '\n';
+    } else if (type == 'html') {
+      str += `<p><i>[Tema ${q.c} Pregunta ${q.n}]</i><br />`;
+      str += `<strong>q.q</strong></p>`;
+      str += '<p>';
+      for (const o of Object.keys(q.o)) {
+        let color = null;
+        if (document.getElementById(`answer-${n}-${o}`).className === 'wrong') color = '#660000 ';
+        else if (o === q.a) color = '#006600';
+        else color = '#000000';
+        str += `<span style="color: ${color}">${o}) ${q.o[o]}</span><br />`;
+      }
+      str += '</p>';
     }
-    str += lb;
   }
 
   return str;
 }
+
+config_questions.value = 3;
+startExam();
+clickQuestion(0); clickQuestion(1); clickQuestion(2);
+answerQuestion(0, exam_state.questions[0].a);
+let a = exam_state.questions[1].a === 'a' ? 'b' : 'a';
+answerQuestion(1, a);
 </script>
