@@ -329,7 +329,7 @@ function switchQuestions(force) {
 }
 
 function exportQuestions(type) {
-  const body = generateExportedQuestions(type);
+  let body = generateExportedQuestions(type);
   if (body == null) return;
 
   if (type === 'text') {
@@ -338,8 +338,12 @@ function exportQuestions(type) {
       () => alert('Error copiando al portapapeles')
     );
   } else if (type === 'html') {
-    const w = window.open("", "examinador_export");
-    w.document.body.innerHTML = body;
+    const blobInput = new Blob([body], {type: 'text/html'});
+    const clipboardItemInput = new ClipboardItem({'text/html' : blobInput});
+    navigator.clipboard.write([clipboardItemInput]).then(
+      () => alert('Preguntas copiadas al portapapeles'),
+      () => alert('Error copiando al portapapeles')
+    );
   }
 }
 
@@ -381,5 +385,6 @@ clickQuestion(0); clickQuestion(1); clickQuestion(2);
 answerQuestion(0, exam_state.questions[0].a);
 let a = exam_state.questions[1].a === 'a' ? 'b' : 'a';
 answerQuestion(1, a);
+exportQuestions('html');
 */
 </script>
