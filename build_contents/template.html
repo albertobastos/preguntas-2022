@@ -304,11 +304,12 @@ function gotoPage(page) {
   document.querySelectorAll('.page.' + page)[0].style.display = "block";
 }
 
+const rndpos = Symbol("rndpos");
 function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
+  const rands = new Uint32Array(array.length);
+  self.crypto.getRandomValues(rands);
+  rands.forEach((n, i) => array[i][rndpos] = n);
+  array.sort((a, b) => a[rndpos] - b[rndpos]);
   return array;
 }
 
