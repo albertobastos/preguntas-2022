@@ -202,23 +202,36 @@ function allChapters(checked) {
 
 function startExam() {
   const selected = new Set([...document.querySelectorAll("input[name=config_chapter]:checked")].map(check => Number(check.value)));
-  const questions = DATA
-    .filter(chapter => selected.has(chapter.num))
-    .reduce((acc, chapter) => {
-      acc.push(...chapter.questions);
-      return acc;
-    }, []);
   const howMany = Number(config_questions.value);
-  if (howMany > questions.length) {
-    alert("Seleccione más temas para alcanzar " + howMany + " preguntas (" + questions.length + ")");
-    return;
-  }
-  resetExam(shuffleArray(questions).slice(0, howMany));
+  const chapters = DATA.filter(chapter => selected.has(chapter.num));
+  const questions = chooseQuestions(chapters, howMany);
+  if (questions == null) return;
+  resetExam(questions);
   renderExamPage();
   switchQuestions(false);
 
   gotoPage("exam");
   window.scrollTo(0, 0);
+}
+
+function chooseQuestions(chapters, n) {
+  const available = chapters.reduce((acc, c) => acc + c.questions.length, 0);
+  if (available < n) {
+    alert("Seleccione más temas para alcanzar " + n + " preguntas (" + availebl + ")");
+    return;
+  }
+  const nPerChapter = chapters.map(c => Math.floor((c.questions.length * n) / available));
+  while (nPerChapter.reduce((acc, nc) => acc+nc, 0) < n) {
+    nPerChapter[Math.floor(Math.random()*nPerChapter.length)]++;
+  }
+  const questions = [];
+  for (let i=0; i<chapters.length; i++)
+    questions.push(...shuffleArray(chapters[i].questions).slice(0, nPerChapter[i]));
+  shuffleArray(questions);
+  //console.log(chapters.map(c => c.questions.length));
+  //console.log(nPerChapter);
+  //console.log(questions.map(q => `Tema ${q.c} Pregunta ${q.n}`));
+  return questions;
 }
 
 function resetExam(questions) {
