@@ -217,10 +217,10 @@ function startExam() {
 function chooseQuestions(chapters, n) {
   const available = chapters.reduce((acc, c) => acc + c.questions.length, 0);
   if (available < n) {
-    alert("Seleccione más temas para alcanzar " + n + " preguntas (" + availebl + ")");
+    alert("Seleccione más temas para alcanzar " + n + " preguntas (" + available + ")");
     return;
   }
-  const nPerChapter = chapters.map(c => Math.floor((c.questions.length * n) / available));
+  const nPerChapter = chapters.map(c => Math.max(Math.floor((c.questions.length * n) / available), 1));
   while (nPerChapter.reduce((acc, nc) => acc+nc, 0) < n) {
     nPerChapter[Math.floor(Math.random()*nPerChapter.length)]++;
   }
@@ -228,9 +228,9 @@ function chooseQuestions(chapters, n) {
   for (let i=0; i<chapters.length; i++)
     questions.push(...shuffleArray(chapters[i].questions).slice(0, nPerChapter[i]));
   shuffleArray(questions);
-  console.log(chapters.map(c => c.questions.length));
-  console.log(nPerChapter);
-  console.log(questions.map(q => `Tema ${q.c} Pregunta ${q.n}`));
+  //console.log(chapters.map(c => c.questions.length));
+  //console.log(nPerChapter);
+  //console.log(questions.map(q => `Tema ${q.c} Pregunta ${q.n}`));
   return questions;
 }
 
@@ -392,6 +392,25 @@ function generateExportedQuestions(type) {
 
   return str;
 }
+
+for (const c of DATA) {
+  for (const q of c.questions) {
+    q.count = 0;
+  }
+}
+for (let i=0; i<10000; i++) {
+  const l = chooseQuestions(DATA, DATA.length);
+  for (const q of l) {
+    q.count++;
+  }
+}
+let str = '';
+for (const c of DATA) {
+  for (const q of c.questions) {
+    str += `T${q.c}P${q.n};${q.count}\n`;
+  }
+}
+console.log(str);
 /*
 config_questions.value = 3;
 startExam();

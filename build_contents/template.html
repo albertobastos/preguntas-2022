@@ -217,10 +217,10 @@ function startExam() {
 function chooseQuestions(chapters, n) {
   const available = chapters.reduce((acc, c) => acc + c.questions.length, 0);
   if (available < n) {
-    alert("Seleccione más temas para alcanzar " + n + " preguntas (" + availebl + ")");
+    alert("Seleccione más temas para alcanzar " + n + " preguntas (" + available + ")");
     return;
   }
-  const nPerChapter = chapters.map(c => Math.floor((c.questions.length * n) / available));
+  const nPerChapter = chapters.map(c => Math.max(Math.floor((c.questions.length * n) / available), 1));
   while (nPerChapter.reduce((acc, nc) => acc+nc, 0) < n) {
     nPerChapter[Math.floor(Math.random()*nPerChapter.length)]++;
   }
