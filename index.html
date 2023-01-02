@@ -113,6 +113,7 @@
     <button onclick="startExam();">Empezar</button>
     <button onclick="allChapters(true);">Todos</button>
     <button onclick="allChapters(false);">Ninguno</button>
+    <input type="checkbox" name="config_shuffle" id="config_shuffle" value="1" /> <label for="config_shuffle">Barajar respuestas</label>
     <p>¿Cuántas preguntas quieres?</p>
     <input id="config_questions" value="100" />
     <p>Elige qué temas incluir:</p>
@@ -184,6 +185,7 @@ function renderConfig() {
 }
 
 const config_questions = document.getElementById("config_questions");
+const config_shuffle = document.getElementById("config_shuffle");
 function onlyChapter(num) {
   const numstr = ""+num;
   const checks = document.getElementsByName("config_chapter");
@@ -204,8 +206,9 @@ function startExam() {
   const selected = new Set([...document.querySelectorAll("input[name=config_chapter]:checked")].map(check => Number(check.value)));
   const howMany = Number(config_questions.value);
   const chapters = DATA.filter(chapter => selected.has(chapter.num));
-  const questions = chooseQuestions(chapters, howMany);
+  let questions = chooseQuestions(chapters, howMany);
   if (questions == null) return;
+  if (config_shuffle.checked) questions = shuffleAnswers(questions);
   resetExam(questions);
   renderExamPage();
   switchQuestions(false);
@@ -232,6 +235,22 @@ function chooseQuestions(chapters, n) {
   //console.log(nPerChapter);
   //console.log(questions.map(q => `Tema ${q.c} Pregunta ${q.n}`));
   return questions;
+}
+
+const ABCD = ['a', 'b', 'c', 'd'];
+function shuffleAnswers(questions) {
+  const shuffled = [];
+  for (const q of questions) {
+    const qs = {...q, o: {...q.o}};
+    const ABCDrnd = [...ABCD].sort((a, b) => 0.5 - Math.random());
+    for (let i=0; i<ABCD.length; i++) {
+      qs.o[ABCDrnd[i]] = q.o[ABCD[i]];
+      if (q.a === ABCD[i]) qs.a = ABCDrnd[i];
+    }    
+    console.log(q.c, q.n, ABCD, '->', ABCDrnd);
+    shuffled.push(qs);
+  }
+  return shuffled;
 }
 
 function resetExam(questions) {
