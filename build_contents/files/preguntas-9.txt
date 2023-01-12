@@ -1,4 +1,4 @@
-﻿1. Segons l’article 16 de la Llei 40/2015, d’1 d’octubre, de règim jurídic del sector públic, quines són les funcions del secretari d’un òrgan col·legiat?
+1. Segons l’article 16 de la Llei 40/2015, d’1 d’octubre, de règim jurídic del sector públic, quines són les funcions del secretari d’un òrgan col·legiat?
 a) Únicament garantir que les regles de constitució dels òrgans es compleixen adequadament.
 b) Vetlar per la legalitat formal i material de les actuacions de l’òrgan col·legiat, certificar les actuacions d’aquest i garantir que els procediments i regles de constitució i adopció d’acords són respectades.
 c) Establir els procediments que s’han de seguir per adoptar acords.
@@ -184,10 +184,11 @@ b) L’encàrrec de gestió no suposa cessió de la titularitat de la competènc
 c) L’encàrrec de gestió suposa la cessió dels elements essencials de l’exercici de la competència de l’òrgan o de l’entitat que l’encarrega.
 d) Per assolir eficàcia, l’instrument de formalització de l’encàrrec de gestió entre òrgans administratius pertanyents a la mateixa administració i la seva resolució s’ha de publicar en el diari oficial a què correspongui l’òrgan que l’encarrega.
 
-32. Senyalau l’opció correcta en matèria d’òrgans col·legiats de les diferents administracions públiques d’acord amb la Llei 40/2015, d’1 d’octubre, de règim jurídic del sector públic:
+32. Senyalau l'opció; correcta en matèria d'òrgans col.legiats de les diferents administracions públiques d'acord amb la Llei 40/2015, d'1 d'octubre, de règim jurídic del sector públic:
 a) El secretari sempre té la condició de membre de l’òrgan col·legiat.
 b) Correspon al president vetlar per la legalitat formal i material de les actuacions de l’òrgan col·legiat.
 c) Perquè la constitució de l’òrgan col·legiat sigui vàlida, a l’efecte d’adoptar d’acords, es requereix l’assistència de la meitat més un dels seus membres.
+d) No pot ser objecte de deliberació o acord cap assumpte que no figuri inclòs en l’ordre del dia, llevat que hi assisteixin tots els membres de l’òrgan col·legiat i es declari la urgència de l’assumpte pel vot favorable de la majoria.
 
 33. D’acord amb l’article 5 de la Llei 40/2015, d’1 d’octubre, de règim jurídic del sector públic, tenen la consideració d’òrgans administratius:
 a) Les unitats administratives a les quals s’atribueixin funcions que tenguin efectes jurídics davant tercers, o l’actuació de les quals tengui caràcter preceptiu.

@@ -1,4 +1,4 @@
-﻿1. Qui dirigeix l’acció del Govern i coordina les funcions dels altres membres del Govern?
+1. Qui dirigeix l’acció del Govern i coordina les funcions dels altres membres del Govern?
 a) El ministre de la Presidència.
 b) El president del Govern.
 c) El Consell de ministres.
@@ -166,13 +166,13 @@ b) Al ministre competent en matèria d’hisenda.
 c) Al Consell de Ministres.
 d) Al president del Govern.
 
-29. Correspon resoldre els assumptes que afecten més d’un ministeri i no requereixen ser elevats al Consell de Ministres:
+29. Correspon resoldre els assumptes que afecten més d'un ministeri i no requereixen ser elevats al Consell de Ministres:
 a) Al Consell d’Estat.
-b) A la Comissió General de Secretari i Subsecretaris.
+b) A la Comissió General de Secretaris i Subsecretaris.
 c) Al ministre de la Presidència.
 d) A las comissions delegades del Govern.
 
-30. La remissió de les convocatòries als diferents membres del Consell de ministres, de les comissions delegades del Govern i de la Comissió General de Secretaria d’Estat i Subsecretaris, correspon:
+30. La remissió de les convocatòries als diferents membres del Consell de ministres, de les comissions delegades del Govern i de la Comissió; General de Secretaris d'Estat i Subsecretaris, correspon:
 a) Al ministre de la Presidència.
 b) Al Secretariat del Govern.
 c) Al Subsecretari d’Estat de Presidència.
@@ -208,7 +208,7 @@ b) El president del Govern.
 c) El president del Govern, llevat dels supòsits de presència del rei.
 d) El ministre de la Presidència, en absència del president del Govern.
 
-36. El coneixement d’un assumpte que correspon decidir a les comissions delegades del Govern pot ser advpcades:
+36. El coneixement d&#8217;un assumpte que correspon decidir a les comissions delegades del Govern pot ser advocades:
 a) Pel Consell de Ministres, a proposta del president del Govern.
 b) Pel president del Govern, a proposta del Consell de ministres.
 c) Pel president de la comissió respectiva, a proposta del president del Govern.
@@ -298,10 +298,11 @@ b) Ha de tenir, a més, la condició de ministre.
 c) Pot, de forma excepcional, assumir la condició de ministre de la Presidència.
 d) Pot, de forma excepcional, assumir la condició de ministre d’Administracions Públiques.
 
-51. D’acord amb la Llei 50/1997, de 27 de novembre, del Govern, entre les funcions del Secretariat del Govern no està:
+51. D'acord amb la Llei 50/1997, de 27 de novembre, del Govern, entre les funcions del Secretariat del Govern no està:
 a) Vetlar per la publicació correcta de les disposicions i les normes del Govern que s’han d’inserir en el Butlletí Oficial de l’Estat.
 b) Col·laborar amb les secretaries tècniques de les comissions delegades del Govern.
 c) Assistir al ministre secretari del Consell de ministres.
+d) Assistir als Ministeris en el control de la seva eficàcia.
 
 52. De conformitat amb el que disposa la Llei 50/1997, de 27 de novembre, del Govern:
 a) Els conflictes d’atribucions entre ministeris es resolen per Acord del Consell de ministres.
@@ -387,11 +388,11 @@ b) Les competències i limitacions corresponents.
 c) Les funcions assumides pels òrgans estatals durant la seva vigència.
 d) Totes les respostes anteriors són correctes.
 
-66. L’estat d’alarma serà declarat:
+66. L'estat d'alarma serà declarat:
 a) Per un termini màxim de vint dies.
 b) Per un termini màxim de quinze dies.
 c) Per un termini màxim de deu dies.
-d) Sense termini de durada.
+d) Sense termini de finalització
 
 67. El Decret que acordi l’estat d’alarma determinarà:
 a) Els drets i les llibertats que quedaran suspesos durant el temps de la declaració.
