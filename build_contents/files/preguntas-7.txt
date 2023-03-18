@@ -100,7 +100,7 @@ b) Els col·legis professionals són corporacions de dret privat.
 c) Els col·legis professionals manquen de personalitat jurídica.
 d) Els col·legis professionals són corporacions de dret públic, amb personalitat jurídica pròpia i plena capacitat per al compliment dels seus fins.
 
-18. D’acord amb la Llei 2/1974, de 13 de febrer, de col·legis professionals, indicau la resposta correcta:
+18. D’acord amb la Llei 2/1974, de 13 de febrer, de col·legis professionals, indicau la resposta incorrecta:
 a) Els col·legis professionals es creen mitjançant una llei.
 b) La fusió, l’absorció, la segregació, el canvi de denominació i la dissolució dels col·legis professionals de la mateixa professió requereix l’aprovació d’un decret.
 c) És requisit indispensable per a l’exercici de les professions trobar-se incorporat al col·legi professional que correspongui quan així ho estableixi una llei estatal.
@@ -118,13 +118,13 @@ b) Des del moment en què es constitueixen els seus òrgans de govern.
 c) Des de la publicació de la norma i dels estatuts en el butlletí oficial.
 d) Des de la publicació de la norma de creació en el butlletí oficial.
 
-21. D’acord amb l’article 4.6 de la Llei 2/1974, de 13 de febrer, de col·legis professionals, no correspon als col·legis professionals:
+21. D’acord amb l’article 5 de la Llei 2/1974, de 13 de febrer, de col·legis professionals, no correspon als col·legis professionals:
 a) Aprovar la fusió i l’absorció de col·legis professionals de la mateixa professió.
 b) Participar en l’elaboració de plans d’estudi i informar sobre les normes d’organització dels centres docents corresponents a les professions respectives.
 c) Estar representats en els patronats universitaris.
 d) Informar en els procediments judicials en què es discuteixin honoraris professionals.
 
-22. D’acord amb l’article 4.6 de la Llei 2/1974, de 13 de febrer, de col·legis professionals, en el seu àmbit territorial, és una funció dels col·legis professionals:
+22. D’acord amb l’article 5 de la Llei 2/1974, de 13 de febrer, de col·legis professionals, en el seu àmbit territorial, és una funció dels col·legis professionals:
 a) Dirimir els conflictes que puguin suscitar-se entre els distints col·legis.
 b) Adoptar les mesures que condueixen a evitar l’intrusisme professional.
 c) Aprovar els estatuts i visar els reglaments de règim interior del col·legis.
@@ -274,19 +274,13 @@ b) De personal directiu professional.
 c) D’un funcionari amb rang de cap de departament.
 d) De personal eventual de gabinet.
 
-47. Indicau la resposta incorrecta. El personal directiu professional dels ens del sector públic instrumental de la Comunitat Autònoma de les Illes Balears no pot exercir:
-a) La funció de la gestió ordinària de l’ens.
-b) La funció de direcció tècnica de les actuacions pròpies de l’ens.
-c) La funció de coordinació de les actuacions pròpies de l’ens.
-d) La funció d’impuls de les actuacions pròpies de l’ens.
-
 48. El personal directiu professional de les entitats de dret públic de la Comunitat Autònoma de les Illes Balears té naturalesa funcionarial:
 a) En el casos en què ho determinin els estatuts de l’ens.
 b) En cap cas.
 c) En el casos dels ens del sector públic instrumental empresarial.
 d) En el casos en què tengui atribuïdes funcions que impliquin la participació en l’exercici de potestats administratives.
 
-49. D’acord amb la Llei 7/2010, de 21 de juliol, del sector públic instrumental de la Comunitat Autònoma de les Illes Balears, els estatuts dels consorcis han de regular com a mínim:
+49. Indicau la resposta incorrecta. D’acord amb la Llei 7/2010, de 21 de juliol, del sector públic instrumental de la Comunitat Autònoma de les Illes Balears, els estatuts dels consorcis han de regular com a mínim:
 a) L’òrgan que exerceix el protectorat.
 b) Les especialitats del règim pressupostari, de comptabilitat, de control i de tresoreria.
 c) La finalitat per la qual el consorci es constitueix.

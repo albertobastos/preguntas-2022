@@ -10,7 +10,7 @@ b) Qualsevol persona.
 c) Ningú.
 d) Només els membres de l’òrgan.
 
-3. Senyalau la resposta incorrecta. Segons el que disposa l’article 18 de la Llei 40/2015, d’1 d’octubre, de règim jurídic del sector públic, a l’acta de la sessió d’un òrgan col·legiat s’ha d’incloure:
+3. Senyalau la resposta correcta. Segons el que disposa l’article 18 de la Llei 40/2015, d’1 d’octubre, de règim jurídic del sector públic, a l’acta de la sessió d’un òrgan col·legiat s’ha d’incloure:
 a) Només els assistents i el contingut dels acords adoptats.
 b) Els assistents, l’ordre del dia de la reunió, les circumstàncies del lloc i temps en què s’ha celebrat, els punts principals de les deliberacions, així com el contingut dels acords adoptats.
 c) Únicament l’ordre del dia i el contingut dels acords adoptats.
@@ -271,7 +271,7 @@ d) Actuen de forma col·legiada.
 46. De conformitat amb el que disposa l’article 17 de la Llei 40/2015, d’1 d’octubre, de règim jurídic del sector públic, estan exempts de la responsabilitat que, si s’escau, es pugui derivar dels acords adoptats pels òrgans col·legiats:
 a) Els membres de l’òrgan que emetin el seu vot per mitjans electrònics o per correu.
 b) Els membres de l’òrgan que hi votin a favor.
-c) Els membres del cos que hi votin en contra o que se n’abstinguin.
+c) Els membres de l’òrgan que hi votin en contra o que se n’abstinguin.
 d) Cap de les respostes anteriors no és correcta.
 
 47. De conformitat amb el que disposa l’article 6 de la Llei 40/2015, d’1 d’octubre, de règim jurídic del sector públic, quina és la conseqüència de l’incompliment d’instruccions o d’ordres de servei?

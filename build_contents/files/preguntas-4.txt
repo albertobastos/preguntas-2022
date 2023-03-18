@@ -95,8 +95,8 @@ c) Són vinculants i van dirigits a tots els estats membres.
 d) No són vinculants i només van dirigits a persones físiques o jurídiques.
 
 17. Una de les següents no és una funció de la Comissió Europea:
-a) Executar el pressupost i gestionar els fons estructurals.
-b) Negociar els tractats que després són aprovats pel Consell Europeu.
+a) Executar el pressupost i gestionar els programes.
+b) Vetllar per l'aplicació dels tractats de la UE.
 c) La potestat legislativa.
 d) La iniciativa legislativa.
 
@@ -208,7 +208,7 @@ b) Espanya té designats tres comissaris.
 c) La Comissió és un òrgan col·legiat i està integrada per 27 membres.
 d) La Comissió representa els interessos dels estats membres de la Unió Europea.
 
-36. D’acord amb l’article 17.2 del Tractat de Funcionament de la Unió Europea, els actes legislatius de la Unió:
+36. D’acord amb l’article 17.2 del Tractat de la Unió Europea, els actes legislatius de la Unió:
 a) S’adopten per majoria qualificada de tres cinquenes parts del Parlament Europeu.
 b) Només poden adoptar-se a proposta de la Comissió, excepte quan els tractats disposin una altra cosa
 c) Únicament es poden adoptar a proposta de la Comissió o d’un dels països membres.
@@ -280,7 +280,7 @@ b) Del Consell Europeu i la Comissió Europea.
 c) Del Consell d’Europa.
 d) Del Consell de la Unió Europea.
 
-48. D’acord amb el Tractat de la Unió Europea, la Unió Europea passa a:
+48. D’acord amb el Tractat de la Unió Europea, la Unió Europea substituirà i succeirà a:
 a) L’OTAN.
 b) La CECA.
 c) La Comunitat Econòmica Europea.
@@ -314,7 +314,7 @@ d) La Comissió Europea decideix unilateralment la normativa de la Unió Europea
 a) Els comissaris representen els punts de vista dels països respectius.
 b) Per ser comissari cal ser primer funcionari al propi país.
 c) Els comissaris són proposats pels seus governs nacionals i han de ser aprovats pel Parlament Europeu.
-d) Els comissaris representen l’interès dels ciutadans de la Unió Europea.
+d) Els comissaris són escollits d'entre els ministres dels governs nacionals.
 
 54. Els membres del Comitè Econòmic i Social i del Comitè de les Regions assisteixen:
 a) Al Consell Europeu i al Consell.

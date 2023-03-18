@@ -74,7 +74,7 @@ d) Amb submissió plena a la Constitució.
 a) El règim de nomenaments dels funcionaris públics.
 b) Totes les respostes són correctes.
 c) Les peculiaritats del sistema sanitari del personal laboral.
-d) El sistema d’incompatibilitats i les garanties per a la imparcialitat en l’exercici de les seves funcions.
+d) El sistema d’incompatibilitats i les garanties per a la imparcialitat en l’exercici de les seves funcions dels funcionaris públics.
 
 14. Les forces i cossos de seguretat tenen com a missió:
 a) Garantir la sobirania i independència de la nació.
@@ -460,9 +460,9 @@ b) Depèn directament de la Presidència del Govern.
 c) És nomenat per un període màxim de dos anys entre persones de reconeguda competència professional.
 d) Totes les respostes anteriors són incorrectes.
 
-78. En les comunitats autònomes uniprovincials, supleix el Delegat del Govern, durant la seva absència:
+78. En les comunitats autònomes uniprovincials, que no tenguin subdelegat, supleix el Delegat del Govern, durant la seva absència:
 a) El subdelegat del Govern més antic.
 b) El subdelegat del Govern que designi el delegat del Govern.
-c) El secretari general.
+c) El secretari general si no existeix el subdelegat.
 d) El director insular.
 

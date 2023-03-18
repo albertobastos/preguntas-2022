@@ -196,10 +196,10 @@ b) Les competències assumides per l'Estat dins del marc que estableix la Consti
 c) Les bases per al traspàs dels serveis corresponents a aquestes competències.
 d) La delimitació del territori de la comunitat autònoma.
 
-34. Els recursos de les comunitats autònomes estan constituïts:
+34. D'acord amb la Constitució espanyola, els recursos de les comunitats autònomes estan constituïts:
 a) Pels seus propis impostos, taxes i contribucions especials.
 b) Per les transferències d'un fons de compensació interterritorial i altres assignacions amb càrrec als Pressupostos Generals de l'Estat.
-c) Per les bases per al traspàs dels serveis corresponents a les competències que s’assumeixen.
+c) El producte de les operacions de crèdit.
 d) Totes són correctes.
 
 35. Amb la finalitat de corregir desequilibris econòmics interterritorials i fer efectiu el principi de solidaritat, la Constitució preveu un Fons de Compensació amb destinació a despeses d'inversió, els recursos del qual seran distribuïts:
@@ -274,9 +274,9 @@ b) Sense personalitat jurídica pròpia.
 c) Mitjançant l'agrupació de municipis limítrofs.
 d) En cap cas.
 
-47. Les comunitats autònomes no poden en cap cas adoptar mesures tributàries:
+47. Segons la Constitució espanyola, les comunitats autònomes no poden en cap cas adoptar mesures tributàries:
 a) Sobre béns situats a l'interior del seu territori de propietat privada.
-b) Sobre béns situats fora del seu territori, propietat de ciutadans residents a la comunitat autònoma.
+b) Sobre béns situats fora del seu territori, o que suposin un obstacle per a la lliure circulació de mercaderies i serveis.
 c) Que suposin un obstacle per a la competència regulada.
 d) Que impedeixin la creació de multinacionals.
 
@@ -312,7 +312,7 @@ d) L'Estat pot assumir directament l'exercici de competències autonòmiques.
 
 53. Quant a l’organització territorial del poder judicial, les comunitats autònomes:
 a) Poden participar en l'organització de les demarcacions judicials del seu territori al marge del que disposa la Llei orgànica del poder judicial, en aquelles instàncies processals que s'esgotin en l'àmbit territorial de les comunitats autònomes.
-b) Poden participar en l'organització de les demarcacions judicials del seu territori respectant la unitat i independència del poder judicial, perquè ho preveu la Llei orgànica del poder judicial.
+b) No poden proposar al Govern la fixació dels partits judicials del seu àmbit territorial, d'acord amb la independència del poder judicial.
 c) No poden participar en l'organització de les demarcacions judicials del seu territori perquè és una competència reservada a l'Estat.
 d) Poden participar en l'organització de les demarcacions judicials del seu territori, d’acord amb els supòsits i amb les formes que indiquen en els seus estatuts.
 
@@ -399,12 +399,6 @@ a) No, perquè es tracta d’una competència exclusiva de l’Estat, d’acord 
 b) No, només pot tenir competències d’execució.
 c) Sí, perquè l’exclusivitat de l’Estat només està referida a les bases de l’ordenació del crèdit.
 d) Sí; és una matèria sobre la qual la Constitució no atribueix cap competència a l’Estat.
-
-68. És possible que una Comunitat autònoma, en exercici de la seva competència exclusiva sobre ordenació del territori, dicti una llei per la qual no s’autoritzin noves infraestructures aeronàutiques en el seu territori?
-a) Sí, precisament perquè té competència exclusiva sobre ordenació del territori.
-b) No, perquè l’Estat té competència exclusiva sobre aeroports d’interès general i opera el principi de prevalença.
-c) Sí; no hi ha cap conflicte de normes.
-d) Cap de les respostes és correcta.
 
 69. L’Estat i les comunitats autònomes poden compartir funcions legislatives sobre una determinada matèria de la competència exclusiva de l’Estat?
 a) No, es tracta d’una competència exclusiva; si la té l’Estat, ja no poden tenir-la les comunitats autònomes.

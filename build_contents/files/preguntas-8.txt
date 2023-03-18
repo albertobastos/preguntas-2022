@@ -41,9 +41,9 @@ c) L’aprovació de les Corts Generals, mitjançant una llei orgànica.
 d) L’aprovació de les Corts Generals, mitjançant una llei ordinària.
 
 8. El principi de legalitat s’estableix en la Constitució en:
-a) L'article 1.
+a) L'article 2.
 b) L'article 9.
-c) L'article 103.
+c) L'article 104.
 d) Les respostes a) i b) són correctes.
 
 9. En cas de necessitat extraordinària i urgent, el Govern pot dictar disposicions legislatives provisionals que adopten la forma de:
@@ -120,9 +120,9 @@ d) Les respostes b) i c) són correctes.
 
 21. D'acord amb la Constitució, els decrets llei:
 a) Hauran de ser sotmesos immediatament a debat i votació de la totalitat al Congrés en el termini de quinze dies des de la promulgació.
-b) No podran afectar els drets fonamentals i les llibertats públiques.
+b) Podran afectar els drets fonamentals i les llibertats públiques.
 c) Hauran de ser sotmesos immediatament a debat i votació de la totalitat al Congrés en el termini dels vint dies següents a la promulgació.
-d) Durant el termini per a la  convalidació o derogació, les Corts podran tramitar-los com a projecte de llei pel procediment d'urgència.
+d) Durant el termini per a la convalidació o derogació, les Corts podran tramitar-los com a projecte de llei pel procediment d'urgència.
 
 22. En relació amb la supletorietat del dret estatal respecte de l'autonòmic, l'article 149.3 de la Constitució estableix que:
 a) El dret estatal serà, en tot cas, supletori del de les comunitats autònomes.
@@ -136,7 +136,7 @@ b) El Senat, com a cambra de representació territorial, podrà delegar al Gover
 c) Les Corts Generals podran delegar al Govern la potestat de dictar normes amb rang de llei sobre el desenvolupament dels drets fonamentals i les llibertats publiques, sobre el règim electoral general i sobre les altres matèries previstes en la Constitució.
 d) Les Corts Generals podran delegar al Govern la potestat de dictar normes amb rang de llei sobre matèries determinades no incloses en l'article 81.
 
-24. Els reglaments dictats pel president del Govern es publiquen amb la denominació de:
+24. D'acord amb la Llei 50/1997, de 27 de novembre, del Govern, els reglaments dictats pel president del Govern es publiquen amb la denominació de:
 a) Reials decrets del president del Govern.
 b) Decrets del president.
 c) Decrets de Presidència.
@@ -260,7 +260,7 @@ d) Totes els respostes anteriors són correctes.
 a) El control de les normes reglamentàries dictades per l’Administració de la Comunitat Autònoma dels Illes Balears correspon a la jurisdicció contenciosa administrativa.
 b) L’entrada en vigor dels reglaments aprovats pel Govern de la nació requereix la publicació íntegra en el Butlletí Oficial de l’Estat.
 c) D’acord amb la Llei 1/2019, de 31 de gener, del Govern de les Illes Balears, en casos d’urgència i de forma excepcional, l’entrada en vigor de determinats reglaments aprovats pel Consell de Govern requereix únicament la publicació d’un extracte en el Butlletí Oficial de les Illes Balears.
-d) Els reglaments dictats per les entitats locals no s’han de publicar en el butlletí oficial que correspongui.
+d) Els reglaments dictats per les entitats locals s’han de publicar en el butlletí oficial que correspongui.
 
 45. Els reglaments es poden definir com a:
 a) Qualsevol disposició jurídica de caràcter singular dictada per l’Administració pública i subordinada a la llei.
@@ -437,10 +437,10 @@ c) Aplicar-lo si així ho imposa una instrucció o una ordre de servei.
 d) Les respostes b) i c) són correctes.
 
 74. Davant un reglament il·legal, l’Administració pot:
-a) Derogar-lo, mitjançant l’aprovació d’un nou reglament.
+a) Convalidar-lo, reparant els vicis que presenti. 
 b) Revisar-lo d’ofici, amb un dictamen previ del Consell Consultiu.
 c) Revisar-lo d’ofici, amb audiència prèvia i informació pública.
-d) Les respostes a) i b) són correctes.
+d) Revocar-lo, sempre que siguin normes desfavorables.
 
 75. Les disposicions reglamentàries s’han d’encapçalar:
 a) Amb una exposició de motius, que expressi la finalitat de les mesures adoptades en la regulació i el marc normatiu en què s’insereix.

@@ -360,7 +360,7 @@ d) El Tribunal Superior de Justícia.
 
 61. Segons l’article 162 de la Constitució espanyola, les Corts Generals tenen legitimitat per interposar un recurs de inconstitucionalitat?
 a) No.
-b) Es requereixen cinquanta diputats o cinquanta senadors.
+b) Sí. Es requereixen cinquanta diputats o cinquanta senadors.
 c) Sí, amb majoria simple del Congrés.
 d) Sí, amb majoria absoluta del Congrés.
 
@@ -447,3 +447,4 @@ a) El títol preliminar.
 b) El capítol II, secció primera del títol I.
 c) El títol II.
 d) El títol III.
+

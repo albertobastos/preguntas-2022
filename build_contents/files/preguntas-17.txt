@@ -40,7 +40,7 @@ b) La publicació en el directori del punt d’accés general electrònic que co
 c) La seu electrònica associada no requereix cap acte o resolució de creació, ja que únicament es crea per raons tècniques i organitzatives.
 d) Les respostes a) i b) són correctes.
 
-8. No forma part dels elements obligatoris que han de constar en l’acte o resolució de creació d’una seu electrònica d’una administració pública:
+8. Forma part dels elements obligatoris que han de constar en l’acte o resolució de creació d’una seu electrònica d’una administració pública:
 a) La identificació del titular de l’òrgan responsable de la seu electrònica.
 b) La identificació de l’òrgan o òrgans encarregats de la gestió i dels serveis posats a disposició en la seu.
 c) La identificació de la direcció de la seu electrònica de referència de la seu electrònica o seu electrònica associada que es creï.
