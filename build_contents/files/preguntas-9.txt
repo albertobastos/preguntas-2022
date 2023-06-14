@@ -179,7 +179,7 @@ c) No es pot delegar la competència per resoldre aquest procediment una vegada 
 d) Només es pot delegar la competència per resoldre aquest procediment una vegada que s’hagi emès el dictamen o informe preceptiu si és vinculant.
 
 31. Indicau la resposta incorrecta en relació amb el règim previst per als encàrrecs de gestió que regular l’article 11 de la Llei 40/2015, d’1 d’octubre, de règim jurídic del sector públic:
-a) Les encàrrecs de de gestió no poden tenir per objecte les prestacions pròpies dels serveis regulats en la legislació de contractes del sector públic.
+a) Les encàrrecs de de gestió no poden tenir per objecte les prestacions pròpies dels contractes regulats en la legislació de contractes del sector públic.
 b) L’encàrrec de gestió no suposa cessió de la titularitat de la competència de l’òrgan o de l’entitat que l’encarrega.
 c) L’encàrrec de gestió suposa la cessió dels elements essencials de l’exercici de la competència de l’òrgan o de l’entitat que l’encarrega.
 d) Per assolir eficàcia, l’instrument de formalització de l’encàrrec de gestió entre òrgans administratius pertanyents a la mateixa administració i la seva resolució s’ha de publicar en el diari oficial a què correspongui l’òrgan que l’encarrega.
@@ -253,8 +253,8 @@ d) Encàrrec de gestió.
 43. D’acord amb la Llei 40/2015, d’1 d’octubre, de règim jurídic del sector públic, tenen la consideració de convenis els acords amb efectes jurídics següents:
 a) Els que s’adoptin entre organismes públics i entitats de dret públic o privat.
 b) Els protocols generals d’actuació.
-c) Els que s’adoptin entre universitats privades i subjectes de dret privat per a un fi comú.
-d) Cap de les respostes anteriors no és correcta.
+c) Els que s’adoptin entre universitats públiques i subjectes de dret privat per a un fi comú.
+d) Les respostes a) i c) són correctes.
 
 44. Segons la Llei 40/2015, d’1 d’octubre, de règim jurídic del sector públic, quina de les afirmacions següents no és correcta:
 a) Les administracions públiques serveixen amb objectivitat els interessos generals.

@@ -1,5 +1,5 @@
 ﻿1. La seu electrònica d’una administració pública és:
-a) L’adreça d’una administració disponible per a la ciutadania a través de xarxes de telecomunicacions.
+a) L’adreça electrònica d’una administració disponible per a la ciutadania a través de xarxes de telecomunicacions.
 b) La xarxa de telecomunicacions de l’Administració que ofereix els serveis a tota la ciutadania.
 c) El conjunt agrupat de tots els procediments administratius inventariats i classificats per unitats orgàniques que pertanyen a una administració.
 d) El punt d’accés per a la ciutadania a les actuacions que pot realitzar amb l’Administració per mitjà d’una autenticació electrònica.
@@ -40,7 +40,7 @@ b) La publicació en el directori del punt d’accés general electrònic que co
 c) La seu electrònica associada no requereix cap acte o resolució de creació, ja que únicament es crea per raons tècniques i organitzatives.
 d) Les respostes a) i b) són correctes.
 
-8. Forma part dels elements obligatoris que han de constar en l’acte o resolució de creació d’una seu electrònica d’una administració pública:
+8. No forma part dels elements obligatoris que han de constar en l’acte o resolució de creació d’una seu electrònica d’una administració pública:
 a) La identificació del titular de l’òrgan responsable de la seu electrònica.
 b) La identificació de l’òrgan o òrgans encarregats de la gestió i dels serveis posats a disposició en la seu.
 c) La identificació de la direcció de la seu electrònica de referència de la seu electrònica o seu electrònica associada que es creï.
@@ -55,7 +55,7 @@ d) Les respostes a) i b) són correctes.
 10. No forma part del contingut mínim que tota seu electrònica o seu electrònica associada ha de posar a disposició de les persones interessades:
 a) La identificació de l’acte o disposició de creació.
 b) L’accés a l’acte o disposició de creació.
-c) L’àmbit d’aplicació de la seu electrònica o seu electrònica associada.
+c) La normativa reguladora del Registre al qual s'accedeixi a través de la seu electrònica.
 d) La identificació de l’adreça electrònica de referencia de la seu electrònica.
 
 11. Quant a aspectes temporals, quin dels següents elements és un contingut mínim del qual ha de disposar tota seu electrònica?
@@ -160,11 +160,11 @@ b) Centre Criptològic Nacional, adscrit al Centre Nacional d’Interoperabilita
 c) Centre Criptològic Nacional, adscrit al Centre Nacional d’Intel·ligència.
 d) Centre Criptogràfic Nacional, adscrit al Centre Nacional d’Interoperabilitat.
 
-28. Quina de les següents opcions no es considera un principi específic de l’Esquema Nacional d’Interoperabilitat?
+28. Quina de les següents opcions es considera un principi específic de l’Esquema Nacional d’Interoperabilitat?
 a) L’enfocament de solucions multidimensionals.
 b) El caràcter multilateral de la interoperabilitat.
 c) La interoperabilitat com a element integrat amb la qualitat.
-d) Totes les respostes són incorrectes.
+d) Totes les respostes són correctes.
 
 29. En l’àmbit de l’Administració electrònica i d’acord amb la norma tècnica de l’expedient electrònic, senyalau l’opció incorrecta sobre l’índex electrònic d’un expedient electrònic:
 a) L’índex electrònic ha de garantir la integritat de l’expedient electrònic.
@@ -276,7 +276,7 @@ d) El requirent.
 
 47. Dins de la xarxa corporativa del Govern de les Illes Balears, com es pot accedir a la Plataforma d'Interoperabilitat de les Illes Balears?
 a) Amb usuari i contrasenya.
-b) Amb qualsevol tipus de certificat digital.
+b) Amb qualsevol tipus de document digital.
 c) Sense autenticació.
 d) Totes les respostes són incorrectes.
 
@@ -286,7 +286,7 @@ b) No cal cap tipus de sol·licitud específica, tots els empleats del Govern de
 c) Sol·licitar l’adhesió a un servei i l’alta com a usuari representant de la Plataforma d'Interoperabilitat de les Illes Balears.
 d) No cal cap tipus de sol·licitud específica, amb l’usuari d’accés a la intranet corporativa es pot accedir directament a la Plataforma d'Interoperabilitat de les Illes Balears.
 
-49. Quin tipus de llicenciament té el programari que implementa la Plataforma d'Interoperabilitat de les Illes Balears?
+49. Quin tipus de llicència té el programari que implementa la Plataforma d'Interoperabilitat de les Illes Balears?
 a) Creative Commons.
 b) GPLv3 (General Public Lisence).
 c) BSD (Berkeley Software Distribution).

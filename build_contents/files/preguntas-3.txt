@@ -16,7 +16,7 @@ b) En el títol VI.
 c) En el títol VIII.
 d) En el títol III.
 
-4. L’organització institucional de les comunitats autònomes constituïdes d’acord amb l’article 151 de la Constitució es basa en:
+4. L’organització institucional de les comunitats autònomes constituïdes d’acord amb l’article 152 de la Constitució es basa en:
 a) Un parlament, un consell de govern, un president i un tribunal de justícia.
 b) Una assemblea legislativa, un consell de govern presidit per un president i un tribunal superior de justícia.
 c) Una assemblea legislativa, un consell de govern i un president.
@@ -346,11 +346,7 @@ b) Un límit dins el qual s’han de moure els òrgans de les comunitats autòno
 c) La possibilitat que l’Estat atribueixi aquesta competència a la comunitat autònoma mitjançant una llei de transferència.
 d) Les respostes a) i b) són correctes.
 
-59. Quant al repartiment competencial entre l’Estat i les comunitats autònomes, la Constitució esmenta les facultats següents:
-a) Lleis de bases, legislació de desenvolupament i execució.
-b) Lleis bàsiques, lleis orgàniques, lleis ordinàries i reglaments.
-c) Lleis orgàniques, lleis de desenvolupament i reglaments.
-d) Legislació, bases, legislació de desenvolupament i execució.
+
 
 60. És possible que l’Estat transfereixi o delegui en les comunitats autònomes funcions corresponents a matèries de titularitat estatal?
 a) Sí, mitjançant un reial decret llei, l’Estat pot transferir matèries de la seva competència.
@@ -425,7 +421,7 @@ c) L'Estat no podrà reservar-se mesures de control, i haurà de preveure en cad
 d) L'Estat haurà de dictar les lleis que estableixin els principis necessaris per harmonitzar les disposicions normatives de les comunitats autònomes amb les estatals.
 
 73. Indicau la resposta incorrecta:
-a) Les comunitats autònomes no tenen funcions legislatives en aquelles matèries en què l’article 149 de la Constitució atribueix la competència exclusiva a l’Estat.
+a) Les comunitats autònomes tenen funcions legislatives en aquelles matèries en què l’article 149 de la Constitució atribueix la competència exclusiva a l’Estat.
 b) Les comunitats autònomes tenen funcions legislatives si la competència exclusiva de l’Estat és sobre les bases d’una matèria determinada.
 c) Les comunitats autònomes no poden dictar lleis orgàniques.
 d) La competència exclusiva de l’Estat sobre el procediment administratiu comú  permet a les comunitats autònomes legislar sobre les especialitats derivades de l’organització pròpia.

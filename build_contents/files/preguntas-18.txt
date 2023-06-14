@@ -262,7 +262,7 @@ b) Conté un article sobre no estigmatització.
 c) Conté un article sobre bon tracte.
 d) No conté cap dels articles anteriors.
 
-45. La Directiva 2004/113/CE del Consell d’Europa, de 13 de desembre de 2004, per la qual s'aplica el principi d’igualtat de tracte entre homes i dones en l’accés als béns i serveis i al seu subministrament:
+45. La Directiva 2004/113/CE del Consell, de 13 de desembre de 2004, per la qual s'aplica el principi d’igualtat de tracte entre homes i dones en l’accés als béns i serveis i al seu subministrament:
 a) Estableix la distinció entre discriminació directa i discriminació indirecta.
 b) Estableix la distinció entre discriminació múltiple i ordre de discriminar.
 c) Estableix la distinció entre assetjament i assetjament sexual.
@@ -347,8 +347,8 @@ c) La modificació no preveu establir cap condició bàsica d’accessibilitat c
 d) La modificació només afecta l’apartat de la inclusió social.
 
 59. L’article 14 de la Constitució espanyola proclama el dret a la igualtat i a la no-discriminació per motius de:
-a) Naixement, raça, sexe, nacionalitat i opinió.
-b) Naixement raça, sexe, religió i opinió.
+a) Naixement, raça, gènere, nacionalitat i opinió.
+b) Naixement raça, gènere, religió i opinió.
 c) Naixement, raça, sexe, religió, opinió i qualsevol altra circumstància personal o social.
 d) Lloc d’origen, ètnia, espiritualitat, opinió i qualsevol altra circumstància personal o social.
 
@@ -388,13 +388,13 @@ b) El Tractat d'Amsterdam.
 c) El Tractat d’Oslo.
 d) El Tractat de Milà.
 
-66. Quina directiva del Consell d’Europa prohibeix la discriminació per origen racial o ètnic en qualsevol àmbit?
+66. Quina directiva del Consell prohibeix la discriminació per origen racial o ètnic en qualsevol àmbit?
 a) La Directiva 1998/53/CE, de 18 de maig de 1996.
 b) La Directiva 2000/43/CE, de 29 de juny de 2000.
 c) La Directiva 2020/32/CE, de 29 d’abril de 2019.
 d) No hi ha cap directiva que prohibeixi aquesta discriminació a la Unió Europea.
 
-67. En quina Llei es va transposar a Espanya la Directiva del Consell d’Europa que prohibeix la discriminació per origen racial o ètnic?
+67. En quina Llei es va transposar a Espanya la Directiva del Consell que prohibeix la discriminació per origen racial o ètnic?
 a) Mitjançant la Llei 62/2003, de 30 de desembre, de mesures fiscals, administratives i d’ordre social.
 b) Mitjançant la Llei 62/2011, de 30 de desembre, de mesures fiscals, administratives i d’ordre social.
 c) Mitjançant la Llei 17/2014, de 30 de desembre, de mesures fiscals, administratives i d’ordre social.

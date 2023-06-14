@@ -276,7 +276,7 @@ d) Els mitjans de consentiment del tractament.
 
 47. Indicau quina de les respostes següents no està inclosa entre les exigències que estableix la Llei orgànica 3/2018, de 5 de desembre, de protecció de dades personals i garantia dels drets digitals, per garantir el dret a l’oblit en cerques d’Internet:
 a) L’exercici del dret a l’oblit en cerques d’Internet impedeix l’accés a la informació publicada al lloc web mitjançant la utilització d’altres criteris de cerca diferents del nom de qui exerceixi el dret.
-b) El dret a l’oblit en cerques d’Internet substitueix encara que sigui lícita la conservació de la informació publicada al lloc web al qual es dirigeixi l’enllaç i aquest no procedeixi a esborrar-lo prèviament o simultàniament.
+b) El dret a l’oblit en cerques d’Internet subsistirà encara que sigui lícita la conservació de la informació publicada al lloc web al qual es dirigeixi l’enllaç i aquest no procedeixi a esborrar-lo prèviament o simultàniament.
 c) Qualsevol persona té dret que els motors de cerca a Internet eliminin de les llistes de resultats que s’obtenguin després d’una cerca efectuada a partir del seu nom quan les circumstàncies personals que invoqui l’afectat evidenciïn la prevalença dels seus drets sobre el manteniment dels enllaços pel servei de cerca a Internet.
 d) Qualsevol persona té dret que els motors de cerca a Internet eliminin de les llistes de resultats que s’obtenguin després d’una cerca efectuada a partir del seu nom els enllaços publicats que contenguin informació relativa a aquesta persona quan siguin no pertinents, entre altres motius.
 

@@ -1,4 +1,4 @@
-﻿1. En matèria d’actuació i funcionament del sector públic per mitjans electrònics, senyalau la resposta incorrecta amb relació al concepte de registre electrònic:
+1. En matèria d’actuació i funcionament del sector públic per mitjans electrònics, senyalau la resposta incorrecta amb relació al concepte de registre electrònic:
 a) Les administracions públiques han de disposar de registres electrònics per rebre i trametre sol·licituds, escrits i comunicacions, que han de ser plenament interoperables de manera que se’n garanteixi la compatibilitat informàtica i la interconnexió en els termes que preveuen l’article 16 de la Llei 39/2015, d’1 d’octubre, del procediment administratiu comú de les administracions públiques, i l’article 60 del Reial decret  203/2021, de 30 de març, pel qual s’aprova el Reglament d’actuació i funcionament del sector públic per mitjans electrònics.
 b) Cada administració ha de disposar d’un registre electrònic central en el qual ha de fer l’assentament de qualsevol document que es presenti o es rebi a qualsevol òrgan administratiu, organisme públic o entitat de dret públic vinculat o dependent.
 c) Els organismes públics i entitats de drets públic vinculats o dependents de cada administració poden disposar del seu propi registre electrònic plenament interoperable i interconnectat amb el registre electrònic general de l’administració a la qual estiguin vinculats o de la qual depenguin.
@@ -30,9 +30,9 @@ d) No, tal com estableix l’article 37.4 del Reial decret 203/2021, de 30 de ma
 
 6. D’acord amb l’article 37.4 del Reial decret  203/2021, de 30 de març, pel qual s’aprova el Reglament d’actuació i funcionament del sector públic per mitjans electrònics, no es consideren presentats en el registre els documents i la informació el règim especial dels quals estableixi una altra forma de presentació. En aquests supòsits:
 a) L’òrgan executiu competent per a la tramitació del procediment ha de notificar aquesta circumstància a l’interessat i l’ha d’informar dels requeriments exigits per la legislació específica aplicable.
-b) L’òrgan administratiu competent per a la tramitació del procediment ha de notificar aquesta circumstància a l’interessat i l’ha d’informar dels requeriments exigits per la legislació específica aplicable.
+b) L’òrgan administratiu competent per a la tramitació del procediment ha de notificar aquesta circumstància a l’interessat i l’ha d’informar dels requisits exigits per la legislació específica aplicable.
 c) L’òrgan executiu competent per a la tramitació del procediment ha de comunicar aquesta circumstància a l’interessat i l’ha d’informar dels requeriments exigits per la legislació específica aplicable.
-d) L’òrgan administratiu competent per a la tramitació del procediment ha de comunicar aquesta circumstància a l’interessat i l’ha d’informar dels requeriments exigits per la legislació específica aplicable.
+d) L’òrgan administratiu competent per a la tramitació del procediment ha de comunicar aquesta circumstància a l’interessat i l’ha d’informar dels requisits exigits per la legislació específica aplicable.
 
 7. Què significa que els registres de totes i cada una de les administracions públiques han de ser plenament interoperables?
 a) Que se n’han de garantir la compatibilitat informàtica i la interconnexió.
@@ -44,7 +44,7 @@ d) Totes les respostes són correctes.
 a) No genera cap anotació al Registre Electrònic General de l’Administració General de l’Estat. Aquest servei electrònic és una passarel·la d’interconnexió amb el Registre Electrònic General de l’administració o organisme al qual va dirigit l’assentament, registre al qual es genera l’anotació.
 b) Genera una anotació al Registre Electrònic General de l’Administració General de l’Estat.
 c) Aquest servei electrònic ha de ser accessible des de la seu electrònica del PAGe de l’Administració general de l’Estat.
-d) Les respostes c) i d) són correctes.
+d) Les respostes b) i c) són correctes.
 
 9. D’acord amb la Llei 39/2015, d’1 d’octubre, del procediment administratiu comú de les administracions públiques, quin àmbit del sector públic ha de disposar d’un registre electrònic d’apoderaments?
 a) L’àmbit estatal.
@@ -166,16 +166,16 @@ b) Les persones interessades que es relacionen amb les administracions públique
 c) Les persones interessades que es relacionen amb les administracions públiques a través de mitjans electrònics tenen dret a consultar en el Punt d’Accés General electrònic els actes de tràmit que s’han dictat en el procediment.
 d) Totes les respostes són correctes.
 
-29. Quina d’aquesta informació té dret a consultar en el Punt d’Accés General electrònic la persona interessada que es relaciona electrònicament amb les administracions públiques?
+29. Quina d'aquesta informació té dret a consultar en el Punt d'Accès General electrònic la persona interessada que es relaciona electrònicament amb les administracions públiques?
 a) La identificació de les autoritats i el personal al servei de les administracions públiques sota la responsabilitat dels quals es tramita el procediment administratiu.
 b) Els actes de tràmit dictats en el procediment.
 c) Els requisits jurídics o tècnics que les disposicions vigents imposin als projectes, les actuacions o les sol·licituds que es proposin realitzar.
 d) Totes les respostes són correctes.
 
 30. En quin cas l’Administració pot obligar les persones físiques a relacionar-s’hi per mitjans electrònics?
-a) En els procediments de concessió de subvencions, quan estigui previst en un reglament.
+a) En els procediments de concessió de subvencions, per a determinats col·lectius, quan estigui previst en un reglament.
 b) Quan ho estableixi per llei per a determinats col·lectius de persones físiques.
-c) Quan ho estableixi per reglament per a determinats col·lectius de persones físiques.
+c) Quan ho estableixi per reglament per a determinats col·lectius de persones físiques i procediments
 d) Totes les respostes són correctes.
 
 31. Quin d’aquests principis generals no regeix en les actuacions i el funcionament del sector públic per mitjans electrònics?
@@ -209,7 +209,7 @@ c) La Direcció General de Qualitat i Serveis.
 d) Totes les respostes són incorrectes.
 
 36. En relació amb l’atenció a la ciutadania, indicau la resposta correcta:
-a) L’atenció i informació ciutadana és una competència que exerceix la Conselleria de Fons Europeus, Universitat i Cultura.
+a) L’atenció i informació ciutadana és una competència que exerceix la Conselleria de Presidència.
 b) L’atenció i informació ciutadana és una competència que exerceix la Direcció General de Qualitat dels Serveis.
 c) L’atenció i informació ciutadana és una competència que exerceix la Conselleria de Salut i Consum.
 d) Totes les respostes són incorrectes.
@@ -229,12 +229,12 @@ d) A les persones jurídiques.
 39. Indicau la resposta correcta. Si un ciutadà es presenta a una oficina d’assistència en matèria de registre per presentar una sol·licitud en una convocatòria de subvencions:
 a) Serà atès en l’ús de mitjans electrònics, depenent del funcionari.
 b) Serà assistit en l’ús de mitjans electrònics, especialment en el cas d’una empresa que no té els mitjans electrònics adequats.
-c) Serà assistit en l’ús de mitjans electrònics, excepte quan l’interessat sigui una persona jurídica.
-d) Totes les respostes són incorrectes.
+c) Serà assistit en l’ús de mitjans electrònics, excepte quan l’interessat sigui una persona jurídica, entre d'altres.
+d) Totes les respostes són correctes.
 
 40. Si una persona presenta una sol·licitud en una convocatòria d’ajudes davant una oficina d’assistència en matèria de registre de l’Administració autonòmica i no disposa de firma electrònica:
 a) L’oficina d’assistència en matèria de registre no és un canal d’atenció a la ciutadania si el procediment està publicat a la Seu Electrònica.
-b) La firma electrònica la podrà fer el funcionari habilitat, sempre que l’interessat no sigui una societat anònima.
+b) La firma electrònica la podrà fer qualsevol funcionari, sempre que l’interessat no sigui una societat anònima.
 c) Les administracions públiques han de garantir que els interessats es puguin relacionar amb l’Administració a través de mitjans electrònics.
 d) Les respostes b) i c) són correctes.
 
@@ -270,8 +270,8 @@ d) En determinats casos, com per exemple en allò referent a la identificació i
 
 46. Quina fita marca la transformació de les oficines de registre en oficines d’assistència en matèria de registre?
 a) L’entrada en vigor de les previsions de registre electrònic d’apoderaments, registre electrònic, registre d’empleats públics habilitats, punt d’accés general electrònic de l’Administració i arxiu únic electrònic.
-b) El 2 d’abril de 2022.
-c) L’entrada en vigor de la Llei 39/2015, d’1 d’octubre, del procediment administratiu comú de les administracions públiques.
+b) El 2 d’abril de 2002.
+c) L’entrada en vigor de la Llei 40/2015, d’1 d’octubre, de règim jurídic del sector públic.
 d) Les respostes a) i b) són correctes.
 
 47. Quan un ciutadà compareix davant una oficina d’assistència en matèria de registre (OAMR) per presentar una sol·licitud d’una convocatòria de subvencions:
@@ -326,7 +326,7 @@ d) Totes les respostes incorrectes.
 a) No, perquè les persones jurídiques no poden presentar documents en paper.
 b) Sí.
 c) No, les seves funcions són les que preveu l’article 16 de la Llei 39/2015, d’1 d’octubre.
-d) Totes les respostes són incorrectes.
+d) Totes les respostes són correctes.
 
 56. Si davant una oficina d’assistència en matèria de registre (OAMR) algun dels subjectes obligats a relacionar-se electrònicament amb l’Administració presenta la sol·licitud presencialment:
 a) L’OAMR no li ha de permetre presentar documentació en paper.
@@ -365,7 +365,7 @@ c) No.
 d) En determinats casos.
 
 62. Si després de registrar una queixa o un suggeriment es conclou que va referit a una altra administració o entitat pública de l’Estat espanyol:
-a) La direcció general competent en matèria de qualitat dels serveis l’ha de remetre a l’entitat objecte de la queixa.
+a) La direcció general competent en matèria de qualitat dels serveis l’ha de remetre a l’entitat objecte de la queixa i ho ha de comunicar a la persona interessada.
 b) La unitat administrativa corresponent l’ha de remetre a l’entitat objecte de la queixa i ho ha de comunicar a la persona interessada.
 c) La unitat administrativa corresponent ha d’inadmetre la queixa o el suggeriment i ho ha de comunicar a la persona interessada.
 d) Totes les respostes són incorrectes.
@@ -376,7 +376,7 @@ b) La forma i els mitjans de presentació de les queixes i els suggeriments.
 c) La tramitació de les queixes i els suggeriments mitjançant l’aplicació d’ús general QSSI.
 d) La informació sobre el dret i els sistemes de queixes i suggeriments.
 
-64. Senyalau la resposta correcta. L’Ordre de la consellera d’Administracions Públiques d’1 d’agost de 2014 per la qual es desplega el Decret 82/2009, de 13 de novembre, pel qual es regula la gestió de queixes i suggeriments sobre el funcionament dels serveis públics de l’Administració de la Comunitat Autònoma de les Illes Balears s’aplica als serveis que presten:
+64. Senyalau la resposta incorrecta. L’Ordre de la consellera d’Administracions Públiques d’1 d’agost de 2014 per la qual es desplega el Decret 82/2009, de 13 de novembre, pel qual es regula la gestió de queixes i suggeriments sobre el funcionament dels serveis públics de l’Administració de la Comunitat Autònoma de les Illes Balears s’aplica als serveis que presten:
 a) Els consorcis en què participa la Comunitat Autònoma de les Illes Balears.
 b) Les persones jurídiques adjudicatàries de contractes de serveis públics.
 c) El sector públic instrumental de la Comunitat Autònoma de les Illes Balears.
@@ -418,13 +418,7 @@ b) La direcció general competent en matèria de qualitat dels serveis.
 c) La direcció dels centres sanitaris, educatius, sociosanitaris i assistencials en el cas que la queixa o el suggeriment facin referència a la prestació de serveis d’aquests centres.
 d) Totes les respostes són incorrectes.
 
-71. Es pot inadmetre a tràmit una queixa o un suggeriment?
-a) Sí, en determinats casos.
-b) No.
-c) Només en el cas que es tracti d’una queixa o un suggeriment manifestament sense fonament.
-d) Sí, amb l’audiència prèvia de la persona interessada.
-
-72. Senyalau la resposta correcta en relació amb les queixes i els suggeriments relatius a serveis públics de l’Administració de la Comunitat Autònoma:
+72. Senyalau la resposta correcta segons indica el Decret 82/2009, de 13 de novembre, pel qual es regula la gestió de les queixes i els suggeriments sobre el funcionament dels serveis públics de l'Administració de la Comunitat Autònoma de les Illes Balears:
 a) Si un cop transcorregut el termini de quinze dies la persona interessada no ha obtingut una resposta, pot adreçar-se a la Inspecció General de Qualitat, Organització i Serveis, perquè, com a òrgan inspector, dugui a terme les actuacions necessàries per conèixer els motius que hagin pogut ocasionar la falta de contestació i adoptar les mesures pertinents.
 b) Si un cop transcorregut el termini de quinze dies naturals la persona interessada no ha obtingut una resposta, pot adreçar-se a la Inspecció General de Qualitat, Organització i Serveis, perquè, com a òrgan inspector, dugui a terme les actuacions necessàries per conèixer els motius que hagin pogut ocasionar la falta de contestació i adoptar les mesures pertinents.
 c) Si un cop transcorregut el termini de quinze dies hàbils la persona interessada no ha obtingut una resposta, pot adreçar-se a la Inspecció General de Qualitat, Organització i Serveis, perquè, com a òrgan inspector, dugui a terme les actuacions necessàries per conèixer els motius que hagin pogut ocasionar la falta de contestació i adoptar les mesures pertinents.
@@ -436,7 +430,7 @@ b) La formulació d’una queixa té la qualificació de recurs administratiu si
 c) La Llei orgànica 4/2001, de 12 de novembre, reguladora del dret de petició s’aplica subsidiàriament en defecte de previsió del Decret 82/2009, de 13 de novembre, pel qual es regula la gestió de queixes i suggeriments sobre el funcionament dels serveis públics de l’Administració de la Comunitat Autònoma de les Illes Balears.
 d) La formulació d’una queixa o d’un suggeriment en exercici del dret de petició es tramita de conformitat amb la Llei orgànica 4/2001, de 12 de novembre, reguladora del dret de petició.
 
-74. En relació amb les queixes i els suggeriments, els òrgans o ens que utilitzen una aplicació diferent de la d’ús general (QSSI) han de trametre a la direcció general competent en matèria de qualitat dels serveis la informació següent:
+74. En relació amb les queixes i els suggeriments, els òrgans o ens que utilitzen una aplicació diferent de la d'ús general (QSSI) han de trametre a la direcció general competent en matèria d'atenció i informació ciutadana la informació següent:
 a) Temps màxim de resposta.
 b) Nombre de suggeriments que s’han presentat.
 c) Matèria o motiu de la queixa o del suggeriment.
