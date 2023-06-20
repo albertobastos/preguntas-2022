@@ -116,6 +116,7 @@
     <input type="checkbox" name="config_shuffle" id="config_shuffle" value="1" /> <label for="config_shuffle">Barajar respuestas</label>
     <p>¿Cuántas preguntas quieres?</p>
     <input id="config_questions" value="100" />
+    <button onclick="allQuestions();">Todas</button>
     <p>Elige qué temas incluir:</p>
     <ul id="config_chapters">
         <!-- to fill -->
@@ -200,6 +201,13 @@ function onlyChapter(num) {
 function allChapters(checked) {
   document.getElementsByName("config_chapter").forEach(c => c.checked = checked);
   if (checked) config_questions.value = 100;
+}
+
+function allQuestions() {
+  const selected = new Set([...document.querySelectorAll("input[name=config_chapter]:checked")].map(check => Number(check.value)));
+  const chapters = DATA.filter(chapter => selected.has(chapter.num));
+  const available = chapters.reduce((acc, c) => acc + c.questions.length, 0);
+  config_questions.value = available;
 }
 
 function startExam() {
