@@ -103,6 +103,9 @@
       height: auto;
       margin-bottom: inherit;
     }
+    button.failures_exam {
+      color: red;
+    }
   </style>
 </html>
 
@@ -132,6 +135,7 @@
     <button class="switch_questions" onclick="switchQuestions();">Ver solo fallos</button>
     <button onclick="exportQuestions('text')">Exportar seleccionadas (texto)</button>
     <button onclick="exportQuestions('html')">Exportar seleccionadas (HTML)</button>
+    <button class="failures_exam" onclick="startFailuresExam();">Repetir fallos</button>
     <section class="exam_stats">
       <!-- to fill -->
       <p>
@@ -157,6 +161,7 @@
     <button class="switch_questions" onclick="switchQuestions();">Ver solo fallos</button>
     <button onclick="exportQuestions('text')">Exportar seleccionadas (texto)</button>
     <button onclick="exportQuestions('html')">Exportar seleccionadas (HTML)</button>
+    <button class="failures_exam" onclick="startFailuresExam();">Repetir fallos</button>
   </section>
 </div>
 
@@ -216,11 +221,15 @@ function startExam() {
   const chapters = DATA.filter(chapter => selected.has(chapter.num));
   let questions = chooseQuestions(chapters, howMany);
   if (questions == null) return;
+  launchExam(questions);
+}
+
+function launchExam(questions) {
   if (config_shuffle.checked) questions = shuffleAnswers(questions);
   resetExam(questions);
   renderExamPage();
   switchQuestions(false);
-
+  
   gotoPage("exam");
   window.scrollTo(0, 0);
 }
@@ -385,6 +394,20 @@ function exportQuestions(type) {
       () => alert('Error copiando al portapapeles')
     );
   }
+}
+
+function startFailuresExam() {
+  let questions = [...document.getElementsByClassName("wrong")].map(b => exam_state.questions[Number(b.name.substring("answer-".length))]);
+  if (questions.length < 1) {
+    alert('El examen no tiene fallos que poder repetir');
+    return;
+  }
+
+  if (!confirm('Esto creará un nuevo examen con las ' + questions.length + ' preguntas falladas. Se perderá el examen actual. ¿Está seguro?')) {
+    return;
+  }
+
+  launchExam(questions);
 }
 
 function generateExportedQuestions(type) {
