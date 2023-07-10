@@ -2,452 +2,167 @@
 <html>
   <meta charset="utf-8" />
   <head>
-    <title>Examinador</title>
+    <title>Examinador 2.0</title>
   </head>
   <style type="text/css">
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 1em;
-      font-size: 1.2em;
-    }
-    li.chapter {
-      list-style-type: none;
-    }
-    div.outer {
-      margin-left: auto;
-      margin-right: auto;
-      width: 70%;
-    }
-    section.exam {
-      display: none;
-    }
-    section.results {
-      display: none;
-    }
-    li.chapter {
-      margin-bottom: .5em;
-      text-align: justify;
-    }
-    li.chapter input {
-      margin-right: 2em;
-      width: 1.2em;
-      height: 1.2em;
-    }
-    li.chapter i {
-      color: #666;
-    }
-    li.chapter a, li.chapter a:visited {
-      font-weight: bold;
-      text-decoration: none;
-      color: #000;
-    }
-    li.chapter a:hover {
-      text-decoration: underline;
-      color: #666;
-    }
-    section.exam_stats {
-      background-color: #eee;
-      margin-top: 1em;
-      margin-bottom: .5em;
-      padding: .5em 1em .5em 1em;
-    }
-    section.exam_stats span {
-      font-weight: bold;
-      margin-right: 1em;
-    }
-    .exam_right {
-      color: green;
-    }
-    .exam_wrong {
-      color: red;
-    }
-    .exam_pending {
-      color: darkorange;
-    }
-    #exam_questions li {
-      margin-bottom: 1em;
-    }
-    #exam_questions li input {
-      width: 1.2em;
-      height: 1.2em;
-    }
-    #exam_questions button {
-      width: 100%;
-      margin: .5em 0 0 0;
-      border: 1px solid #000;
-      padding: .5em;
-      text-align: left;
-      font-size: 1em;
-      background-color: #F9F9F9;
-    }
-    #exam_questions button:hover {
-      background-color: #F0F0F0;
-      cursor: pointer;
-    }
-    #exam_questions button.right {
-      background-color: lightgreen;
-    }
-    #exam_questions  button.wrong {
-      background-color: lightpink;
-    }
-    #exam_questions li.fail {
-      color: red;
-    }
-    #exam_questions.onlyFail li {
-      visibility: hidden;
-      height: 0;
-      margin-bottom: 0;
-    }
-    #exam_questions.onlyFail li.fail {
-      visibility: visible;
-      height: auto;
-      margin-bottom: inherit;
-    }
-    button.failures_exam {
-      color: red;
-    }
   </style>
 </html>
 
-<div class="outer">
-  <h1>Examinador</h1>
+<div id="nojs">
+  Sin JavaScript hay poco que hacer, que no cobro por esto.
+</div>
 
-  <section class="page config">
-    <button onclick="startExam();">Empezar</button>
-    <button onclick="allChapters(true);">Todos</button>
-    <button onclick="allChapters(false);">Ninguno</button>
-    <input type="checkbox" name="config_shuffle" id="config_shuffle" value="1" /> <label for="config_shuffle">Barajar respuestas</label>
-    <p>¿Cuántas preguntas quieres?</p>
-    <input id="config_questions" value="100" />
-    <button onclick="allQuestions();">Todas</button>
+<div id="outer" style="display: none;">
+  <h1>Examinador 2.0</h1>
+  <div id="config">
     <p>Elige qué temas incluir:</p>
-    <ul id="config_chapters">
-        <!-- to fill -->
-        <li class="chapter"><input type="checkbox" name="config_chapter" value="1" checked="checked" /><strong>Tema 1.</strong> Título del capítulo. <i>(N preguntas)</i>.</li>
+    <ul>
+      <li><button >Seleccionar todos</button></li>
     </ul>
-    <button onclick="startExam();">Empezar</button>
-    <button onclick="allChapters(true);">Todos</button>
-    <button onclick="allChapters(false);">Ninguno</button>
-  </section>
-  
-  <section class="page exam">
-    <button onclick="gotoPage('config');">Nuevo examen</button>
-    <button class="switch_questions" onclick="switchQuestions();">Ver solo fallos</button>
-    <button onclick="exportQuestions('text')">Exportar seleccionadas (texto)</button>
-    <button onclick="exportQuestions('html')">Exportar seleccionadas (HTML)</button>
-    <button class="failures_exam" onclick="startFailuresExam();">Repetir fallos</button>
-    <section class="exam_stats">
-      <!-- to fill -->
-      <p>
-        Aciertos: <span class="exam_right">-</span>
-        Fallos: <span class="exam_wrong">-</span>
-        No contestadas: <span class="exam_pending">-</span>
-        Resultado: <span class="exam_score">-</span>
-      </p>
-    </section>
-    <section>
-      <ol id="exam_questions" className="onlyFail">
-        <!-- to fill -->
-        <li title="Tema y numero de pregunta" class="fail">
-          <input type="checkbox" name="check_question" id="check-question-1" value="1" />
-          <span onclick="clickQuestion(1);">Enunciado de la pregunta</span>
-          <button name="answer-0" id="answer-0-a" onclick="answerQuestion(1, 'a')">Texto de la pregunta</button>
-        </li>  
-      </ol>
-    </section>
-    <section class="exam_stats">
-    </section>
-    <button onclick="gotoPage('config');">Nuevo examen</button>
-    <button class="switch_questions" onclick="switchQuestions();">Ver solo fallos</button>
-    <button onclick="exportQuestions('text')">Exportar seleccionadas (texto)</button>
-    <button onclick="exportQuestions('html')">Exportar seleccionadas (HTML)</button>
-    <button class="failures_exam" onclick="startFailuresExam();">Repetir fallos</button>
-  </section>
+    <ul id="config-chapters">
+      <!--li>
+        <input type="checkbox" name="config-chapter-X" checked="checked" />
+        <button>Tema N.</button> Bla bla bla bla. <span>(N preguntas)</span>
+      </li-->
+    </ul>
+    <ul>
+      <li><input type="checkbox" id="config-shuffle" /> Barajar respuestas</li>
+      <li>Cuántas preguntas: <input type="text" id="config-amount" />
+        <span>(máx: N)</span></li>
+    </ul>
+    <button>Empezar</button>
+  </div>
+  <div id="exam">
+    <div id="exam-stats">
+      <ul>
+        <li>Aciertos: <span>N</span></li>
+        <li>Fallos: <span>N</span></li>
+        <li>Sin contestar: <span>N</span></li>
+        <li>Nota (sobre 60): <span>N</span></li>
+        <li>Nota (sobre 10): <span>N</span></li>
+      </ul>
+      <ul>
+        <li><button>Nuevo examen</button></li>
+        <li><button>Ver solo fallos</button></li>
+        <li><button>Exportar seleccionadas</button></li>
+        <li><button>Repetir fallos</button></li>
+        <li><button>Estadísticas</button></li>
+      </ul>
+    </div>
+    <div id="exam-sheet">
+        <div>
+          <p>
+            <input type="checkbox" name="exam-question-N" /><span>N. </span>
+            <span>Bla bla bla bla bla</span>
+          </p>
+          <ul>
+            <li><button>a) foo</button></li>
+            <li><button>b) bar</button></li>
+            <li><button>c) xyx</button></li>
+            <li><button>d) culo</button></li>
+          </ul>
+        </div>
+    </div>
+  </div>
 </div>
 
 <script type="text/javascript">
 const DATA = ##DATA##;
 
-let exam_state = {
-  questions: null,
-  right: 0,
-  wrong: 0,
-  pending: 0,
-  score: 0
+/*
+DATA [ // un item por tema
+  {
+    num // int, numeración original del tema
+    title // string, nombre del tema
+    questions [ // un item por cada pregunta del tema
+                // aquí ya solo llegan preguntas que cumplen todo lo
+                // necesario para incluirse en un examen
+      {
+        n // int, numeración original de la pregunta dentro del tema
+        a // char, opción (siguiendo orden original) con la respuesta correcta
+        q // string, enunciado de la pregunta
+        o [ // un item por cada posible respuesta
+          {char x} // texto de la respuesta para la opción etiquetada como {x}
+                   // en el orden original
+        ]
+      }
+    ]
+  }
+]
+*/
+
+const STATE = {
+  view: "config",
+  stats: {
+
+  },
+  currentExam: {
+    questions: []
+  }
 };
 
-DATA.forEach(chapter => {
-  chapter.questions.forEach(question => question.c = chapter.num);
-});
-
-renderConfig();
-
-function renderConfig() {
-  let s ="";
-  DATA.forEach(chapter => {
-    s += `<li class="chapter"><input type="checkbox" name="config_chapter" value="${chapter.num}" checked="checked" /><strong><a href="javascript:onlyChapter(${chapter.num});">Tema ${chapter.num}.</a></strong> ${chapter.title}. <i>(${chapter.questions.length} preguntas)</i>.</li>`;
-  });
-  document.getElementById("config_chapters").innerHTML = s;
-}
-
-const config_questions = document.getElementById("config_questions");
-const config_shuffle = document.getElementById("config_shuffle");
-function onlyChapter(num) {
-  const numstr = ""+num;
-  const checks = document.getElementsByName("config_chapter");
-
-  for (const check of checks)
-    check.checked = check.value === numstr;
-
-  const ch = DATA.find(c => c.num === num);
-  config_questions.value = ch.questions.length;
-}
-
-function allChapters(checked) {
-  document.getElementsByName("config_chapter").forEach(c => c.checked = checked);
-  if (checked) config_questions.value = 100;
-}
-
-function allQuestions() {
-  const selected = new Set([...document.querySelectorAll("input[name=config_chapter]:checked")].map(check => Number(check.value)));
-  const chapters = DATA.filter(chapter => selected.has(chapter.num));
-  const available = chapters.reduce((acc, c) => acc + c.questions.length, 0);
-  config_questions.value = available;
-}
-
-function startExam() {
-  const selected = new Set([...document.querySelectorAll("input[name=config_chapter]:checked")].map(check => Number(check.value)));
-  const howMany = Number(config_questions.value);
-  const chapters = DATA.filter(chapter => selected.has(chapter.num));
-  let questions = chooseQuestions(chapters, howMany);
-  if (questions == null) return;
-  launchExam(questions);
-}
-
-function launchExam(questions) {
-  if (config_shuffle.checked) questions = shuffleAnswers(questions);
-  resetExam(questions);
-  renderExamPage();
-  switchQuestions(false);
-  
-  gotoPage("exam");
-  window.scrollTo(0, 0);
-}
-
-function chooseQuestions(chapters, n) {
-  const available = chapters.reduce((acc, c) => acc + c.questions.length, 0);
-  if (available < n) {
-    alert("Seleccione más temas para alcanzar " + n + " preguntas (" + available + ")");
-    return;
-  }
-  const nPerChapter = chapters.map(c => Math.max(Math.floor((c.questions.length * n) / available), 1));
-  while (nPerChapter.reduce((acc, nc) => acc+nc, 0) < n) {
-    nPerChapter[Math.floor(Math.random()*nPerChapter.length)]++;
-  }
-  const questions = [];
-  for (let i=0; i<chapters.length; i++)
-    questions.push(...shuffleArray(chapters[i].questions).slice(0, nPerChapter[i]));
-  shuffleArray(questions);
-  //console.log(chapters.map(c => c.questions.length));
-  //console.log(nPerChapter);
-  //console.log(questions.map(q => `Tema ${q.c} Pregunta ${q.n}`));
-  return questions;
-}
-
-const ABCD = ['a', 'b', 'c', 'd'];
-function shuffleAnswers(questions) {
-  const shuffled = [];
-  for (const q of questions) {
-    const qs = {...q, o: {...q.o}};
-    const ABCDrnd = [...ABCD].sort((a, b) => 0.5 - Math.random());
-    for (let i=0; i<ABCD.length; i++) {
-      qs.o[ABCDrnd[i]] = q.o[ABCD[i]];
-      if (q.a === ABCD[i]) qs.a = ABCDrnd[i];
-    }    
-    shuffled.push(qs);
-  }
-  return shuffled;
-}
-
-function resetExam(questions) {
-  exam_state.questions = questions;
-  exam_state.answers = new Array(questions.length).fill(null);
-  exam_state.current = 0;
-  exam_state.right = exam_state.wrong = exam_state.score = 0;
-  exam_state.pending = exam_state.questions.length;
-}
-
-const exam_stats = document.querySelectorAll(".exam_stats");
-const exam_questions  = document.getElementById("exam_questions");
-function renderExamPage() {
-  updateExamStats();
-
-  let s = "";
-  exam_state.questions.forEach((q,i) => {
-    s += `
-<li title="Tema ${q.c} Pregunta ${q.n}">
-<input type="checkbox" name="check_question" id="check-question-${i}" value="${i}" />
-<span onclick="clickQuestion(${i});">${q.q}</span>`;
-    Object.keys(q.o).forEach(a => {
-      s += `<button name="answer-${i}" id="answer-${i}-${a}" onclick="answerQuestion(${i}, '${a}');">${a}) ${q.o[a]}</button>`;
-    });
-    s += `</li>`;
-  });
-  exam_questions.innerHTML = s;
-}
-
-function updateExamStats() {
-  let s = `
-<p>
-  Aciertos: <span class="exam_right">${exam_state.right}</span>
-  Fallos: <span class="exam_wrong">${exam_state.wrong}</span>
-  No contestadas: <span class="exam_pending">${exam_state.pending}</span>
-  Resultado: <span class="exam_score">${formatScore(exam_state.score)}</span>
-</p>
-`;
-  for (const section of exam_stats)
-    section.innerHTML = s;
-}
-
-function answerQuestion(question, answer) {
-  if (exam_state.answers[question] != null) return; // already answered
-  const button = document.getElementById(`answer-${question}-${answer}`);
-  exam_state.answers[question] = answer;
-  const q = exam_state.questions[question];
-  if (q.a === answer) {
-    // right!
-    exam_state.right++;
-    button.className = "right";
-  } else {
-    // wrong!
-    exam_state.wrong++;
-    button.className = "wrong";
-    document.getElementById(`answer-${question}-${q.a}`).className = "right";
-    //document.getElementById(`check-question-${question}`).checked = true;
-    button.parentNode.className = "fail";
-
-  }
-  exam_state.pending--;
-  updateScore();
-  updateExamStats();
-}
-
-function clickQuestion(question) {
-  const chk = document.getElementById(`check-question-${question}`);
-  chk.checked = !chk.checked;
-}
-
-function updateScore() {
-  exam_state.score = Math.floor((exam_state.right/exam_state.questions.length) *6000) / 100;
-}
-
-function formatScore(score) {
-  const score10 = Math.floor(((score * 10) / 60) * 100) / 100;
-  return `${score}/60 - ${score10}/10`;
-}
-
-const pages = document.querySelectorAll('section.page');
-function gotoPage(page) {
-  pages.forEach(p => p.style.display = "none");
-  document.querySelectorAll('.page.' + page)[0].style.display = "block";
-}
-
-const rndpos = Symbol("rndpos");
-function shuffleArray(array) {
-  const rands = new Uint32Array(array.length);
-  self.crypto.getRandomValues(rands);
-  rands.forEach((n, i) => array[i][rndpos] = n);
-  array.sort((a, b) => a[rndpos] - b[rndpos]);
-  return array;
-}
-
-let onlyFail = false;
-const switchButtons = document.querySelectorAll('.switch_questions');
-function switchQuestions(force) {
-  if (force !== undefined) onlyFail = force;
-  else onlyFail = !onlyFail;
-
-  exam_questions.className = onlyFail ? "onlyFail" : "";
-
-  for (const button of switchButtons) {
-    button.innerHTML = onlyFail ? "Ver todas" : "Ver solo fallos";
-    button.style.color = onlyFail ? "red" : "";
-  }
-
-  window.scrollTo(0, 0);
-}
-
-function exportQuestions(type) {
-  let body = generateExportedQuestions(type);
-  if (body == null) return;
-
-  if (type === 'text') {
-    navigator.clipboard.writeText(body).then(
-      () => alert('Preguntas copiadas al portapapeles'),
-      () => alert('Error copiando al portapapeles')
-    );
-  } else if (type === 'html') {
-    const blobInput = new Blob([body], {type: 'text/html'});
-    const clipboardItemInput = new ClipboardItem({'text/html' : blobInput});
-    navigator.clipboard.write([clipboardItemInput]).then(
-      () => alert('Preguntas copiadas al portapapeles'),
-      () => alert('Error copiando al portapapeles')
-    );
-  }
-}
-
-function startFailuresExam() {
-  let questions = [...document.getElementsByClassName("wrong")].map(b => exam_state.questions[Number(b.name.substring("answer-".length))]);
-  if (questions.length < 1) {
-    alert('El examen no tiene fallos que poder repetir');
-    return;
-  }
-
-  if (!confirm('Esto creará un nuevo examen con las ' + questions.length + ' preguntas falladas. Se perderá el examen actual. ¿Está seguro?')) {
-    return;
-  }
-
-  launchExam(questions);
-}
-
-function generateExportedQuestions(type) {
-  const qnums = [...document.getElementsByName("check_question")].filter(c => c.checked).map(c => Number(c.value));
-  if (qnums.length < 1) return null;
-
-  let str = "";
-  for (const n of qnums) {
-    const q = exam_state.questions[n];
-    if (type === 'text') {
-      str += `[Tema ${q.c} Pregunta ${q.n}]\n`;
-      str += q.q + '\n';
-      for (const o of Object.keys(q.o)) {
-        if (document.getElementById(`answer-${n}-${o}`).className === 'wrong') str += 'X ';
-        else if (o === q.a) str += '+ '; 
-        else str += '  ';
-        str += `${o}) ${q.o[o]}\n`;
-      }
-      str += '\n';
-    } else if (type == 'html') {
-      str += `<p style="margin-bottom:0;">[Tema ${q.c} Pregunta ${q.n}]</p><p style="margin-top:0;">${q.q}</p>`;
-      for (const o of Object.keys(q.o)) {
-        let color = null;
-        if (document.getElementById(`answer-${n}-${o}`).className === 'wrong') color = 'red ';
-        else if (o === q.a) color = 'green';
-        else color = 'black';
-        str += `<p style="color: ${color}; margin: 0;">${o}) ${q.o[o]}</p>`;
-      }
+const DOM = {
+  nojs: document.getElementById('nojs'),
+  outer: document.getElementById('outer'),
+  config: {
+    chapters: document.getElementById('config-chapters'),
+    chapterChecks: () => {
+      const checks = [...DOM.config.chapters.getElementsByTagName('input')]
+        .filter(input => input.type === "checkbox");
+      DOM.config.chapterChecks = () => checks;
+      return checks;
     }
   }
+};
 
-  return str;
-}
-/*
-config_questions.value = 3;
-startExam();
-clickQuestion(0); clickQuestion(1); clickQuestion(2);
-answerQuestion(0, exam_state.questions[0].a);
-let a = exam_state.questions[1].a === 'a' ? 'b' : 'a';
-answerQuestion(1, a);
-exportQuestions('html');
-*/
+const handlers = {
+  config: {
+    selectAll: function() {
+
+    },
+    checkChapter: function(checkbox) {
+
+    },
+    onlyChapter: function(button) {
+      const num = button.getAttribute("data-num");
+      DOM.config.chapterChecks().forEach(check => 
+        check.checked = check.getAttribute("data-num")===num ? "checked" : "");
+    }
+  }
+};
+
+const helpers = {
+  config: {
+    reset: function() {
+      DATA.forEach(c => {
+        helpers.config.addChapter(c.num, c.title, c.questions.length);
+      });
+    },
+    addChapter: function(num, title, nQuestions) {
+      const li = document.createElement('li');
+      const html = `\
+<input
+  data-num="${num}"
+  type="checkbox"
+  checked="checked"
+  onclick="handlers.config.checkChapter(this);" />
+<button
+  data-num="${num}"
+  onclick="handlers.config.onlyChapter(this);"
+>Tema ${num}.</button> ${title} <span>(${nQuestions} preguntas)</span>`;
+      li.innerHTML = html;
+      DOM.config.chapters.appendChild(li);
+    },
+    updateConfigAmountMax: function() {
+
+    }
+  }
+};
+
+(function init() {
+  helpers.config.reset();
+  DOM.nojs.style.display = 'none';
+  DOM.outer.style.display = '';
+})();
+
 </script>
