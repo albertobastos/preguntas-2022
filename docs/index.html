@@ -17,20 +17,20 @@
   <div id="config">
     <p>Elige qué temas incluir:</p>
     <ul>
-      <li><button >Seleccionar todos</button></li>
+      <li><button onclick="handlers.config.selectAll();">Seleccionar todos</button></li>
     </ul>
     <ul id="config-chapters">
       <!--li>
-        <input type="checkbox" name="config-chapter-X" checked="checked" />
+        <input type="checkbox" data-num="x" data-amount="n" checked="checked" />
         <button>Tema N.</button> Bla bla bla bla. <span>(N preguntas)</span>
       </li-->
     </ul>
     <ul>
       <li><input type="checkbox" id="config-shuffle" /> Barajar respuestas</li>
       <li>Cuántas preguntas: <input type="text" id="config-amount" />
-        <span>(máx: N)</span></li>
+        <span>(máx: <span id="config-max"></span>)</span></li>
     </ul>
-    <button>Empezar</button>
+    <button onclick="handlers.config.startExam();">Empezar</button>
   </div>
   <div id="exam">
     <div id="exam-stats">
@@ -50,7 +50,7 @@
       </ul>
     </div>
     <div id="exam-sheet">
-        <div>
+        <!--div>
           <p>
             <input type="checkbox" name="exam-question-N" /><span>N. </span>
             <span>Bla bla bla bla bla</span>
@@ -61,7 +61,7 @@
             <li><button>c) xyx</button></li>
             <li><button>d) culo</button></li>
           </ul>
-        </div>
+        </div-->
     </div>
   </div>
 </div>
@@ -94,12 +94,34 @@ DATA [ // un item por tema
 const STATE = {
   view: "config",
   stats: {
-
+    chapters: new Map() // es un Map(Map)
+                         // en el que questions[N][M] devuelve las estadísticas
+                         // de la pregunta M en el tema N
   },
   currentExam: {
-    questions: []
+    questions: null,
+    total: null,
+    right: null,
+    wrong: null
   }
 };
+
+DATA.forEach(c => {
+  const cm = new Map();
+  c.questions.forEach(q => {
+    cm.set(q.n, {
+      chapter: c,
+      question: q,
+      appearances: 0,
+      answered: 0,
+      right: 0,
+      wrong: 0,
+      score60: 0,
+      score10: 0
+    });
+  });
+  STATE.stats.chapters.set(c.num, cm);
+});
 
 const DOM = {
   nojs: document.getElementById('nojs'),
@@ -111,22 +133,59 @@ const DOM = {
         .filter(input => input.type === "checkbox");
       DOM.config.chapterChecks = () => checks;
       return checks;
-    }
+    },
+    amount: document.getElementById('config-amount'),
+    max: document.getElementById('config-max'),
+    shuffle: document.getElementById('config-shuffle')
   }
 };
 
 const handlers = {
   config: {
     selectAll: function() {
-
+      DOM.config.chapterChecks().forEach(chk => chk.checked = true);
+      helpers.config.updateConfigAmountMax();
     },
     checkChapter: function(checkbox) {
-
+      helpers.config.updateConfigAmountMax();
     },
     onlyChapter: function(button) {
       const num = button.getAttribute("data-num");
       DOM.config.chapterChecks().forEach(check => 
         check.checked = check.getAttribute("data-num")===num ? "checked" : "");
+      helpers.config.updateConfigAmountMax();
+      DOM.config.amount.value = helpers.config.getConfigMaxAmount();
+    },
+    startExam: function() {
+      let n = Number(DOM.config.amount.value);
+      if (n > helpers.config.getConfigMaxAmount()) {
+        alert("Solo puedes elegir hasta " + helpers.config.getConfigMaxAmount()
+          + " preguntas.");
+        return;
+      }
+      const shuffleAnswers = DOM.config.shuffle.checked;
+      const chapterNums = DATA
+        .map(c => c.num)
+        .filter(cnum => DOM.config.chapterChecks().some(cc =>
+          cc.checked && Number(cc.getAttribute("data-num")) === cnum));
+      const candidates =
+        [...helpers.config.buildQuestionCandidates(chapterNums).values()];
+      const cn = candidates.length;
+      const qss = [];
+      for (let ci=0; n>0; ci=(ci+1)%cn) {
+        if (candidates[ci].length > 0) {
+          qss.push(candidates[ci].pop());
+          n--;
+        }
+      }
+      shuffle(qss);
+      const questions = [];
+      for (const qs of qss) {
+        qs.appearances++;
+        questions.push(toExamQuestion(qs.chapter, qs.question, shuffleAnswers));
+      }
+
+      helpers.exam.newExam(questions);
     }
   }
 };
@@ -137,12 +196,15 @@ const helpers = {
       DATA.forEach(c => {
         helpers.config.addChapter(c.num, c.title, c.questions.length);
       });
+      helpers.config.updateConfigAmountMax();
+      DOM.config.amount.value = 100;
     },
     addChapter: function(num, title, nQuestions) {
       const li = document.createElement('li');
       const html = `\
 <input
   data-num="${num}"
+  data-amount="${nQuestions}"
   type="checkbox"
   checked="checked"
   onclick="handlers.config.checkChapter(this);" />
@@ -153,11 +215,92 @@ const helpers = {
       li.innerHTML = html;
       DOM.config.chapters.appendChild(li);
     },
+    getConfigMaxAmount: function() {
+      return DOM.config.chapterChecks()
+        .filter(c => c.checked)
+        .map(c => Number(c.getAttribute("data-amount")))
+        .reduce((acc, curr) => acc+curr, 0);
+    },
     updateConfigAmountMax: function() {
+      const max = helpers.config.getConfigMaxAmount();
+      DOM.config.max.innerHTML = max;
+    },
+    buildQuestionCandidates: function(chapters) {
+      const candidates = new Map(); // chapter num => question stats sorted
+      chapters.forEach(cnum => {
+        const appearancesMap = new Map();
+        for (const qs of STATE.stats.chapters.get(cnum).values()) {
+          if (!appearancesMap.has(qs.appearances))
+            appearancesMap.set(qs.appearances, []);
+          appearancesMap.get(qs.appearances).push(qs);
+        }
+        const ccands = [];
+          [...appearancesMap.keys()].sort().reverse()
+            .forEach(n => ccands.push(...shuffle(appearancesMap.get(n))));
+        candidates.set(cnum, ccands);
+      });
+      return candidates;
+    }
+  },
+  exam: {
+    newExam: function(questions) {
+      const e = STATE.currentExam;
+      e.questions = questions;
+      e.total = questions.length;
+      e.right = 0;
+      e.wrong = 0;
+      helpers.exam.updateScore();
+      // TODO: show "exam" page
+    },
+    updateScore: function() {
+      const e = STATE.currentExam;
+      e.score60 = Math.floor((e.right/e.total) *6000) / 100;
+      e.score10 = Math.floor(((e.score60 * 10) / 60) * 100) / 100
+    }
+  },
+};
 
+// https://stackoverflow.com/posts/2450976/revisions
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
+function toExamQuestion(c, q, shuffleAnswers) {
+  let options = {...q.o};
+  let answer = q.a;
+  if (shuffleAnswers) {
+    const keys = Object.keys(options);
+    const newOrder = shuffle([...keys]);
+    for (let i=0; i<keys.length; i++) {
+      const oldKey = newOrder[i], newKey = keys[i];
+      options[newKey] = q.o[oldKey];
+      if (q.a === oldKey) answer = newKey;
     }
   }
-};
+  return {
+    chapter: c.num,
+    num: q.n,
+    text: q.q,
+    options,
+    answer,
+    answered: null,
+    correct: null
+  };
+}
 
 (function init() {
   helpers.config.reset();
