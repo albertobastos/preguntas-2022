@@ -137,6 +137,9 @@ const DOM = {
     amount: document.getElementById('config-amount'),
     max: document.getElementById('config-max'),
     shuffle: document.getElementById('config-shuffle')
+  },
+  exam: {
+    sheet: document.getElementById('exam-sheet')
   }
 };
 
@@ -186,6 +189,19 @@ const handlers = {
       }
 
       helpers.exam.newExam(questions);
+    }
+  },
+  exam: {
+    submitAnswer(qIndex, qOpt) {
+      const q = STATE.currentExam.questions[qIndex];
+      if (q.answered == null) return;
+      if (q.answer === qOpt) {
+        // right!
+        // TODO
+      } else {
+        // wrong!
+        // TODO
+      }
     }
   }
 };
@@ -250,12 +266,39 @@ const helpers = {
       e.right = 0;
       e.wrong = 0;
       helpers.exam.updateScore();
-      // TODO: show "exam" page
+      helpers.exam.renderExam();
     },
     updateScore: function() {
       const e = STATE.currentExam;
       e.score60 = Math.floor((e.right/e.total) *6000) / 100;
       e.score10 = Math.floor(((e.score60 * 10) / 60) * 100) / 100
+    },
+    renderExam: function() {
+      helpers.exam.clearExam();
+      const qs = STATE.currentExam.questions;
+      for (let i=0; i<qs.length; i++)
+        helpers.exam.addQuestion(i+1, qs[i]);
+    },
+    clearExam: function() {
+      DOM.exam.sheet.innerHTML = '';
+    },
+    addQuestion: function(i, q) {
+      const div = document.createElement('div');
+      const lis = Object.entries(q.options).map(([opt, text]) =>
+`<li><button
+  data-i="${i}"
+  data-opt="${opt}"
+  onClick="handlers.exam.submitAnswer(${i}, ${opt})"
+>${opt}) ${text}</button></li>`).join('');
+      div.innerHTML = `\
+<p>
+  <input type="checkbox" name="exam-question-${i}" />
+  <span title="${q.chapter}.${q.num}">${i}. </span>
+  <span>${q.text}</span>
+</p>
+<ul>${lis}</ul>
+`;
+      DOM.exam.sheet.appendChild(div);
     }
   },
 };
@@ -297,8 +340,7 @@ function toExamQuestion(c, q, shuffleAnswers) {
     text: q.q,
     options,
     answer,
-    answered: null,
-    correct: null
+    answered: null
   };
 }
 
