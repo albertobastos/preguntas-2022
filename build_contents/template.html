@@ -5,6 +5,13 @@
     <title>Examinador 2.0</title>
   </head>
   <style type="text/css">
+  button.right {
+    background-color: lightgreen;
+  }
+  button.wrong {
+    background-color: red;
+    color: white;
+  }
   </style>
 </html>
 
@@ -35,11 +42,11 @@
   <div id="exam">
     <div id="exam-stats">
       <ul>
-        <li>Aciertos: <span>N</span></li>
-        <li>Fallos: <span>N</span></li>
-        <li>Sin contestar: <span>N</span></li>
-        <li>Nota (sobre 60): <span>N</span></li>
-        <li>Nota (sobre 10): <span>N</span></li>
+        <li>Aciertos: <span id="exam-stats-right">N</span></li>
+        <li>Fallos: <span id="exam-stats-wrong">N</span></li>
+        <li>Sin contestar: <span id="exam-stats-blank">N</span></li>
+        <li>Nota (sobre 60): <span id="exam-stats-score60">N</span></li>
+        <li>Nota (sobre 10): <span id="exam-stats-score10">N</span></li>
       </ul>
       <ul>
         <li><button>Nuevo examen</button></li>
@@ -102,7 +109,9 @@ const STATE = {
     questions: null,
     total: null,
     right: null,
-    wrong: null
+    wrong: null,
+    score60: 0,
+    score10: 0
   }
 };
 
@@ -116,8 +125,6 @@ DATA.forEach(c => {
       answered: 0,
       right: 0,
       wrong: 0,
-      score60: 0,
-      score10: 0
     });
   });
   STATE.stats.chapters.set(c.num, cm);
@@ -139,7 +146,12 @@ const DOM = {
     shuffle: document.getElementById('config-shuffle')
   },
   exam: {
-    sheet: document.getElementById('exam-sheet')
+    sheet: document.getElementById('exam-sheet'),
+    right: document.getElementById('exam-stats-right'),
+    wrong: document.getElementById('exam-stats-wrong'),
+    blank: document.getElementById('exam-stats-blank'),
+    score60: document.getElementById('exam-stats-score60'),
+    score10: document.getElementById('exam-stats-score10')
   }
 };
 
@@ -192,16 +204,28 @@ const handlers = {
     }
   },
   exam: {
-    submitAnswer(qIndex, qOpt) {
+    submitAnswer(button, qIndex, qOpt) {
       const q = STATE.currentExam.questions[qIndex];
       if (q.answered == null) return;
-      if (q.answer === qOpt) {
-        // right!
-        // TODO
-      } else {
-        // wrong!
-        // TODO
+      q.answered = qOpt;
+      const optionButtons = button.parentNode.parentNode.querySelectorAll('button');
+      for (const ob of optionButtons) {
+        const opt = ob.getAttribute("opt");
+        const cl = helpers.exam.determineAnswerClass(q, opt);
+        if (cl != '') ob.classList.add(cl);
       }
+      const qstat = STATE.stats.chapters.get(q.chapter).get(q.n);
+      const estat = STATE.currentExam;
+      qstat.answered++;
+      if (q.answer === qOpt) {
+        qstat.right++;
+        estat.right++;
+      } else {
+        qstat.wrong++;
+        estat.wrong++;
+      }
+      helpers.exam.updateScore();
+      helpers.exam.renderScore();
     }
   }
 };
@@ -266,18 +290,28 @@ const helpers = {
       e.right = 0;
       e.wrong = 0;
       helpers.exam.updateScore();
-      helpers.exam.renderExam();
+      helpers.exam.renderScore();
+      helpers.exam.renderSheet();
     },
     updateScore: function() {
       const e = STATE.currentExam;
       e.score60 = Math.floor((e.right/e.total) *6000) / 100;
-      e.score10 = Math.floor(((e.score60 * 10) / 60) * 100) / 100
+      e.score10 = Math.floor(((e.score60 * 10) / 60) * 100) / 100;
     },
-    renderExam: function() {
+    renderSheet: function() {
       helpers.exam.clearExam();
       const qs = STATE.currentExam.questions;
       for (let i=0; i<qs.length; i++)
         helpers.exam.addQuestion(i+1, qs[i]);
+    },
+    renderScore: function() {
+      const e = STATE.currentExam;
+      const d = DOM.exam;
+      d.right.innerHTML = e.right;
+      d.wrong.innerHTML = e.wrong;
+      d.blank.innerHTML = e.total - e.right - e.wrong;
+      d.score60.innerHTML = e.score60;
+      d.score10.innerHTML = e.score10;
     },
     clearExam: function() {
       DOM.exam.sheet.innerHTML = '';
@@ -288,7 +322,8 @@ const helpers = {
 `<li><button
   data-i="${i}"
   data-opt="${opt}"
-  onClick="handlers.exam.submitAnswer(${i}, ${opt})"
+  class="${helpers.exam.determineAnswerClass(q, opt)}"
+  onClick="handlers.exam.submitAnswer(this, ${i}, '${opt}')"
 >${opt}) ${text}</button></li>`).join('');
       div.innerHTML = `\
 <p>
@@ -299,6 +334,16 @@ const helpers = {
 <ul>${lis}</ul>
 `;
       DOM.exam.sheet.appendChild(div);
+    },
+    determineAnswerClass: function(q, opt) {
+      if (q.answered == null)
+        return '';
+      else if (q.answered === opt && opt !== q.answer)
+        return 'wrong';
+      else if (q.answer === opt)
+        return 'right';
+      else
+        return '';
     }
   },
 };
