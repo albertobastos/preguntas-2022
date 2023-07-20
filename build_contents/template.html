@@ -12,6 +12,13 @@
     background-color: red;
     color: white;
   }
+  .hidden {
+    display: none;
+  }
+  button.on {
+    background-color: grey;
+    color: white;
+  }
   </style>
 </html>
 
@@ -50,7 +57,11 @@
       </ul>
       <ul>
         <li><button>Nuevo examen</button></li>
-        <li><button>Ver solo fallos</button></li>
+        <li><button
+          id="toggle-only-wrong"
+          onclick="handlers.exam.toggleOnlyWrong();"
+          class="off"
+        >Ver solo fallos</button></li>
         <li><button>Exportar seleccionadas</button></li>
         <li><button>Repetir fallos</button></li>
         <li><button>Estadísticas</button></li>
@@ -151,27 +162,28 @@ const DOM = {
     wrong: document.getElementById('exam-stats-wrong'),
     blank: document.getElementById('exam-stats-blank'),
     score60: document.getElementById('exam-stats-score60'),
-    score10: document.getElementById('exam-stats-score10')
+    score10: document.getElementById('exam-stats-score10'),
+    btnOnlyWrong: document.getElementById('toggle-only-wrong')
   }
 };
 
 const handlers = {
   config: {
-    selectAll: function() {
+    selectAll() {
       DOM.config.chapterChecks().forEach(chk => chk.checked = true);
       helpers.config.updateConfigAmountMax();
     },
-    checkChapter: function(checkbox) {
+    checkChapter(checkbox) {
       helpers.config.updateConfigAmountMax();
     },
-    onlyChapter: function(button) {
+    onlyChapter(button) {
       const num = button.getAttribute("data-num");
       DOM.config.chapterChecks().forEach(check => 
         check.checked = check.getAttribute("data-num")===num ? "checked" : "");
       helpers.config.updateConfigAmountMax();
       DOM.config.amount.value = helpers.config.getConfigMaxAmount();
     },
-    startExam: function() {
+    startExam() {
       let n = Number(DOM.config.amount.value);
       if (n > helpers.config.getConfigMaxAmount()) {
         alert("Solo puedes elegir hasta " + helpers.config.getConfigMaxAmount()
@@ -206,15 +218,17 @@ const handlers = {
   exam: {
     submitAnswer(button, qIndex, qOpt) {
       const q = STATE.currentExam.questions[qIndex];
-      if (q.answered == null) return;
+      if (q.answered != null) return;
       q.answered = qOpt;
-      const optionButtons = button.parentNode.parentNode.querySelectorAll('button');
+      const optionButtons = button.parentNode.parentNode
+        .querySelectorAll('button');
+      const questionDiv = button.parentNode.parentNode.parentNode;
       for (const ob of optionButtons) {
-        const opt = ob.getAttribute("opt");
+        const opt = ob.getAttribute("data-opt");
         const cl = helpers.exam.determineAnswerClass(q, opt);
         if (cl != '') ob.classList.add(cl);
       }
-      const qstat = STATE.stats.chapters.get(q.chapter).get(q.n);
+      const qstat = STATE.stats.chapters.get(q.chapter).get(q.num);
       const estat = STATE.currentExam;
       qstat.answered++;
       if (q.answer === qOpt) {
@@ -223,23 +237,30 @@ const handlers = {
       } else {
         qstat.wrong++;
         estat.wrong++;
+        questionDiv.classList.add('wrong');
       }
       helpers.exam.updateScore();
       helpers.exam.renderScore();
+    },
+    toggleOnlyWrong() {
+      const btn = DOM.exam.btnOnlyWrong;
+      const qs =DOM.exam.sheet.querySelectorAll('div.question:not(.wrong)');
+      for (const q of qs) q.classList.toggle('hidden');
+      btn.classList.toggle('on');
     }
   }
 };
 
 const helpers = {
   config: {
-    reset: function() {
+    reset() {
       DATA.forEach(c => {
         helpers.config.addChapter(c.num, c.title, c.questions.length);
       });
       helpers.config.updateConfigAmountMax();
       DOM.config.amount.value = 100;
     },
-    addChapter: function(num, title, nQuestions) {
+    addChapter(num, title, nQuestions) {
       const li = document.createElement('li');
       const html = `\
 <input
@@ -255,17 +276,17 @@ const helpers = {
       li.innerHTML = html;
       DOM.config.chapters.appendChild(li);
     },
-    getConfigMaxAmount: function() {
+    getConfigMaxAmount() {
       return DOM.config.chapterChecks()
         .filter(c => c.checked)
         .map(c => Number(c.getAttribute("data-amount")))
         .reduce((acc, curr) => acc+curr, 0);
     },
-    updateConfigAmountMax: function() {
+    updateConfigAmountMax() {
       const max = helpers.config.getConfigMaxAmount();
       DOM.config.max.innerHTML = max;
     },
-    buildQuestionCandidates: function(chapters) {
+    buildQuestionCandidates(chapters) {
       const candidates = new Map(); // chapter num => question stats sorted
       chapters.forEach(cnum => {
         const appearancesMap = new Map();
@@ -283,7 +304,7 @@ const helpers = {
     }
   },
   exam: {
-    newExam: function(questions) {
+    newExam(questions) {
       const e = STATE.currentExam;
       e.questions = questions;
       e.total = questions.length;
@@ -292,19 +313,20 @@ const helpers = {
       helpers.exam.updateScore();
       helpers.exam.renderScore();
       helpers.exam.renderSheet();
+      DOM.exam.btnOnlyWrong.classList.remove('on');
     },
-    updateScore: function() {
+    updateScore() {
       const e = STATE.currentExam;
       e.score60 = Math.floor((e.right/e.total) *6000) / 100;
       e.score10 = Math.floor(((e.score60 * 10) / 60) * 100) / 100;
     },
-    renderSheet: function() {
+    renderSheet() {
       helpers.exam.clearExam();
       const qs = STATE.currentExam.questions;
       for (let i=0; i<qs.length; i++)
         helpers.exam.addQuestion(i+1, qs[i]);
     },
-    renderScore: function() {
+    renderScore() {
       const e = STATE.currentExam;
       const d = DOM.exam;
       d.right.innerHTML = e.right;
@@ -313,11 +335,12 @@ const helpers = {
       d.score60.innerHTML = e.score60;
       d.score10.innerHTML = e.score10;
     },
-    clearExam: function() {
+    clearExam() {
       DOM.exam.sheet.innerHTML = '';
     },
-    addQuestion: function(i, q) {
+    addQuestion(i, q) {
       const div = document.createElement('div');
+      div.classList.add('question');
       const lis = Object.entries(q.options).map(([opt, text]) =>
 `<li><button
   data-i="${i}"
@@ -335,7 +358,7 @@ const helpers = {
 `;
       DOM.exam.sheet.appendChild(div);
     },
-    determineAnswerClass: function(q, opt) {
+    determineAnswerClass(q, opt) {
       if (q.answered == null)
         return '';
       else if (q.answered === opt && opt !== q.answer)
