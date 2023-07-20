@@ -10,6 +10,9 @@
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+  .green { color: darkgreen; }
+  .red { color: red; }
+  .orange { color: darkorange; }
   ul { padding: 0; }
   li { list-style-type: none; }
   h1 {
@@ -24,6 +27,9 @@
   }
   #outer {
     margin: .5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
   }
   .upper-bold {
     font-weight: bold;
@@ -120,6 +126,7 @@
     width: 100%;
     cursor: pointer;
     font-size: 1em;
+    text-size-adjust: none;
   }
   div.question li {
     margin-bottom: .3em;
@@ -175,9 +182,9 @@
   <div id="exam" class="page hidden">
     <div class="exam-stats">
       <ul class="results">
-        <li>Aciertos: <span name="exam-stats-right">?</span></li>
-        <li>Fallos: <span name="exam-stats-wrong">?</span></li>
-        <li>Sin contestar: <span name="exam-stats-blank">?</span></li>
+        <li>Aciertos: <span class="green" name="exam-stats-right">?</span></li>
+        <li>Fallos: <span class="red" name="exam-stats-wrong">?</span></li>
+        <li>Sin contestar: <span class="orange" name="exam-stats-blank">?</span></li>
         <li>Nota (sobre 60): <span name="exam-stats-score60">?</span></li>
         <li>Nota (sobre 10): <span name="exam-stats-score10">?</span></li>
       </ul>
