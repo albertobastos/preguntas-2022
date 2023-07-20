@@ -26,11 +26,12 @@
   Sin JavaScript hay poco que hacer, que no cobro por esto.
 </div>
 
-<div id="outer" style="display: none;">
+<div id="outer">
   <h1>Examinador 2.0</h1>
-  <div id="config">
+  <div id="config" class="page hidden">
     <p>Elige qué temas incluir:</p>
     <ul>
+      <li><button onclick="handlers.config.startExam();">Empezar</button></li>
       <li><button onclick="handlers.config.selectAll();">Seleccionar todos</button></li>
     </ul>
     <ul id="config-chapters">
@@ -43,10 +44,11 @@
       <li><input type="checkbox" id="config-shuffle" /> Barajar respuestas</li>
       <li>Cuántas preguntas: <input type="text" id="config-amount" />
         <span>(máx: <span id="config-max"></span>)</span></li>
+      <li><button onclick="handlers.config.startExam();">Empezar</button></li>
+      <li><button onclick="handlers.config.selectAll();">Seleccionar todos</button></li>
     </ul>
-    <button onclick="handlers.config.startExam();">Empezar</button>
   </div>
-  <div id="exam">
+  <div id="exam" class="page hidden">
     <div id="exam-stats">
       <ul>
         <li>Aciertos: <span id="exam-stats-right">N</span></li>
@@ -56,14 +58,18 @@
         <li>Nota (sobre 10): <span id="exam-stats-score10">N</span></li>
       </ul>
       <ul>
-        <li><button>Nuevo examen</button></li>
+        <li><button
+          onclick="handlers.exam.newExam();"
+        >Nuevo examen</button></li>
         <li><button
           id="toggle-only-wrong"
           onclick="handlers.exam.toggleOnlyWrong();"
           class="off"
         >Ver solo fallos</button></li>
-        <li><button>Exportar seleccionadas</button></li>
-        <li><button>Repetir fallos</button></li>
+        <!--li><button>Exportar seleccionadas</button></li-->
+        <li><button
+          onclick="handlers.exam.repeatWrong();"
+        >Repetir fallos</button></li>
         <li><button>Estadísticas</button></li>
       </ul>
     </div>
@@ -144,6 +150,7 @@ DATA.forEach(c => {
 const DOM = {
   nojs: document.getElementById('nojs'),
   outer: document.getElementById('outer'),
+  pages: document.querySelectorAll('div.page'),
   config: {
     chapters: document.getElementById('config-chapters'),
     chapterChecks: () => {
@@ -213,11 +220,20 @@ const handlers = {
       }
 
       helpers.exam.newExam(questions);
+      helpers.goTo('exam');
     }
   },
   exam: {
+    newExam() {
+      const e = STATE.currentExam;
+      if (e.total > e.right + e.wrong)
+        if (!confirm(`Quedan preguntas sin contestar. El examen actual se \
+  perderá. ¿Está seguro/a?`))
+          return;
+      helpers.goTo('config');
+    },
     submitAnswer(button, qIndex, qOpt) {
-      const q = STATE.currentExam.questions[qIndex];
+      const q = STATE.currentExam.questions[qIndex-1];
       if (q.answered != null) return;
       q.answered = qOpt;
       const optionButtons = button.parentNode.parentNode
@@ -247,11 +263,37 @@ const handlers = {
       const qs =DOM.exam.sheet.querySelectorAll('div.question:not(.wrong)');
       for (const q of qs) q.classList.toggle('hidden');
       btn.classList.toggle('on');
+    },
+    repeatWrong() {
+      const e = STATE.currentExam;
+      if (e.wrong < 1) {
+        alert('¡No hay fallos!');
+        return;
+      }
+      if (e.total > e.right + e.wrong) {
+        if (!confirm(`Quedan preguntas sin contestar. Esta acción creará \
+un nuevo examen y el actual se perderá. ¿Está seguro/a?`))
+          return;
+      }
+      const shuffleAnswers = DOM.config.shuffle.checked;
+      const newQuestions = [];
+      e.questions.forEach(q => {
+        if (q.answered == null || q.answered === q.answer) return;
+        newQuestions.push(toExamReQuestion(q, shuffleAnswers));
+        STATE.stats.chapters.get(q.chapter).get(q.num).appearances++;
+      });
+      helpers.exam.newExam(newQuestions);
     }
   }
 };
 
 const helpers = {
+  goTo(page) {
+    for (const p of DOM.pages) {
+      if (p.id === page) p.classList.remove('hidden');
+      else p.classList.add('hidden');
+    }
+  },
   config: {
     reset() {
       DATA.forEach(c => {
@@ -259,6 +301,7 @@ const helpers = {
       });
       helpers.config.updateConfigAmountMax();
       DOM.config.amount.value = 100;
+      helpers.goTo('config');
     },
     addChapter(num, title, nQuestions) {
       const li = document.createElement('li');
@@ -350,7 +393,7 @@ const helpers = {
 >${opt}) ${text}</button></li>`).join('');
       div.innerHTML = `\
 <p>
-  <input type="checkbox" name="exam-question-${i}" />
+  <!--input type="checkbox" name="exam-question-${i}" /-->
   <span title="${q.chapter}.${q.num}">${i}. </span>
   <span>${q.text}</span>
 </p>
@@ -392,16 +435,7 @@ function shuffle(array) {
 
 function toExamQuestion(c, q, shuffleAnswers) {
   let options = {...q.o};
-  let answer = q.a;
-  if (shuffleAnswers) {
-    const keys = Object.keys(options);
-    const newOrder = shuffle([...keys]);
-    for (let i=0; i<keys.length; i++) {
-      const oldKey = newOrder[i], newKey = keys[i];
-      options[newKey] = q.o[oldKey];
-      if (q.a === oldKey) answer = newKey;
-    }
-  }
+  const answer = shuffleAnswers ? shuffleOptions(options, q.a) : q.a;
   return {
     chapter: c.num,
     num: q.n,
@@ -410,6 +444,32 @@ function toExamQuestion(c, q, shuffleAnswers) {
     answer,
     answered: null
   };
+}
+
+function toExamReQuestion(q, shuffleAnswers) {
+  let options = {...q.options};
+  const answer = shuffleAnswers ? shuffleOptions(options, q.answer) : q.answer;
+  return {
+    chapter: q.chapter,
+    num: q.num,
+    text: q.text,
+    options,
+    answer,
+    answered: null
+  };
+}
+
+function shuffleOptions(options, answer) {
+  let newAnswer;
+  const src = {...options};
+  const keys = Object.keys(options);
+  const newOrder = shuffle([...keys]);
+  for (let i=0; i<keys.length; i++) {
+    const oldKey = newOrder[i], newKey = keys[i];
+    options[newKey] = src[oldKey];
+    if (answer === oldKey) newAnswer = newKey;
+  }
+  return newAnswer;
 }
 
 (function init() {
