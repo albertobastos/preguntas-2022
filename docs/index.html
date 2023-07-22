@@ -313,7 +313,7 @@
     */
 
     const STATE = {
-      view: "config",
+      VERSION: 1,
       stats: {
         chapters: new Map() // es un Map(Map)
                             // en el que questions[N][M] devuelve las estadísticas
@@ -540,6 +540,22 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
           else p.classList.add('hidden');
         }
       },
+      loadState() {
+        if (window == null || window.localStorage == null) return false;
+        const storedStr = window.localStorage.getItem('state');
+        if (storedStr == null) return false;
+        const stored = JSON.parse(storedStr);
+        if (stored.VERSION !== STATE.VERSION) {
+          alert('Los datos guardados pertenecen a una versión anterior y'
+            + ' deben descartarse.');
+          return false;
+        }
+        STATE = stored;
+        // TODO: if exam in progress, ask if reload it
+      },
+      saveState() {
+        window.localStorage.setItem('state', JSON.stringify(STATE));
+      },
       config: {
         reset() {
           helpers.stats.init();
@@ -688,6 +704,7 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
           DOM.stats.tbody.innerHTML = html;
         },
         init() {
+          if (helpers.loadState()) return;
           DATA.forEach(c => {
             const cm = new Map();
             c.questions.forEach(q => {
@@ -773,7 +790,7 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
       DOM.nojs.style.display = 'none';
       DOM.stats.container.style.display = 'none';
       DOM.outer.style.display = '';
-      handlers.stats.show();
+      //handlers.stats.show();
     })();
 
     </script>
