@@ -312,13 +312,11 @@
     ]
     */
 
-    const STATE = {
+    let STATE = {
       VERSION: 1,
-      stats: {
-        chapters: new Map() // es un Map(Map)
-                            // en el que questions[N][M] devuelve las estadísticas
-                            // de la pregunta M en el tema N
-      },
+      stats: {},// es un diccionario de dos niveles en el que
+                // chapters.N.M guarda las estadísticas de la pregunta M
+                // en el tema N
       currentExam: {
         questions: null,
         total: null,
@@ -423,10 +421,13 @@
           const questions = [];
           for (const qs of qss) {
             qs.appearances++;
-            questions.push(toExamQuestion(qs.chapter, qs.question, shuffleAnswers));
+            const c = DATA[qs.cindex];
+            const q = c.questions[qs.qindex];
+            questions.push(toExamQuestion(c, q, shuffleAnswers));
           }
 
           helpers.exam.newExam(questions);
+          helpers.saveState();
           helpers.goTo('exam');
         }
       },
@@ -437,6 +438,7 @@
             if (!confirm(`Quedan preguntas sin contestar. El examen actual se \
       perderá. ¿Está seguro/a?`))
               return;
+          STATE.currentExam = null;
           helpers.goTo('config');
         },
         submitAnswer(button, qIndex, qOpt) {
@@ -451,7 +453,7 @@
             const cl = helpers.exam.determineAnswerClass(q, opt);
             if (cl != '') ob.classList.add(cl);
           }
-          const qstat = STATE.stats.chapters.get(q.chapter).get(q.num);
+          const qstat = STATE.stats[q.cnum][q.qnum];
           const estat = STATE.currentExam;
           qstat.answered++;
           if (q.answer === qOpt) {
@@ -464,6 +466,7 @@
           }
           helpers.exam.updateScore();
           helpers.exam.renderScore();
+          helpers.saveState();
         },
         toggleOnlyWrong(val) {
           val = val != null ? val : DOM.exam.onlyWrong[0].getAttribute("data-set") === "false";
@@ -492,7 +495,7 @@
           e.questions.forEach(q => {
             if (q.answered == null || q.answered === q.answer) return;
             newQuestions.push(toExamReQuestion(q, shuffleAnswers));
-            STATE.stats.chapters.get(q.chapter).get(q.num).appearances++;
+            STATE.stats[q.cnum][q.qnum].appearances++;
           });
           helpers.exam.newExam(newQuestions);
         }
@@ -508,7 +511,9 @@
           DOM.stats.container.style.display = 'none';
         },
         showQuestion(cnum, qnum) {
-          const {chapter, question} = STATE.stats.chapters.get(cnum).get(qnum);
+          const {cindex, qindex} = STATE.stats[cnum][qnum];
+          const chapter = DATA[cindex];
+          const question = chapter.questions[qindex];
           const msg = `\
 Tema ${cnum}: ${chapter.title}
 
@@ -526,7 +531,9 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
           if(!confirm('De verdad, ¿eh? Que la puedes liar gorda.'))
             return;
 
-          helpers.stats.init();
+          helpers.stats.init(true);
+          STATE.currentExam = null;
+          helpers.saveState();
           helpers.goTo('config');
           handlers.stats.hide();
         }
@@ -551,6 +558,16 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
           return false;
         }
         STATE = stored;
+        const e = STATE.currentExam;
+        if (e != null && e.total > e.right + e.wrong) {
+          if (confirm(`Se ha detectado un examen en curso, ¿quiere recuperarlo?`)) {
+            helpers.exam.loadCurrentExam();
+            helpers.goTo('exam');
+          } else {
+            STATE.currentExam = null;
+            helpers.saveState();
+          }
+        }
         // TODO: if exam in progress, ask if reload it
       },
       saveState() {
@@ -558,13 +575,13 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
       },
       config: {
         reset() {
+          helpers.goTo('config');
           helpers.stats.init();
           DATA.forEach(c => {
             helpers.config.addChapter(c.num, c.title, c.questions.length);
           });
           helpers.config.updateConfigAmountMax();
           DOM.config.amount.value = 100;
-          helpers.goTo('config');
         },
         isShuffle() {
           DOM.config.shuffle[0].getAttribute("data-shuffle") === "true";
@@ -601,7 +618,9 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
           const candidates = new Map(); // chapter num => question stats sorted
           chapters.forEach(cnum => {
             const appearancesMap = new Map();
-            for (const qs of STATE.stats.chapters.get(cnum).values()) {
+            const cs = STATE.stats[cnum];
+            for (const qnum of Object.keys(cs)) {
+              const qs = cs[qnum];
               if (!appearancesMap.has(qs.appearances))
                 appearancesMap.set(qs.appearances, []);
               appearancesMap.get(qs.appearances).push(qs);
@@ -621,6 +640,12 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
           e.total = questions.length;
           e.right = 0;
           e.wrong = 0;
+          helpers.exam.updateScore();
+          helpers.exam.renderScore();
+          helpers.exam.renderSheet();
+          handlers.exam.toggleOnlyWrong(false);
+        },
+        loadCurrentExam() {
           helpers.exam.updateScore();
           helpers.exam.renderScore();
           helpers.exam.renderSheet();
@@ -660,7 +685,7 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
       onClick="handlers.exam.submitAnswer(this, ${i}, '${opt}')"
     >${opt}) ${text}</button></li>`).join('');
           div.innerHTML = `\
-    <p title="${q.chapter}.${q.num}">
+    <p title="${q.cnum}.${q.qnum}">
       <span>${i}. </span>
       <span>${q.text}</span>
     </p>
@@ -682,8 +707,10 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
       stats: {
         render() {
           let html = '';
-          for (const [cnum, qmap] of STATE.stats.chapters.entries()) {
-            for (const [qnum, qs] of qmap.entries()) {
+          const x = STATE.stats; 
+          for (const cnum of Object.keys(x)) {
+            for (const qnum of Object.keys(x[cnum])) {
+              const qs = x[cnum][qnum];
               const answered = qs.right + qs.wrong;
               html += `\
 <tr>
@@ -703,21 +730,21 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
           }
           DOM.stats.tbody.innerHTML = html;
         },
-        init() {
-          if (helpers.loadState()) return;
-          DATA.forEach(c => {
-            const cm = new Map();
-            c.questions.forEach(q => {
-              cm.set(q.n, {
-                chapter: c,
-                question: q,
+        init(skipStorage = false) {
+          if (!skipStorage && helpers.loadState()) return;
+          DATA.forEach((c, cindex) => {
+            const cs = {};
+            c.questions.forEach((q, qindex) => {
+              cs[q.n] = {
+                cindex,
+                qindex,
                 appearances: 0,
                 answered: 0,
                 right: 0,
                 wrong: 0,
-              });
+              };
             });
-            STATE.stats.chapters.set(c.num, cm);
+            STATE.stats[c.num] = cs;
           });
         },
       }
@@ -746,8 +773,8 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
       let options = {...q.o};
       const answer = shuffleAnswers ? shuffleOptions(options, q.a) : q.a;
       return {
-        chapter: c.num,
-        num: q.n,
+        cnum: c.num,
+        qnum: q.n,
         text: q.q,
         options,
         answer,
@@ -759,9 +786,7 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
       let options = {...q.options};
       const answer = shuffleAnswers ? shuffleOptions(options, q.answer) : q.answer;
       return {
-        chapter: q.chapter,
-        num: q.num,
-        text: q.text,
+        ...q,
         options,
         answer,
         answered: null
