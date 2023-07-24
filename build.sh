@@ -1,3 +1,3 @@
 #!/bin/sh
 
-node ./build_contents/build.js docs/index.html
+node ./src/build.js docs/index.html
