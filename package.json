@@ -1,0 +1,25 @@
+{
+  "name": "preguntas2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "clean": "rm -rf docs",
+    "pre-build": "npm run clean",
+    "build": "mkdir -p docs && node ./src/build.js docs/index.html",
+    "serve": "python -m http.server --directory docs 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertobastos/preguntas-2022.git"
+  },
+  "author": "Alberto Bastos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albertobastos/preguntas-2022/issues"
+  },
+  "homepage": "https://github.com/albertobastos/preguntas-2022#readme"
+}
