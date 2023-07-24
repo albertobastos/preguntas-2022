@@ -436,9 +436,10 @@
           const e = STATE.currentExam;
           if (e.total > e.right + e.wrong)
             if (!confirm(`Quedan preguntas sin contestar. El examen actual se \
-      perderá. ¿Está seguro/a?`))
+perderá. ¿Está seguro/a?`))
               return;
-          STATE.currentExam = null;
+          e.questions = null;
+          helpers.saveState();
           helpers.goTo('config');
         },
         submitAnswer(button, qIndex, qOpt) {
@@ -487,7 +488,7 @@
           }
           if (e.total > e.right + e.wrong) {
             if (!confirm(`Quedan preguntas sin contestar. Esta acción creará \
-    un nuevo examen y el actual se perderá. ¿Está seguro/a?`))
+un nuevo examen y el actual se perderá. ¿Está seguro/a?`))
               return;
           }
           const shuffleAnswers = helpers.config.isShuffle();
@@ -515,8 +516,7 @@
           const chapter = DATA[cindex];
           const question = chapter.questions[qindex];
           const msg = `\
-Tema ${cnum}: ${chapter.title}
-
+Tema ${cnum}
 Pregunta #${qnum}: ${question.q}
 
 ${Object.entries(question.o)
@@ -532,7 +532,7 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
             return;
 
           helpers.stats.init(true);
-          STATE.currentExam = null;
+          STATE.currentExam.questions = null;
           helpers.saveState();
           helpers.goTo('config');
           handlers.stats.hide();
@@ -559,16 +559,16 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
         }
         STATE = stored;
         const e = STATE.currentExam;
-        if (e != null && e.total > e.right + e.wrong) {
+        if (e != null && e.questions != null && e.total > e.right + e.wrong) {
           if (confirm(`Se ha detectado un examen en curso, ¿quiere recuperarlo?`)) {
             helpers.exam.loadCurrentExam();
             helpers.goTo('exam');
           } else {
-            STATE.currentExam = null;
+            STATE.currentExam.questions = null;
             helpers.saveState();
           }
         }
-        // TODO: if exam in progress, ask if reload it
+        return true;
       },
       saveState() {
         window.localStorage.setItem('state', JSON.stringify(STATE));
