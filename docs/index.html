@@ -111,6 +111,12 @@
   ul.results li span {
     font-weight: bold;
   }
+  #exam-stats-disabled {
+    border-color: 1px solid red;
+    background-color: lightpink;
+    font-weight: bold;
+    padding: 1em;
+  }
   div.question {
     margin-bottom: .5em;
     padding: .5em;
@@ -218,6 +224,10 @@
           </ul>
         </div>
         <div id="exam" class="page hidden">
+          <div id="exam-stats-disabled">
+            Este examen es una repetición de fallos anteriores y sus respuestas
+            no se tendrán en cuenta para las estadísticas.
+          </div>
           <div class="exam-stats">
             <ul class="results">
               <li>Aciertos: <span class="green" name="exam-stats-right">?</span></li>
@@ -244,12 +254,12 @@
           </div>
           <div id="exam-sheet"></div>
           <ul class="results">
-            <li>Aciertos: <span name="exam-stats-right">?</span></li>
-            <li>Fallos: <span name="exam-stats-wrong">?</span></li>
-            <li>Sin contestar: <span name="exam-stats-blank">?</span></li>
+            <li>Aciertos: <span class="green" name="exam-stats-right">?</span></li>
+            <li>Fallos: <span class="red" name="exam-stats-wrong">?</span></li>
+            <li>Sin contestar: <span class="orange" name="exam-stats-blank">?</span></li>
             <li>Nota (sobre 60): <span name="exam-stats-score60">?</span></li>
             <li>Nota (sobre 10): <span name="exam-stats-score10">?</span></li>
-          </ul>
+        </ul>
           <ul class="buttons">
             <li><button
               class="upper-bold"
@@ -275,11 +285,9 @@
         <thead>
           <tr>
             <th>Pregunta</th>
-            <th>Apariciones</th>
             <th>Contestada</th>
             <th>Aciertos</th>
             <th>Fallos</th>
-            <th>% contestada</th>
             <th>% aciertos</th>
           </tr>
         </thead>
@@ -323,7 +331,8 @@
         right: null,
         wrong: null,
         score60: 0,
-        score10: 0
+        score10: 0,
+        statsEnabled: null
       }
     };
 
@@ -351,7 +360,8 @@
         blank: document.getElementsByName('exam-stats-blank'),
         score60: document.getElementsByName('exam-stats-score60'),
         score10: document.getElementsByName('exam-stats-score10'),
-        onlyWrong: document.getElementsByName('exam-only-wrong')
+        onlyWrong: document.getElementsByName('exam-only-wrong'),
+        statsDisabled: document.getElementById('exam-stats-disabled')
       },
       stats: {
         container: document.getElementById('stats-container'),
@@ -420,7 +430,6 @@
           shuffle(qss);
           const questions = [];
           for (const qs of qss) {
-            qs.appearances++;
             const c = DATA[qs.cindex];
             const q = c.questions[qs.qindex];
             questions.push(toExamQuestion(c, q, shuffleAnswers));
@@ -455,14 +464,14 @@ perderá. ¿Está seguro/a?`))
             if (cl != '') ob.classList.add(cl);
           }
           const qstat = STATE.stats[q.cnum][q.qnum];
-          const estat = STATE.currentExam;
-          qstat.answered++;
+          const e = STATE.currentExam;
+          if (e.statsEnabled) qstat.appearances++;
           if (q.answer === qOpt) {
-            qstat.right++;
-            estat.right++;
+            if (e.statsEnabled) qstat.right++;
+            e.right++;
           } else {
-            qstat.wrong++;
-            estat.wrong++;
+            if (e.statsEnabled) qstat.wrong++;
+            e.wrong++;
             questionDiv.classList.add('wrong');
           }
           helpers.exam.updateScore();
@@ -496,9 +505,8 @@ un nuevo examen y el actual se perderá. ¿Está seguro/a?`))
           e.questions.forEach(q => {
             if (q.answered == null || q.answered === q.answer) return;
             newQuestions.push(toExamReQuestion(q, shuffleAnswers));
-            STATE.stats[q.cnum][q.qnum].appearances++;
           });
-          helpers.exam.newExam(newQuestions);
+          helpers.exam.newExam(newQuestions, false);
         }
       },
       stats: {
@@ -634,12 +642,13 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
         }
       },
       exam: {
-        newExam(questions) {
+        newExam(questions, statsEnabled = true) {
           const e = STATE.currentExam;
           e.questions = questions;
           e.total = questions.length;
           e.right = 0;
           e.wrong = 0;
+          e.statsEnabled = statsEnabled;
           helpers.exam.updateScore();
           helpers.exam.renderScore();
           helpers.exam.renderSheet();
@@ -661,6 +670,8 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
           const qs = STATE.currentExam.questions;
           for (let i=0; i<qs.length; i++)
             helpers.exam.addQuestion(i+1, qs[i]);
+          DOM.exam.statsDisabled.classList
+            .toggle('hidden', STATE.currentExam.statsEnabled);
         },
         renderScore() {
           const e = STATE.currentExam;
@@ -677,6 +688,8 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
         addQuestion(i, q) {
           const div = document.createElement('div');
           div.classList.add('question');
+          if (q.answered != null && q.answered !== q.answer)
+            div.classList.add('wrong');
           const lis = Object.entries(q.options).map(([opt, text]) =>
     `<li><button
       data-i="${i}"
@@ -719,10 +732,8 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
     onclick="handlers.stats.showQuestion(${cnum}, ${qnum});"
   >${cnum}.${qnum}</a></td>
   <td>${qs.appearances}</td>
-  <td>${answered}</td>
   <td>${qs.right}</td>
   <td>${qs.wrong}</td>
-  <td>${percent(answered / qs.appearances)}</td>
   <td>${percent(qs.right / qs.appearances)}</td>
 </tr>
 `;
@@ -739,7 +750,6 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
                 cindex,
                 qindex,
                 appearances: 0,
-                answered: 0,
                 right: 0,
                 wrong: 0,
               };
