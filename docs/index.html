@@ -438,6 +438,7 @@
           helpers.exam.newExam(questions);
           helpers.saveState();
           helpers.goTo('exam');
+          helpers.goTop();
         }
       },
       exam: {
@@ -450,6 +451,7 @@ perderá. ¿Está seguro/a?`))
           e.questions = null;
           helpers.saveState();
           helpers.goTo('config');
+          helpers.goTop();
         },
         submitAnswer(button, qIndex, qOpt) {
           const q = STATE.currentExam.questions[qIndex-1];
@@ -488,6 +490,7 @@ perderá. ¿Está seguro/a?`))
           const questions =
             DOM.exam.sheet.querySelectorAll('div.question:not(.wrong)');
           for (const q of questions) q.classList.toggle('hidden', val);
+          helpers.goTop();
         },
         repeatWrong() {
           const e = STATE.currentExam;
@@ -555,6 +558,9 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
           else p.classList.add('hidden');
         }
       },
+      goTop() {
+        window.scrollTo({top: 0, left: 0, behavior: 'instant'});
+      },
       loadState() {
         if (window == null || window.localStorage == null) return false;
         const storedStr = window.localStorage.getItem('state');
@@ -592,7 +598,7 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
           DOM.config.amount.value = 100;
         },
         isShuffle() {
-          DOM.config.shuffle[0].getAttribute("data-shuffle") === "true";
+          return DOM.config.shuffle[0].getAttribute("data-shuffle") === "true";
         },
         addChapter(num, title, nQuestions) {
           const li = document.createElement('li');
