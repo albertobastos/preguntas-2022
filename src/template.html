@@ -640,7 +640,8 @@ DESCARTARÁ cualquier examen todavía en curso. ¿Está seguro/a?`))
               appearancesMap.get(qs.appearances).push(qs);
             }
             const ccands = [];
-              [...appearancesMap.keys()].sort().reverse()
+              [...appearancesMap.keys()]
+                .sort((a, b) => Number(b) - Number(a))
                 .forEach(n => ccands.push(...shuffle(appearancesMap.get(n))));
             candidates.set(cnum, ccands);
           });
